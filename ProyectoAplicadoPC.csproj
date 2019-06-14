@@ -98,5 +98,11 @@
   <ItemGroup>
     <None Include="Resources\document_delete_icono.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_search_find_locate_1551.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_add_256_icon-icons.com_75994.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
