@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoAplicadoPC.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,10 @@ namespace ProyectoAplicadoPC
             InitializeComponent();
         }
 
+        private void RegistroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rCliente cliente = new rCliente();
+            cliente.Show();
+        }
     }
 }

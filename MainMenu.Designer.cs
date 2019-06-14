@@ -73,6 +73,7 @@
             this.registroDeClienteToolStripMenuItem.Name = "registroDeClienteToolStripMenuItem";
             this.registroDeClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroDeClienteToolStripMenuItem.Text = "&Registro de Cliente";
+            this.registroDeClienteToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeClienteToolStripMenuItem_Click);
             // 
             // puntoDeVentasToolStripMenuItem
             // 
