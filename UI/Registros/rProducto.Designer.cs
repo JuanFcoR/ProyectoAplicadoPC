@@ -38,17 +38,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.PrecioCostoTextBox = new System.Windows.Forms.TextBox();
+            this.DescripcionTextBox = new System.Windows.Forms.TextBox();
+            this.PrecioVentaTextBox = new System.Windows.Forms.TextBox();
+            this.ITBIsTextBox = new System.Windows.Forms.TextBox();
+            this.TasaGananciaTextBox = new System.Windows.Forms.TextBox();
+            this.DepartamentoTextBox = new System.Windows.Forms.TextBox();
+            this.CodigoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ExistenciaNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,14 +135,14 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Cantidad Existente";
             // 
-            // dateTimePicker1
+            // FechaDateTimePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker1.Location = new System.Drawing.Point(112, 9);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 9;
+            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(112, 9);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(100, 20);
+            this.FechaDateTimePicker.TabIndex = 9;
             // 
             // button1
             // 
@@ -160,80 +162,78 @@
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // PrecioCostoTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 12;
+            this.PrecioCostoTextBox.Location = new System.Drawing.Point(112, 99);
+            this.PrecioCostoTextBox.Name = "PrecioCostoTextBox";
+            this.PrecioCostoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PrecioCostoTextBox.TabIndex = 12;
             // 
-            // textBox2
+            // DescripcionTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 13;
+            this.DescripcionTextBox.Location = new System.Drawing.Point(112, 70);
+            this.DescripcionTextBox.Name = "DescripcionTextBox";
+            this.DescripcionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DescripcionTextBox.TabIndex = 13;
             // 
-            // textBox3
+            // PrecioVentaTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 14;
+            this.PrecioVentaTextBox.Location = new System.Drawing.Point(112, 125);
+            this.PrecioVentaTextBox.Name = "PrecioVentaTextBox";
+            this.PrecioVentaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PrecioVentaTextBox.TabIndex = 14;
             // 
-            // textBox4
+            // ITBIsTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(112, 164);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 15;
+            this.ITBIsTextBox.Location = new System.Drawing.Point(112, 161);
+            this.ITBIsTextBox.Name = "ITBIsTextBox";
+            this.ITBIsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ITBIsTextBox.TabIndex = 15;
             // 
-            // textBox5
+            // TasaGananciaTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(112, 195);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 16;
+            this.TasaGananciaTextBox.Location = new System.Drawing.Point(112, 195);
+            this.TasaGananciaTextBox.Name = "TasaGananciaTextBox";
+            this.TasaGananciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TasaGananciaTextBox.TabIndex = 16;
             // 
-            // textBox6
+            // DepartamentoTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(112, 226);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 17;
+            this.DepartamentoTextBox.Location = new System.Drawing.Point(112, 226);
+            this.DepartamentoTextBox.Name = "DepartamentoTextBox";
+            this.DepartamentoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartamentoTextBox.TabIndex = 17;
             // 
-            // comboBox1
+            // CodigoNumericUpDown
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 18;
+            this.CodigoNumericUpDown.Location = new System.Drawing.Point(112, 39);
+            this.CodigoNumericUpDown.Name = "CodigoNumericUpDown";
+            this.CodigoNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.CodigoNumericUpDown.TabIndex = 18;
             // 
-            // comboBox2
+            // ExistenciaNumericUpDown
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 255);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 19;
+            this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(112, 253);
+            this.ExistenciaNumericUpDown.Name = "ExistenciaNumericUpDown";
+            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.ExistenciaNumericUpDown.TabIndex = 19;
             // 
             // rProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(268, 349);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ExistenciaNumericUpDown);
+            this.Controls.Add(this.CodigoNumericUpDown);
+            this.Controls.Add(this.DepartamentoTextBox);
+            this.Controls.Add(this.TasaGananciaTextBox);
+            this.Controls.Add(this.ITBIsTextBox);
+            this.Controls.Add(this.PrecioVentaTextBox);
+            this.Controls.Add(this.DescripcionTextBox);
+            this.Controls.Add(this.PrecioCostoTextBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -246,6 +246,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rProducto";
             this.Text = "Registro de Producto";
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,16 +264,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox PrecioCostoTextBox;
+        private System.Windows.Forms.TextBox DescripcionTextBox;
+        private System.Windows.Forms.TextBox PrecioVentaTextBox;
+        private System.Windows.Forms.TextBox ITBIsTextBox;
+        private System.Windows.Forms.TextBox TasaGananciaTextBox;
+        private System.Windows.Forms.TextBox DepartamentoTextBox;
+        private System.Windows.Forms.NumericUpDown CodigoNumericUpDown;
+        private System.Windows.Forms.NumericUpDown ExistenciaNumericUpDown;
     }
 }
