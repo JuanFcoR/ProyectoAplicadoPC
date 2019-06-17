@@ -23,5 +23,11 @@ namespace ProyectoAplicadoPC
             rCliente cliente = new rCliente();
             cliente.Show();
         }
+
+        private void RegistarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rProducto producto = new rProducto();
+            producto.Show();
+        }
     }
 }

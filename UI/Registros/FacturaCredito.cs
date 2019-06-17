@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoAplicadoPC.UI.Registros
 {
-    public partial class rProducto : Form
+    public partial class FacturaCredito : Form
     {
-        public rProducto()
+        public FacturaCredito()
         {
             InitializeComponent();
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

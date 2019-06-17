@@ -110,6 +110,7 @@
             this.registarProductoToolStripMenuItem.Name = "registarProductoToolStripMenuItem";
             this.registarProductoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registarProductoToolStripMenuItem.Text = "&Registar Producto";
+            this.registarProductoToolStripMenuItem.Click += new System.EventHandler(this.RegistarProductoToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
