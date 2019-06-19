@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoAplicadoPC.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace ProyectoAplicadoPC.UI.Registros
         public rProducto()
         {
             InitializeComponent();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
