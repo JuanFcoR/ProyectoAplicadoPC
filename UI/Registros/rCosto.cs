@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoAplicadoPC.UI.Registros
 {
-    public partial class Costo : Form
+    public partial class rCosto : Form
     {
-        public Costo()
+        public rCosto()
         {
             InitializeComponent();
         }

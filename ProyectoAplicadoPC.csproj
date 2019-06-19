@@ -85,17 +85,17 @@
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Registros\Costo.cs">
+    <Compile Include="UI\Registros\rCosto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\Costo.Designer.cs">
-      <DependentUpon>Costo.cs</DependentUpon>
+    <Compile Include="UI\Registros\rCosto.Designer.cs">
+      <DependentUpon>rCosto.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\RegistrarCliente.cs">
+    <Compile Include="UI\Registros\rRegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\RegistrarCliente.Designer.cs">
-      <DependentUpon>RegistrarCliente.cs</DependentUpon>
+    <Compile Include="UI\Registros\rRegistrarCliente.Designer.cs">
+      <DependentUpon>rRegistrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RegistrarProducto.cs">
       <SubType>Form</SubType>
@@ -134,14 +134,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Registros\Costo.resx">
-      <DependentUpon>Costo.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\rCosto.resx">
+      <DependentUpon>rCosto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCliente.resx">
       <DependentUpon>rCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RegistrarCliente.resx">
-      <DependentUpon>RegistrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\rRegistrarCliente.resx">
+      <DependentUpon>rRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistrarProducto.resx">
       <DependentUpon>RegistrarProducto.cs</DependentUpon>

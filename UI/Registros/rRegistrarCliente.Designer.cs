@@ -1,6 +1,6 @@
 ﻿namespace ProyectoAplicadoPC.UI.Registros
 {
-    partial class RegistrarCliente
+    partial class rRegistrarCliente
     {
         /// <summary>
         /// Required designer variable.
