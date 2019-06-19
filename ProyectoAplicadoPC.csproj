@@ -84,11 +84,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Registros\FacturaCredito.cs">
+    <Compile Include="UI\Registros\rFacturaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\FacturaCredito.Designer.cs">
-      <DependentUpon>FacturaCredito.cs</DependentUpon>
+    <Compile Include="UI\Registros\rFacturaCredito.Designer.cs">
+      <DependentUpon>rFacturaCredito.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rCliente.cs">
       <SubType>Form</SubType>
@@ -117,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Registros\rCliente.resx">
       <DependentUpon>rCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rFacturaCredito.resx">
+      <DependentUpon>rFacturaCredito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rProducto.resx">
       <DependentUpon>rProducto.cs</DependentUpon>
