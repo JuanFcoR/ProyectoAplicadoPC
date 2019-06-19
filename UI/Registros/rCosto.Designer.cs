@@ -1,6 +1,6 @@
 ﻿namespace ProyectoAplicadoPC.UI.Registros
 {
-    partial class Costo
+    partial class rCosto
     {
         /// <summary>
         /// Required designer variable.
