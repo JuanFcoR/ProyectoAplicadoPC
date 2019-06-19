@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.ComentariotextBox = new System.Windows.Forms.TextBox();
-            this.CantidadExistentedomainUpDown = new System.Windows.Forms.DomainUpDown();
-            this.DepartamentotextBox = new System.Windows.Forms.TextBox();
-            this.TasaDeGananciadomainUpDown = new System.Windows.Forms.DomainUpDown();
-            this.ITBISnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.PrecioVentadomainUpDown = new System.Windows.Forms.DomainUpDown();
-            this.PrecioCostodomainUpDown = new System.Windows.Forms.DomainUpDown();
-            this.DescripciontextBox = new System.Windows.Forms.TextBox();
-            this.CodigonumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.ComentarioTextBox = new System.Windows.Forms.TextBox();
+            this.DepartamentoTextBox = new System.Windows.Forms.TextBox();
+            this.ITBIsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DescripcionTextBox = new System.Windows.Forms.TextBox();
+            this.CodigoRegistroNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,94 +45,74 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Cancelarbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ITBISnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CodigonumericUpDown)).BeginInit();
+            this.CancelarButton = new System.Windows.Forms.Button();
+            this.PreciocostoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.PrecioVentaNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TasaDeGananciaNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CantidadExistenteNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoRegistroNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PreciocostoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioVentaNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TasaDeGananciaNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadExistenteNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
-            // Guardarbutton
+            // GuardarButton
             // 
-            this.Guardarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
-            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(126, 376);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(94, 36);
-            this.Guardarbutton.TabIndex = 44;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GuardarButton.Location = new System.Drawing.Point(126, 376);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(94, 36);
+            this.GuardarButton.TabIndex = 44;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GuardarButton.UseVisualStyleBackColor = true;
             // 
-            // ComentariotextBox
+            // ComentarioTextBox
             // 
-            this.ComentariotextBox.Location = new System.Drawing.Point(112, 319);
-            this.ComentariotextBox.Name = "ComentariotextBox";
-            this.ComentariotextBox.Size = new System.Drawing.Size(100, 20);
-            this.ComentariotextBox.TabIndex = 42;
+            this.ComentarioTextBox.Location = new System.Drawing.Point(112, 319);
+            this.ComentarioTextBox.Name = "ComentarioTextBox";
+            this.ComentarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ComentarioTextBox.TabIndex = 42;
             // 
-            // CantidadExistentedomainUpDown
+            // DepartamentoTextBox
             // 
-            this.CantidadExistentedomainUpDown.Location = new System.Drawing.Point(112, 281);
-            this.CantidadExistentedomainUpDown.Name = "CantidadExistentedomainUpDown";
-            this.CantidadExistentedomainUpDown.Size = new System.Drawing.Size(100, 20);
-            this.CantidadExistentedomainUpDown.TabIndex = 41;
+            this.DepartamentoTextBox.Location = new System.Drawing.Point(112, 250);
+            this.DepartamentoTextBox.Name = "DepartamentoTextBox";
+            this.DepartamentoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartamentoTextBox.TabIndex = 40;
             // 
-            // DepartamentotextBox
+            // ITBIsNumericUpDown
             // 
-            this.DepartamentotextBox.Location = new System.Drawing.Point(112, 250);
-            this.DepartamentotextBox.Name = "DepartamentotextBox";
-            this.DepartamentotextBox.Size = new System.Drawing.Size(100, 20);
-            this.DepartamentotextBox.TabIndex = 40;
+            this.ITBIsNumericUpDown.Location = new System.Drawing.Point(112, 184);
+            this.ITBIsNumericUpDown.Name = "ITBIsNumericUpDown";
+            this.ITBIsNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.ITBIsNumericUpDown.TabIndex = 38;
             // 
-            // TasaDeGananciadomainUpDown
+            // DescripcionTextBox
             // 
-            this.TasaDeGananciadomainUpDown.Location = new System.Drawing.Point(112, 217);
-            this.TasaDeGananciadomainUpDown.Name = "TasaDeGananciadomainUpDown";
-            this.TasaDeGananciadomainUpDown.Size = new System.Drawing.Size(100, 20);
-            this.TasaDeGananciadomainUpDown.TabIndex = 39;
+            this.DescripcionTextBox.Location = new System.Drawing.Point(112, 90);
+            this.DescripcionTextBox.Name = "DescripcionTextBox";
+            this.DescripcionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DescripcionTextBox.TabIndex = 35;
             // 
-            // ITBISnumericUpDown
+            // CodigoRegistroNumericUpDown
             // 
-            this.ITBISnumericUpDown.Location = new System.Drawing.Point(112, 184);
-            this.ITBISnumericUpDown.Name = "ITBISnumericUpDown";
-            this.ITBISnumericUpDown.Size = new System.Drawing.Size(100, 20);
-            this.ITBISnumericUpDown.TabIndex = 38;
+            this.CodigoRegistroNumericUpDown.Location = new System.Drawing.Point(112, 56);
+            this.CodigoRegistroNumericUpDown.Name = "CodigoRegistroNumericUpDown";
+            this.CodigoRegistroNumericUpDown.Size = new System.Drawing.Size(86, 20);
+            this.CodigoRegistroNumericUpDown.TabIndex = 34;
             // 
-            // PrecioVentadomainUpDown
+            // FechaDateTimePicker
             // 
-            this.PrecioVentadomainUpDown.Location = new System.Drawing.Point(112, 149);
-            this.PrecioVentadomainUpDown.Name = "PrecioVentadomainUpDown";
-            this.PrecioVentadomainUpDown.Size = new System.Drawing.Size(100, 20);
-            this.PrecioVentadomainUpDown.TabIndex = 37;
-            // 
-            // PrecioCostodomainUpDown
-            // 
-            this.PrecioCostodomainUpDown.Location = new System.Drawing.Point(112, 120);
-            this.PrecioCostodomainUpDown.Name = "PrecioCostodomainUpDown";
-            this.PrecioCostodomainUpDown.Size = new System.Drawing.Size(100, 20);
-            this.PrecioCostodomainUpDown.TabIndex = 36;
-            // 
-            // DescripciontextBox
-            // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(112, 90);
-            this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(100, 20);
-            this.DescripciontextBox.TabIndex = 35;
-            // 
-            // CodigonumericUpDown
-            // 
-            this.CodigonumericUpDown.Location = new System.Drawing.Point(112, 56);
-            this.CodigonumericUpDown.Name = "CodigonumericUpDown";
-            this.CodigonumericUpDown.Size = new System.Drawing.Size(86, 20);
-            this.CodigonumericUpDown.TabIndex = 34;
-            // 
-            // FechadateTimePicker
-            // 
-            this.FechadateTimePicker.CustomFormat = "";
-            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(112, 21);
-            this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(86, 20);
-            this.FechadateTimePicker.TabIndex = 33;
+            this.FechaDateTimePicker.CustomFormat = "";
+            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(112, 21);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(86, 20);
+            this.FechaDateTimePicker.TabIndex = 33;
             // 
             // label10
             // 
@@ -228,35 +204,63 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Fecha";
             // 
-            // Cancelarbutton
+            // CancelarButton
             // 
-            this.Cancelarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
-            this.Cancelarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cancelarbutton.Location = new System.Drawing.Point(14, 376);
-            this.Cancelarbutton.Name = "Cancelarbutton";
-            this.Cancelarbutton.Size = new System.Drawing.Size(94, 36);
-            this.Cancelarbutton.TabIndex = 43;
-            this.Cancelarbutton.Text = "Cancelar";
-            this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Cancelarbutton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
+            this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelarButton.Location = new System.Drawing.Point(14, 376);
+            this.CancelarButton.Name = "CancelarButton";
+            this.CancelarButton.Size = new System.Drawing.Size(94, 36);
+            this.CancelarButton.TabIndex = 43;
+            this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CancelarButton.UseVisualStyleBackColor = true;
+            // 
+            // PreciocostoNumericUpDown
+            // 
+            this.PreciocostoNumericUpDown.Location = new System.Drawing.Point(112, 118);
+            this.PreciocostoNumericUpDown.Name = "PreciocostoNumericUpDown";
+            this.PreciocostoNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.PreciocostoNumericUpDown.TabIndex = 45;
+            // 
+            // PrecioVentaNumericUpDown
+            // 
+            this.PrecioVentaNumericUpDown.Location = new System.Drawing.Point(112, 149);
+            this.PrecioVentaNumericUpDown.Name = "PrecioVentaNumericUpDown";
+            this.PrecioVentaNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.PrecioVentaNumericUpDown.TabIndex = 46;
+            // 
+            // TasaDeGananciaNumericUpDown
+            // 
+            this.TasaDeGananciaNumericUpDown.Location = new System.Drawing.Point(112, 215);
+            this.TasaDeGananciaNumericUpDown.Name = "TasaDeGananciaNumericUpDown";
+            this.TasaDeGananciaNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.TasaDeGananciaNumericUpDown.TabIndex = 47;
+            // 
+            // CantidadExistenteNumericUpDown
+            // 
+            this.CantidadExistenteNumericUpDown.Location = new System.Drawing.Point(112, 281);
+            this.CantidadExistenteNumericUpDown.Name = "CantidadExistenteNumericUpDown";
+            this.CantidadExistenteNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.CantidadExistenteNumericUpDown.TabIndex = 48;
             // 
             // RegistrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 431);
-            this.Controls.Add(this.Guardarbutton);
-            this.Controls.Add(this.Cancelarbutton);
-            this.Controls.Add(this.ComentariotextBox);
-            this.Controls.Add(this.CantidadExistentedomainUpDown);
-            this.Controls.Add(this.DepartamentotextBox);
-            this.Controls.Add(this.TasaDeGananciadomainUpDown);
-            this.Controls.Add(this.ITBISnumericUpDown);
-            this.Controls.Add(this.PrecioVentadomainUpDown);
-            this.Controls.Add(this.PrecioCostodomainUpDown);
-            this.Controls.Add(this.DescripciontextBox);
-            this.Controls.Add(this.CodigonumericUpDown);
-            this.Controls.Add(this.FechadateTimePicker);
+            this.ClientSize = new System.Drawing.Size(321, 431);
+            this.Controls.Add(this.CantidadExistenteNumericUpDown);
+            this.Controls.Add(this.TasaDeGananciaNumericUpDown);
+            this.Controls.Add(this.PrecioVentaNumericUpDown);
+            this.Controls.Add(this.PreciocostoNumericUpDown);
+            this.Controls.Add(this.GuardarButton);
+            this.Controls.Add(this.CancelarButton);
+            this.Controls.Add(this.ComentarioTextBox);
+            this.Controls.Add(this.DepartamentoTextBox);
+            this.Controls.Add(this.ITBIsNumericUpDown);
+            this.Controls.Add(this.DescripcionTextBox);
+            this.Controls.Add(this.CodigoRegistroNumericUpDown);
+            this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -269,8 +273,12 @@
             this.Controls.Add(this.label1);
             this.Name = "RegistrarProducto";
             this.Text = "RegistrarProducto";
-            ((System.ComponentModel.ISupportInitialize)(this.ITBISnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CodigonumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoRegistroNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PreciocostoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioVentaNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TasaDeGananciaNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadExistenteNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,18 +286,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Guardarbutton;
-        private System.Windows.Forms.Button Cancelarbutton;
-        private System.Windows.Forms.TextBox ComentariotextBox;
-        private System.Windows.Forms.DomainUpDown CantidadExistentedomainUpDown;
-        private System.Windows.Forms.TextBox DepartamentotextBox;
-        private System.Windows.Forms.DomainUpDown TasaDeGananciadomainUpDown;
-        private System.Windows.Forms.NumericUpDown ITBISnumericUpDown;
-        private System.Windows.Forms.DomainUpDown PrecioVentadomainUpDown;
-        private System.Windows.Forms.DomainUpDown PrecioCostodomainUpDown;
-        private System.Windows.Forms.TextBox DescripciontextBox;
-        private System.Windows.Forms.NumericUpDown CodigonumericUpDown;
-        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.Button GuardarButton;
+        private System.Windows.Forms.Button CancelarButton;
+        private System.Windows.Forms.TextBox ComentarioTextBox;
+        private System.Windows.Forms.TextBox DepartamentoTextBox;
+        private System.Windows.Forms.NumericUpDown ITBIsNumericUpDown;
+        private System.Windows.Forms.TextBox DescripcionTextBox;
+        private System.Windows.Forms.NumericUpDown CodigoRegistroNumericUpDown;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -300,5 +304,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown PreciocostoNumericUpDown;
+        private System.Windows.Forms.NumericUpDown PrecioVentaNumericUpDown;
+        private System.Windows.Forms.NumericUpDown TasaDeGananciaNumericUpDown;
+        private System.Windows.Forms.NumericUpDown CantidadExistenteNumericUpDown;
     }
 }
