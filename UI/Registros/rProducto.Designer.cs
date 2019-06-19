@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rProducto));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,8 +39,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.GuardarButton = new System.Windows.Forms.Button();
             this.PrecioCostoTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.PrecioVentaTextBox = new System.Windows.Forms.TextBox();
@@ -50,10 +47,11 @@
             this.DepartamentoTextBox = new System.Windows.Forms.TextBox();
             this.CodigoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ExistenciaNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Guardar_button = new System.Windows.Forms.Button();
+            this.Cancelar_button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,93 +141,110 @@
             this.FechaDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.FechaDateTimePicker.Location = new System.Drawing.Point(112, 9);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(100, 20);
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(158, 20);
             this.FechaDateTimePicker.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(33, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.Location = new System.Drawing.Point(137, 302);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(75, 35);
-            this.GuardarButton.TabIndex = 11;
-            this.GuardarButton.Text = "Guardar";
-            this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // PrecioCostoTextBox
             // 
             this.PrecioCostoTextBox.Location = new System.Drawing.Point(112, 99);
             this.PrecioCostoTextBox.Name = "PrecioCostoTextBox";
-            this.PrecioCostoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PrecioCostoTextBox.Size = new System.Drawing.Size(158, 20);
             this.PrecioCostoTextBox.TabIndex = 12;
             // 
             // DescripcionTextBox
             // 
             this.DescripcionTextBox.Location = new System.Drawing.Point(112, 70);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
-            this.DescripcionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DescripcionTextBox.Size = new System.Drawing.Size(158, 20);
             this.DescripcionTextBox.TabIndex = 13;
             // 
             // PrecioVentaTextBox
             // 
             this.PrecioVentaTextBox.Location = new System.Drawing.Point(112, 125);
             this.PrecioVentaTextBox.Name = "PrecioVentaTextBox";
-            this.PrecioVentaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PrecioVentaTextBox.Size = new System.Drawing.Size(158, 20);
             this.PrecioVentaTextBox.TabIndex = 14;
             // 
             // ITBIsTextBox
             // 
             this.ITBIsTextBox.Location = new System.Drawing.Point(112, 161);
             this.ITBIsTextBox.Name = "ITBIsTextBox";
-            this.ITBIsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ITBIsTextBox.Size = new System.Drawing.Size(158, 20);
             this.ITBIsTextBox.TabIndex = 15;
             // 
             // TasaGananciaTextBox
             // 
             this.TasaGananciaTextBox.Location = new System.Drawing.Point(112, 195);
             this.TasaGananciaTextBox.Name = "TasaGananciaTextBox";
-            this.TasaGananciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TasaGananciaTextBox.Size = new System.Drawing.Size(158, 20);
             this.TasaGananciaTextBox.TabIndex = 16;
             // 
             // DepartamentoTextBox
             // 
             this.DepartamentoTextBox.Location = new System.Drawing.Point(112, 226);
             this.DepartamentoTextBox.Name = "DepartamentoTextBox";
-            this.DepartamentoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartamentoTextBox.Size = new System.Drawing.Size(158, 20);
             this.DepartamentoTextBox.TabIndex = 17;
             // 
             // CodigoNumericUpDown
             // 
-            this.CodigoNumericUpDown.Location = new System.Drawing.Point(112, 39);
+            this.CodigoNumericUpDown.Location = new System.Drawing.Point(112, 35);
             this.CodigoNumericUpDown.Name = "CodigoNumericUpDown";
-            this.CodigoNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.CodigoNumericUpDown.Size = new System.Drawing.Size(78, 20);
             this.CodigoNumericUpDown.TabIndex = 18;
             // 
             // ExistenciaNumericUpDown
             // 
             this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(112, 253);
             this.ExistenciaNumericUpDown.Name = "ExistenciaNumericUpDown";
-            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(158, 20);
             this.ExistenciaNumericUpDown.TabIndex = 19;
             // 
-            // SuperErrorProvider
+            // Guardar_button
             // 
-            this.SuperErrorProvider.ContainerControl = this;
+            this.Guardar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guardar_button.Image = global::ProyectoAplicadoPC.Properties.Resources.document_add_256_icon_icons_com_75994;
+            this.Guardar_button.Location = new System.Drawing.Point(155, 289);
+            this.Guardar_button.Name = "Guardar_button";
+            this.Guardar_button.Size = new System.Drawing.Size(110, 33);
+            this.Guardar_button.TabIndex = 23;
+            this.Guardar_button.Text = "Guardar";
+            this.Guardar_button.UseVisualStyleBackColor = true;
+            // 
+            // Cancelar_button
+            // 
+            this.Cancelar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelar_button.Image = global::ProyectoAplicadoPC.Properties.Resources.document_delete_icono;
+            this.Cancelar_button.Location = new System.Drawing.Point(33, 289);
+            this.Cancelar_button.Name = "Cancelar_button";
+            this.Cancelar_button.Size = new System.Drawing.Size(105, 33);
+            this.Cancelar_button.TabIndex = 22;
+            this.Cancelar_button.Text = "Cancelar";
+            this.Cancelar_button.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::ProyectoAplicadoPC.Properties.Resources.preview_search_find_locate_1551;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(196, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 28);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // rProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 349);
+            this.ClientSize = new System.Drawing.Size(294, 334);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Guardar_button);
+            this.Controls.Add(this.Cancelar_button);
             this.Controls.Add(this.ExistenciaNumericUpDown);
             this.Controls.Add(this.CodigoNumericUpDown);
             this.Controls.Add(this.DepartamentoTextBox);
@@ -238,8 +253,6 @@
             this.Controls.Add(this.PrecioVentaTextBox);
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.PrecioCostoTextBox);
-            this.Controls.Add(this.GuardarButton);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -255,7 +268,6 @@
             this.Text = "Registro de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.CodigoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,8 +285,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.TextBox PrecioCostoTextBox;
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.TextBox PrecioVentaTextBox;
@@ -283,6 +293,8 @@
         private System.Windows.Forms.TextBox DepartamentoTextBox;
         private System.Windows.Forms.NumericUpDown CodigoNumericUpDown;
         private System.Windows.Forms.NumericUpDown ExistenciaNumericUpDown;
-        private System.Windows.Forms.ErrorProvider SuperErrorProvider;
+        private System.Windows.Forms.Button Guardar_button;
+        private System.Windows.Forms.Button Cancelar_button;
+        private System.Windows.Forms.Button button1;
     }
 }

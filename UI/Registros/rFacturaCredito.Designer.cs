@@ -1,6 +1,6 @@
 ﻿namespace ProyectoAplicadoPC.UI.Registros
 {
-    partial class FacturaCredito
+    partial class rFacturaCredito
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rFacturaCredito));
+            this.SuspendLayout();
+            // 
+            // rFacturaCredito
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(308, 316);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "rFacturaCredito";
             this.Text = "FacturaCredito";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

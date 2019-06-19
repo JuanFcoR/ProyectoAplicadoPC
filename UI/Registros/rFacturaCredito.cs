@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoAplicadoPC.UI.Registros
 {
-    public partial class FacturaCredito : Form
+    public partial class rFacturaCredito : Form
     {
-        public FacturaCredito()
+        public rFacturaCredito()
         {
             InitializeComponent();
         }
