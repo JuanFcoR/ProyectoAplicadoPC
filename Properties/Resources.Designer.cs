@@ -93,6 +93,26 @@ namespace ProyectoAplicadoPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Remove_icon {
+            get {
+                object obj = ResourceManager.GetObject("Remove-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_as_icon {
+            get {
+                object obj = ResourceManager.GetObject("Save-as-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_black_512_icon {
             get {
                 object obj = ResourceManager.GetObject("Save_black-512 icon", resourceCulture);

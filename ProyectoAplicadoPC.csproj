@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Registros\Costo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\Costo.Designer.cs">
+      <DependentUpon>Costo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rFacturaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Registros\Costo.resx">
+      <DependentUpon>Costo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCliente.resx">
       <DependentUpon>rCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\document_add_256_icon-icons.com_75994.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-as-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
