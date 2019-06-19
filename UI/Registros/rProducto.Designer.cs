@@ -61,7 +61,6 @@
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
@@ -141,12 +140,12 @@
             this.FechaDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.FechaDateTimePicker.Location = new System.Drawing.Point(112, 9);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(100, 20);
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(158, 20);
             this.FechaDateTimePicker.TabIndex = 9;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(33, 302);
+            this.button1.Location = new System.Drawing.Point(54, 291);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 35);
             this.button1.TabIndex = 10;
@@ -155,7 +154,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(137, 302);
+            this.button2.Location = new System.Drawing.Point(158, 291);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 35);
             this.button2.TabIndex = 11;
@@ -166,63 +165,63 @@
             // 
             this.PrecioCostoTextBox.Location = new System.Drawing.Point(112, 99);
             this.PrecioCostoTextBox.Name = "PrecioCostoTextBox";
-            this.PrecioCostoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PrecioCostoTextBox.Size = new System.Drawing.Size(158, 20);
             this.PrecioCostoTextBox.TabIndex = 12;
             // 
             // DescripcionTextBox
             // 
             this.DescripcionTextBox.Location = new System.Drawing.Point(112, 70);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
-            this.DescripcionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DescripcionTextBox.Size = new System.Drawing.Size(158, 20);
             this.DescripcionTextBox.TabIndex = 13;
             // 
             // PrecioVentaTextBox
             // 
             this.PrecioVentaTextBox.Location = new System.Drawing.Point(112, 125);
             this.PrecioVentaTextBox.Name = "PrecioVentaTextBox";
-            this.PrecioVentaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PrecioVentaTextBox.Size = new System.Drawing.Size(158, 20);
             this.PrecioVentaTextBox.TabIndex = 14;
             // 
             // ITBIsTextBox
             // 
             this.ITBIsTextBox.Location = new System.Drawing.Point(112, 161);
             this.ITBIsTextBox.Name = "ITBIsTextBox";
-            this.ITBIsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ITBIsTextBox.Size = new System.Drawing.Size(158, 20);
             this.ITBIsTextBox.TabIndex = 15;
             // 
             // TasaGananciaTextBox
             // 
             this.TasaGananciaTextBox.Location = new System.Drawing.Point(112, 195);
             this.TasaGananciaTextBox.Name = "TasaGananciaTextBox";
-            this.TasaGananciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TasaGananciaTextBox.Size = new System.Drawing.Size(158, 20);
             this.TasaGananciaTextBox.TabIndex = 16;
             // 
             // DepartamentoTextBox
             // 
             this.DepartamentoTextBox.Location = new System.Drawing.Point(112, 226);
             this.DepartamentoTextBox.Name = "DepartamentoTextBox";
-            this.DepartamentoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartamentoTextBox.Size = new System.Drawing.Size(158, 20);
             this.DepartamentoTextBox.TabIndex = 17;
             // 
             // CodigoNumericUpDown
             // 
             this.CodigoNumericUpDown.Location = new System.Drawing.Point(112, 39);
             this.CodigoNumericUpDown.Name = "CodigoNumericUpDown";
-            this.CodigoNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.CodigoNumericUpDown.Size = new System.Drawing.Size(158, 20);
             this.CodigoNumericUpDown.TabIndex = 18;
             // 
             // ExistenciaNumericUpDown
             // 
             this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(112, 253);
             this.ExistenciaNumericUpDown.Name = "ExistenciaNumericUpDown";
-            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(158, 20);
             this.ExistenciaNumericUpDown.TabIndex = 19;
             // 
             // rProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 349);
+            this.ClientSize = new System.Drawing.Size(286, 334);
             this.Controls.Add(this.ExistenciaNumericUpDown);
             this.Controls.Add(this.CodigoNumericUpDown);
             this.Controls.Add(this.DepartamentoTextBox);
