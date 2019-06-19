@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Cancelarbutton = new System.Windows.Forms.Button();
             this.LimiteDeCreditomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.TelefonoDeReferenciamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
@@ -50,30 +48,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Cancelarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CodigonumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(154, 381);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(89, 39);
-            this.Guardarbutton.TabIndex = 43;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Cancelarbutton
-            // 
-            this.Cancelarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cancelarbutton.Location = new System.Drawing.Point(41, 381);
-            this.Cancelarbutton.Name = "Cancelarbutton";
-            this.Cancelarbutton.Size = new System.Drawing.Size(86, 39);
-            this.Cancelarbutton.TabIndex = 42;
-            this.Cancelarbutton.Text = "Cancelar";
-            this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Cancelarbutton.UseVisualStyleBackColor = true;
             // 
             // LimiteDeCreditomaskedTextBox
             // 
@@ -243,11 +221,35 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Codigo";
             // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardarbutton.Location = new System.Drawing.Point(143, 371);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(89, 39);
+            this.Guardarbutton.TabIndex = 43;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Cancelarbutton
+            // 
+            this.Cancelarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
+            this.Cancelarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Cancelarbutton.Location = new System.Drawing.Point(30, 371);
+            this.Cancelarbutton.Name = "Cancelarbutton";
+            this.Cancelarbutton.Size = new System.Drawing.Size(86, 39);
+            this.Cancelarbutton.TabIndex = 42;
+            this.Cancelarbutton.Text = "Cancelar";
+            this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Cancelarbutton.UseVisualStyleBackColor = true;
+            // 
             // RegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 450);
+            this.ClientSize = new System.Drawing.Size(262, 422);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Cancelarbutton);
             this.Controls.Add(this.LimiteDeCreditomaskedTextBox);

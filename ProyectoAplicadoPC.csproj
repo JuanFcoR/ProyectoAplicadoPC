@@ -97,6 +97,12 @@
     <Compile Include="UI\Registros\RegistrarCliente.Designer.cs">
       <DependentUpon>RegistrarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\RegistrarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RegistrarProducto.Designer.cs">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rFacturaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistrarCliente.resx">
       <DependentUpon>RegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistrarProducto.resx">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rFacturaCredito.resx">
       <DependentUpon>rFacturaCredito.cs</DependentUpon>
