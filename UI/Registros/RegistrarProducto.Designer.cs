@@ -58,7 +58,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(126, 376);
+            this.Guardarbutton.Location = new System.Drawing.Point(118, 362);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(94, 36);
             this.Guardarbutton.TabIndex = 44;
@@ -232,7 +232,7 @@
             // 
             this.Cancelarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
             this.Cancelarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cancelarbutton.Location = new System.Drawing.Point(14, 376);
+            this.Cancelarbutton.Location = new System.Drawing.Point(6, 362);
             this.Cancelarbutton.Name = "Cancelarbutton";
             this.Cancelarbutton.Size = new System.Drawing.Size(94, 36);
             this.Cancelarbutton.TabIndex = 43;
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 431);
+            this.ClientSize = new System.Drawing.Size(235, 411);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Cancelarbutton);
             this.Controls.Add(this.ComentariotextBox);
