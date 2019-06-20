@@ -212,6 +212,7 @@
             this.Guardar_button.TabIndex = 23;
             this.Guardar_button.Text = "Guardar";
             this.Guardar_button.UseVisualStyleBackColor = true;
+           
             // 
             // Cancelar_button
             // 

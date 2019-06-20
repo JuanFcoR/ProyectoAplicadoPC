@@ -54,27 +54,7 @@ namespace ProyectoAplicadoPC.BLL
             return paso;
         }
 
-        public static bool Eliminar(int id)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-            try
-            {
-                Productos Producto = contexto.Productos.Find(id);
-                contexto.Productos.Remove(Producto);
-                paso = contexto.SaveChanges() > 0;
-                contexto.Dispose();
-            }
-
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-            return paso;
-        }
-
+       
         public static Productos Buscar(int id)
         {
             Contexto contexto = new Contexto();
@@ -94,23 +74,6 @@ namespace ProyectoAplicadoPC.BLL
             return Producto;
         }
 
-        public static List<Productos> GetList(Expression<Func<Productos, bool>> expression)
-        {
-            List<Productos> Producto = new List<Productos>();
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                contexto.Productos.Where(expression).ToList();
-                contexto.Dispose();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-            return Producto;
-        }
+        
     }
 }
