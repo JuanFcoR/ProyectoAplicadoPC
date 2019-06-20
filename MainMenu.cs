@@ -26,7 +26,7 @@ namespace ProyectoAplicadoPC
 
         private void RegistarProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rProducto producto = new rProducto();
+            RegistrarProducto producto = new RegistrarProducto();
             producto.Show();
         }
     }

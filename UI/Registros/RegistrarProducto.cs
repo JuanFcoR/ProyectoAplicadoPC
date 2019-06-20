@@ -143,5 +143,10 @@ namespace ProyectoAplicadoPC.UI.Registros
             else
                 SuperErrorProvider.SetError(CodigoRegistroNumericUpDown, "No se puede eliminar un producto que no existe");
         }
+
+        private void CancelarButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
