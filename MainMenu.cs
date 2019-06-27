@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace ProyectoAplicadoPC
 {
@@ -52,6 +53,47 @@ namespace ProyectoAplicadoPC
         private void Minimizar_pictureBox_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int lParam);
+
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Clientes_button_Click(object sender, EventArgs e)
+        {
+            SubMenuClientes.Visible = true;
+        }
+
+        private void RegistrarCliente_button_Click(object sender, EventArgs e)
+        {
+            SubMenuClientes.Visible = false;
+        }
+
+        private void ConsultarCliente_button_Click(object sender, EventArgs e)
+        {
+            SubMenuClientes.Visible = false;
+        }
+
+        private void Productos_button_Click(object sender, EventArgs e)
+        {
+            SubMenuP_panel.Visible = true;
+        }
+
+        private void RegistarP_button_Click(object sender, EventArgs e)
+        {
+            SubMenuP_panel.Visible = false;
+        }
+
+        private void ConsultarP_button_Click(object sender, EventArgs e)
+        {
+            SubMenuP_panel.Visible = false;
         }
     }
 }
