@@ -85,11 +85,11 @@
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Registros\rCosto.cs">
+    <Compile Include="UI\Registros\rCobros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\rCosto.Designer.cs">
-      <DependentUpon>rCosto.cs</DependentUpon>
+    <Compile Include="UI\Registros\rCobros.Designer.cs">
+      <DependentUpon>rCobros.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rRegistrarCliente.cs">
       <SubType>Form</SubType>
@@ -109,18 +109,6 @@
     <Compile Include="UI\Registros\rFacturaCredito.Designer.cs">
       <DependentUpon>rFacturaCredito.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\rCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\rCliente.Designer.cs">
-      <DependentUpon>rCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\rProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\rProducto.Designer.cs">
-      <DependentUpon>rProducto.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,11 +122,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Registros\rCosto.resx">
-      <DependentUpon>rCosto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rCliente.resx">
-      <DependentUpon>rCliente.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\rCobros.resx">
+      <DependentUpon>rCobros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rRegistrarCliente.resx">
       <DependentUpon>rRegistrarCliente.cs</DependentUpon>
@@ -148,9 +133,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rFacturaCredito.resx">
       <DependentUpon>rFacturaCredito.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rProducto.resx">
-      <DependentUpon>rProducto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

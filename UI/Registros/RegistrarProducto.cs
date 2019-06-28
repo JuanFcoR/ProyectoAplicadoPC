@@ -110,7 +110,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             if (!Validar())
                 return;
             Producto = llenarClase();
-            limpiar();
+            //limpiar();
 
             if (CodigoRegistroNumericUpDown.Value == 0)
             {
@@ -134,17 +134,26 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            SuperErrorProvider.Clear();
             int id;
-            int.TryParse(Convert.ToString(CodigoRegistroNumericUpDown.Value), out id);
+            Productos producto = new Productos();
+            int.TryParse(CodigoRegistroNumericUpDown.Value.ToString(), out id);
             limpiar();
-            if (ProductosBLL.Eliminar(id))
-                MessageBox.Show("Eliminado");
+
+            producto = ProductosBLL.Buscar(id);
+
+            if (producto != null)
+            {
+                MessageBox.Show("Producto Encontrada");
+                LlenarCampos(producto);
+            }
             else
-                SuperErrorProvider.SetError(CodigoRegistroNumericUpDown, "No se puede eliminar un producto que no existe");
+                MessageBox.Show("Producto no encontrada");
         }
 
-        private void CancelarButton_Click(object sender, EventArgs e)
+
+    
+
+    private void CancelarButton_Click(object sender, EventArgs e)
         {
             Close();
         }

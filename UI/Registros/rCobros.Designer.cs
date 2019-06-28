@@ -1,6 +1,6 @@
 ﻿namespace ProyectoAplicadoPC.UI.Registros
 {
-    partial class rCosto
+    partial class rCobros
     {
         /// <summary>
         /// Required designer variable.
@@ -170,7 +170,7 @@
             this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Cancelarbutton.UseVisualStyleBackColor = true;
             // 
-            // Costo
+            // rCosto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +189,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Costo";
-            this.Text = "Costo";
+            this.Name = "rCosto";
+            this.Text = "Cobro";
             ((System.ComponentModel.ISupportInitialize)(this.DeudaActualnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoDelClientenumericUpDown)).EndInit();
