@@ -288,5 +288,11 @@
   <ItemGroup>
     <None Include="Resources\bestbuy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_340_icon-icons.com_61497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_340_icon-icons.com_61497.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
