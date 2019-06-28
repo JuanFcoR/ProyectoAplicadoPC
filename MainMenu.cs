@@ -21,7 +21,7 @@ namespace ProyectoAplicadoPC
 
         private void RegistroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rCliente cliente = new rCliente();
+            rCliente cliente = new rCliente(); 
             cliente.Show();
         }
 

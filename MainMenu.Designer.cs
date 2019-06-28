@@ -35,15 +35,16 @@
             this.Maximixar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.SubMenuClientes = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.ConsultarCliente_button = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.RegistrarCliente_button = new System.Windows.Forms.Button();
             this.SubMenuP_panel = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.ConsultarP_button = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.RegistarP_button = new System.Windows.Forms.Button();
-            this.SubMenuClientes = new System.Windows.Forms.Panel();
-            this.ConsultarCliente_button = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.RegistrarCliente_button = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,15 +53,14 @@
             this.Productos_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Clientes_button = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).BeginInit();
             this.MenuVertical.SuspendLayout();
-            this.SubMenuP_panel.SuspendLayout();
             this.SubMenuClientes.SuspendLayout();
+            this.SubMenuP_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -149,6 +149,71 @@
             this.MenuVertical.Size = new System.Drawing.Size(200, 274);
             this.MenuVertical.TabIndex = 1;
             // 
+            // SubMenuClientes
+            // 
+            this.SubMenuClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubMenuClientes.Controls.Add(this.panel7);
+            this.SubMenuClientes.Controls.Add(this.ConsultarCliente_button);
+            this.SubMenuClientes.Controls.Add(this.panel6);
+            this.SubMenuClientes.Controls.Add(this.RegistrarCliente_button);
+            this.SubMenuClientes.Location = new System.Drawing.Point(44, 34);
+            this.SubMenuClientes.Name = "SubMenuClientes";
+            this.SubMenuClientes.Size = new System.Drawing.Size(159, 86);
+            this.SubMenuClientes.TabIndex = 2;
+            this.SubMenuClientes.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.panel7.Location = new System.Drawing.Point(-3, 41);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(13, 32);
+            this.panel7.TabIndex = 9;
+            // 
+            // ConsultarCliente_button
+            // 
+            this.ConsultarCliente_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ConsultarCliente_button.FlatAppearance.BorderSize = 0;
+            this.ConsultarCliente_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
+            this.ConsultarCliente_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConsultarCliente_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConsultarCliente_button.ForeColor = System.Drawing.Color.White;
+            this.ConsultarCliente_button.Image = global::ProyectoAplicadoPC.Properties.Resources.empleados;
+            this.ConsultarCliente_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ConsultarCliente_button.Location = new System.Drawing.Point(3, 41);
+            this.ConsultarCliente_button.Name = "ConsultarCliente_button";
+            this.ConsultarCliente_button.Size = new System.Drawing.Size(153, 32);
+            this.ConsultarCliente_button.TabIndex = 8;
+            this.ConsultarCliente_button.Text = "     Consultar";
+            this.ConsultarCliente_button.UseVisualStyleBackColor = false;
+            this.ConsultarCliente_button.Click += new System.EventHandler(this.ConsultarCliente_button_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.panel6.Location = new System.Drawing.Point(-3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(13, 32);
+            this.panel6.TabIndex = 5;
+            // 
+            // RegistrarCliente_button
+            // 
+            this.RegistrarCliente_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.RegistrarCliente_button.FlatAppearance.BorderSize = 0;
+            this.RegistrarCliente_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
+            this.RegistrarCliente_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistrarCliente_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrarCliente_button.ForeColor = System.Drawing.Color.White;
+            this.RegistrarCliente_button.Image = global::ProyectoAplicadoPC.Properties.Resources.empleados;
+            this.RegistrarCliente_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RegistrarCliente_button.Location = new System.Drawing.Point(3, 3);
+            this.RegistrarCliente_button.Name = "RegistrarCliente_button";
+            this.RegistrarCliente_button.Size = new System.Drawing.Size(153, 32);
+            this.RegistrarCliente_button.TabIndex = 6;
+            this.RegistrarCliente_button.Text = "   Registrar";
+            this.RegistrarCliente_button.UseVisualStyleBackColor = false;
+            this.RegistrarCliente_button.Click += new System.EventHandler(this.RegistrarCliente_button_Click);
+            // 
             // SubMenuP_panel
             // 
             this.SubMenuP_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -213,63 +278,6 @@
             this.RegistarP_button.Text = "   Registrar";
             this.RegistarP_button.UseVisualStyleBackColor = false;
             this.RegistarP_button.Click += new System.EventHandler(this.RegistarP_button_Click);
-            // 
-            // SubMenuClientes
-            // 
-            this.SubMenuClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuClientes.Controls.Add(this.panel7);
-            this.SubMenuClientes.Controls.Add(this.ConsultarCliente_button);
-            this.SubMenuClientes.Controls.Add(this.panel6);
-            this.SubMenuClientes.Controls.Add(this.RegistrarCliente_button);
-            this.SubMenuClientes.Location = new System.Drawing.Point(44, 34);
-            this.SubMenuClientes.Name = "SubMenuClientes";
-            this.SubMenuClientes.Size = new System.Drawing.Size(159, 86);
-            this.SubMenuClientes.TabIndex = 2;
-            this.SubMenuClientes.Visible = false;
-            // 
-            // ConsultarCliente_button
-            // 
-            this.ConsultarCliente_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ConsultarCliente_button.FlatAppearance.BorderSize = 0;
-            this.ConsultarCliente_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
-            this.ConsultarCliente_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConsultarCliente_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsultarCliente_button.ForeColor = System.Drawing.Color.White;
-            this.ConsultarCliente_button.Image = global::ProyectoAplicadoPC.Properties.Resources.empleados;
-            this.ConsultarCliente_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ConsultarCliente_button.Location = new System.Drawing.Point(3, 41);
-            this.ConsultarCliente_button.Name = "ConsultarCliente_button";
-            this.ConsultarCliente_button.Size = new System.Drawing.Size(153, 32);
-            this.ConsultarCliente_button.TabIndex = 8;
-            this.ConsultarCliente_button.Text = "     Consultar";
-            this.ConsultarCliente_button.UseVisualStyleBackColor = false;
-            this.ConsultarCliente_button.Click += new System.EventHandler(this.ConsultarCliente_button_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.panel6.Location = new System.Drawing.Point(-3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(13, 32);
-            this.panel6.TabIndex = 5;
-            // 
-            // RegistrarCliente_button
-            // 
-            this.RegistrarCliente_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.RegistrarCliente_button.FlatAppearance.BorderSize = 0;
-            this.RegistrarCliente_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
-            this.RegistrarCliente_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistrarCliente_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistrarCliente_button.ForeColor = System.Drawing.Color.White;
-            this.RegistrarCliente_button.Image = global::ProyectoAplicadoPC.Properties.Resources.empleados;
-            this.RegistrarCliente_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegistrarCliente_button.Location = new System.Drawing.Point(3, 3);
-            this.RegistrarCliente_button.Name = "RegistrarCliente_button";
-            this.RegistrarCliente_button.Size = new System.Drawing.Size(153, 32);
-            this.RegistrarCliente_button.TabIndex = 6;
-            this.RegistrarCliente_button.Text = "   Registrar";
-            this.RegistrarCliente_button.UseVisualStyleBackColor = false;
-            this.RegistrarCliente_button.Click += new System.EventHandler(this.RegistrarCliente_button_Click);
             // 
             // panel4
             // 
@@ -374,14 +382,6 @@
             this.Clientes_button.UseVisualStyleBackColor = false;
             this.Clientes_button.Click += new System.EventHandler(this.Clientes_button_Click);
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.panel7.Location = new System.Drawing.Point(-3, 41);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(13, 32);
-            this.panel7.TabIndex = 9;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,8 +400,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).EndInit();
             this.MenuVertical.ResumeLayout(false);
-            this.SubMenuP_panel.ResumeLayout(false);
             this.SubMenuClientes.ResumeLayout(false);
+            this.SubMenuP_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
