@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ProyectoAplicadoPC.UI.Consultas;
+using ProyectoAplicadoPC.UI;
 
 namespace ProyectoAplicadoPC
 {
@@ -21,14 +23,14 @@ namespace ProyectoAplicadoPC
 
         private void RegistroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rCliente cliente = new rCliente(); 
-            cliente.Show();
+            rRegistrarCliente cliente = new rRegistrarCliente(); 
+            cliente.ShowDialog();
         }
 
         private void RegistarProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegistrarProducto producto = new RegistrarProducto();
-            producto.Show();
+            producto.ShowDialog();
         }
 
         private void Cerrar_pictureBox_Click(object sender, EventArgs e)
@@ -83,11 +85,15 @@ namespace ProyectoAplicadoPC
         {
 
             SubMenuClientes.Visible = false;
+            rRegistrarCliente cliente = new rRegistrarCliente();
+            cliente.ShowDialog();
         }
 
         private void ConsultarCliente_button_Click(object sender, EventArgs e)
         {
             SubMenuClientes.Visible = false;
+            cClientes cliente = new cClientes();
+            cliente.ShowDialog();
         }
 
         private void Productos_button_Click(object sender, EventArgs e)
@@ -104,11 +110,16 @@ namespace ProyectoAplicadoPC
 
         private void RegistarP_button_Click(object sender, EventArgs e)
         {
+           
+            RegistrarProducto rp = new RegistrarProducto();
+            rp.ShowDialog();
             SubMenuP_panel.Visible = false;
         }
 
         private void ConsultarP_button_Click(object sender, EventArgs e)
         {
+            cProductos cp = new cProductos();
+            cp.ShowDialog();
             SubMenuP_panel.Visible = false;
         }
     }

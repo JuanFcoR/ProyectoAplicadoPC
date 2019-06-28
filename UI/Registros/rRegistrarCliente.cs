@@ -1,5 +1,6 @@
 ﻿using ProyectoAplicadoPC.BLL;
 using ProyectoAplicadoPC.Entidades;
+using ProyectoAplicadoPC.UI.Consultas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -181,9 +182,12 @@ namespace ProyectoAplicadoPC.UI.Registros
             Close();
         }
 
-        private void BuscarButton_Click(object sender, EventArgs e)
-        {
 
+        private void BuscarButton_Click_1(object sender, EventArgs e)
+        {
+            cClientes cp = new cClientes();
+            this.Hide();
+            cp.ShowDialog();
         }
     }
 }
