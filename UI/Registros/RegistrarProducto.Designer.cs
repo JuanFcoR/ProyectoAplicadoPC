@@ -81,7 +81,7 @@
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GuardarButton.Location = new System.Drawing.Point(147, 447);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(94, 36);
+            this.GuardarButton.Size = new System.Drawing.Size(93, 36);
             this.GuardarButton.TabIndex = 44;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -323,6 +323,7 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(331, 32);
             this.BarraTitulo.TabIndex = 51;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // Restaurar_pictureBox
@@ -443,7 +444,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrarProducto";
-            this.Opacity = 0.85D;
             this.Text = "RegistrarProducto";
             this.Load += new System.EventHandler(this.RegistrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).EndInit();

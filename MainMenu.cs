@@ -122,5 +122,10 @@ namespace ProyectoAplicadoPC
             cp.ShowDialog();
             SubMenuP_panel.Visible = false;
         }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
