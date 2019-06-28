@@ -1,24 +1,24 @@
 ﻿using ProyectoAplicadoPC.DAL;
+using ProyectoAplicadoPC.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using MySql.Data.EntityFramework;
 
 namespace ProyectoAplicadoPC.BLL
 {
-    public class ProductosBLL
+    public class ClientesBLL
     {
-        public static bool Guardar(Productos Producto)
+        public static bool Guardar(Clientes Cliente)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Productos.Add(Producto) != null)
+                if (contexto.Clientes.Add(Cliente)!=null)
                 {
                     contexto.SaveChanges();
                     paso = true;
@@ -36,13 +36,13 @@ namespace ProyectoAplicadoPC.BLL
             return paso;
         }
 
-        public static bool Modificar(Productos Producto)
+        public static bool Modificar(Clientes Cliente)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Entry(Producto).State = EntityState.Modified;
+                contexto.Entry(Cliente).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
                 contexto.Dispose();
             }
@@ -60,8 +60,8 @@ namespace ProyectoAplicadoPC.BLL
             Contexto contexto = new Contexto();
             try
             {
-                Productos Producto = contexto.Productos.Find(id);
-                contexto.Productos.Remove(Producto);
+                Clientes Cliente = contexto.Clientes.Find(id);
+                contexto.Clientes.Remove(Cliente);
                 paso = contexto.SaveChanges() > 0;
                 contexto.Dispose();
             }
@@ -75,13 +75,13 @@ namespace ProyectoAplicadoPC.BLL
             return paso;
         }
 
-        public static Productos Buscar(int id)
+        public static Clientes Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Productos Producto;
+            Clientes Cliente;
             try
             {
-                Producto = contexto.Productos.Find(id);
+                Cliente = contexto.Clientes.Find(id);
                 contexto.Dispose();
             }
 
@@ -91,16 +91,16 @@ namespace ProyectoAplicadoPC.BLL
                 throw;
             }
 
-            return Producto;
+            return Cliente;
         }
 
-        public static List<Productos> GetList(Expression<Func<Productos, bool>> persona)
+        public static List<Clientes> GetList(Expression<Func<Clientes, bool>> persona)
         {
-            List<Productos> Lista = new List<Productos>();
+            List<Clientes> Lista = new List<Clientes>();
             Contexto db = new Contexto();
             try
             {
-                Lista = db.Productos.Where(persona).ToList();
+                Lista = db.Clientes.Where(persona).ToList();
             }
             catch (Exception)
             {
@@ -115,3 +115,4 @@ namespace ProyectoAplicadoPC.BLL
 
     }
 }
+

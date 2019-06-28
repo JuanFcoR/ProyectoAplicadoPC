@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,12 @@ namespace ProyectoAplicadoPC.UI.Registros
         public RegistrarProducto()
         {
             InitializeComponent();
+        }
+
+        public RegistrarProducto(Productos p)
+        {
+            InitializeComponent();
+            LlenarCampos(p);
         }
 
         private void limpiar()
@@ -101,6 +108,8 @@ namespace ProyectoAplicadoPC.UI.Registros
             TasaDeGananciaNumericUpDown.Value = Convert.ToDecimal(Producto.TasaDeGanancia);
         }
 
+        
+
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             Productos Producto;
@@ -134,20 +143,9 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            int id;
-            Productos producto = new Productos();
-            int.TryParse(CodigoRegistroNumericUpDown.Value.ToString(), out id);
-            limpiar();
-
-            producto = ProductosBLL.Buscar(id);
-
-            if (producto != null)
-            {
-                MessageBox.Show("Producto Encontrada");
-                LlenarCampos(producto);
-            }
-            else
-                MessageBox.Show("Producto no encontrada");
+            cProductos cp = new cProductos();
+            this.Hide();
+            cp.ShowDialog();
         }
 
 
@@ -156,6 +154,51 @@ namespace ProyectoAplicadoPC.UI.Registros
     private void CancelarButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void RegistrarProducto_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int lParam);
+
+        private void Minimizar_pictureBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        
+        private void Restaurar_pictureBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            Maximixar_pictureBox.Visible = true;
+            Restaurar_pictureBox.Visible = false;
+        }
+
+        private void Maximixar_pictureBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            Maximixar_pictureBox.Visible = false;
+            Restaurar_pictureBox.Visible = true;
+        }
+
+        private void Cerrar_pictureBox_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void CantidadExistenteNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
