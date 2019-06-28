@@ -68,11 +68,20 @@ namespace ProyectoAplicadoPC
 
         private void Clientes_button_Click(object sender, EventArgs e)
         {
-            SubMenuClientes.Visible = true;
+            if(SubMenuClientes.Visible == true)
+            {
+                SubMenuClientes.Visible = false;
+            }
+            else
+            {
+                SubMenuClientes.Visible = true;
+            }
+            
         }
 
         private void RegistrarCliente_button_Click(object sender, EventArgs e)
         {
+
             SubMenuClientes.Visible = false;
         }
 
@@ -83,7 +92,14 @@ namespace ProyectoAplicadoPC
 
         private void Productos_button_Click(object sender, EventArgs e)
         {
-            SubMenuP_panel.Visible = true;
+            if(SubMenuP_panel.Visible == true)
+            {
+                SubMenuP_panel.Visible = false;
+            }
+            else
+            {
+                SubMenuP_panel.Visible = true;
+            }
         }
 
         private void RegistarP_button_Click(object sender, EventArgs e)
