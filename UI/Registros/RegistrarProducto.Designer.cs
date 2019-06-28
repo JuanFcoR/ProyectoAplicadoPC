@@ -445,7 +445,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrarProducto";
-            this.Opacity = 0.85D;
             this.Text = "RegistrarProducto";
             this.Load += new System.EventHandler(this.RegistrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).EndInit();
