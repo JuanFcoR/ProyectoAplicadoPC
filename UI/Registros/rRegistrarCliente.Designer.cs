@@ -50,7 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.Restaurar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Minimizar_pictureBox = new System.Windows.Forms.PictureBox();
@@ -61,7 +61,7 @@
             this.Cancelarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigonumericUpDown)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).BeginInit();
@@ -261,19 +261,20 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Codigo";
             // 
-            // panel1
+            // BarraTitulo
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.panel1.Controls.Add(this.Restaurar_pictureBox);
-            this.panel1.Controls.Add(this.Minimizar_pictureBox);
-            this.panel1.Controls.Add(this.Maximixar_pictureBox);
-            this.panel1.Controls.Add(this.Cerrar_pictureBox);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(345, 38);
-            this.panel1.TabIndex = 74;
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.BarraTitulo.Controls.Add(this.Restaurar_pictureBox);
+            this.BarraTitulo.Controls.Add(this.Minimizar_pictureBox);
+            this.BarraTitulo.Controls.Add(this.Maximixar_pictureBox);
+            this.BarraTitulo.Controls.Add(this.Cerrar_pictureBox);
+            this.BarraTitulo.Controls.Add(this.label11);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(345, 38);
+            this.BarraTitulo.TabIndex = 74;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // label11
             // 
@@ -390,7 +391,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(345, 455);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Cancelarbutton);
@@ -417,10 +418,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rRegistrarCliente";
             this.Text = "RegistrarCliente";
+
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigonumericUpDown)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.BarraTitulo.ResumeLayout(false);
+            this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).EndInit();
@@ -432,7 +434,7 @@
 
         #endregion
         private System.Windows.Forms.ErrorProvider SuperErrorProvider;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Cancelarbutton;
