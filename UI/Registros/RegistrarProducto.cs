@@ -191,7 +191,7 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void Cerrar_pictureBox_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
 
