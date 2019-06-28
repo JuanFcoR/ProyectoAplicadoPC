@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using ProyectoAplicadoPC.UI;
 
 namespace ProyectoAplicadoPC
 {
@@ -22,7 +21,7 @@ namespace ProyectoAplicadoPC
 
         private void RegistroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rRegistrarCliente cliente = new rRegistrarCliente();
+            rCliente cliente = new rCliente(); 
             cliente.Show();
         }
 
@@ -69,14 +68,21 @@ namespace ProyectoAplicadoPC
 
         private void Clientes_button_Click(object sender, EventArgs e)
         {
-            SubMenuClientes.Visible = true;
+            if(SubMenuClientes.Visible == true)
+            {
+                SubMenuClientes.Visible = false;
+            }
+            else
+            {
+                SubMenuClientes.Visible = true;
+            }
+            
         }
 
         private void RegistrarCliente_button_Click(object sender, EventArgs e)
         {
+
             SubMenuClientes.Visible = false;
-            rRegistrarCliente rc = new rRegistrarCliente();
-            rc.ShowDialog();
         }
 
         private void ConsultarCliente_button_Click(object sender, EventArgs e)
@@ -86,26 +92,24 @@ namespace ProyectoAplicadoPC
 
         private void Productos_button_Click(object sender, EventArgs e)
         {
-            SubMenuP_panel.Visible = true;
+            if(SubMenuP_panel.Visible == true)
+            {
+                SubMenuP_panel.Visible = false;
+            }
+            else
+            {
+                SubMenuP_panel.Visible = true;
+            }
         }
 
         private void RegistarP_button_Click(object sender, EventArgs e)
         {
             SubMenuP_panel.Visible = false;
-            RegistrarProducto rp = new RegistrarProducto();
-            rp.ShowDialog();
         }
 
         private void ConsultarP_button_Click(object sender, EventArgs e)
         {
             SubMenuP_panel.Visible = false;
-            cProductos cp = new cProductos();
-            cp.ShowDialog();
-        }
-
-        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
