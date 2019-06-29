@@ -68,6 +68,7 @@
             this.CerrarButton.TabIndex = 64;
             this.CerrarButton.Text = "Cerrar";
             this.CerrarButton.UseVisualStyleBackColor = true;
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click_1);
             // 
             // NuevoButton
             // 
@@ -82,6 +83,7 @@
             this.NuevoButton.TabIndex = 63;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click_1);
             // 
             // EditarButton
             // 
@@ -96,6 +98,7 @@
             this.EditarButton.TabIndex = 62;
             this.EditarButton.Text = "Editar";
             this.EditarButton.UseVisualStyleBackColor = true;
+            this.EditarButton.Click += new System.EventHandler(this.EditarButton_Click_1);
             // 
             // label4
             // 
@@ -231,9 +234,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(90, 5);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 23);
+            this.label11.Size = new System.Drawing.Size(169, 23);
             this.label11.TabIndex = 50;
-            this.label11.Text = "Productos";
+            this.label11.Text = "Registrar Clientes";
             // 
             // Minimizar_pictureBox
             // 
@@ -290,6 +293,7 @@
             this.ConsultaButton.Text = "Consultar";
             this.ConsultaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultaButton.UseVisualStyleBackColor = true;
+            this.ConsultaButton.Click += new System.EventHandler(this.ConsultaButton_Click_1);
             // 
             // cClientes
             // 

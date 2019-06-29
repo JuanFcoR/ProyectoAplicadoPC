@@ -31,7 +31,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
             ConsultaDataGridView.DataSource = listado;
         }
 
-        private void ConsultaButton_Click(object sender, EventArgs e)
+        private void ConsultaButton_Click_1(object sender, EventArgs e)
         {
             var listado = new List<Clientes>();
 
@@ -78,7 +78,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
             ConsultaDataGridView.DataSource = listado;
         }
 
-        private void EditarButton_Click(object sender, EventArgs e)
+        private void EditarButton_Click_1(object sender, EventArgs e)
         {
             int id;
             Clientes p = new Clientes();
@@ -89,14 +89,14 @@ namespace ProyectoAplicadoPC.UI.Consultas
             rp.ShowDialog();
         }
 
-        private void NuevoButton_Click(object sender, EventArgs e)
+        private void NuevoButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             rRegistrarCliente rc = new rRegistrarCliente();
             rc.ShowDialog();
         }
 
-        private void CerrarButton_Click(object sender, EventArgs e)
+        private void CerrarButton_Click_1(object sender, EventArgs e)
         {
             Close();
         }
@@ -136,5 +136,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        
     }
 }

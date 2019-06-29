@@ -51,11 +51,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.Restaurar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Minimizar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Maximixar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Cancelarbutton = new System.Windows.Forms.Button();
@@ -276,17 +276,6 @@
             this.BarraTitulo.TabIndex = 74;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(66, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(169, 23);
-            this.label11.TabIndex = 75;
-            this.label11.Text = "Registrar Clientes";
-            // 
             // Restaurar_pictureBox
             // 
             this.Restaurar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -341,6 +330,17 @@
             this.Cerrar_pictureBox.TabStop = false;
             this.Cerrar_pictureBox.Click += new System.EventHandler(this.Cerrar_pictureBox_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(66, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(169, 23);
+            this.label11.TabIndex = 75;
+            this.label11.Text = "Registrar Clientes";
+            // 
             // BuscarButton
             // 
             this.BuscarButton.BackColor = System.Drawing.Color.White;
@@ -370,6 +370,7 @@
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click1);
             // 
             // Cancelarbutton
             // 
@@ -418,7 +419,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rRegistrarCliente";
             this.Text = "RegistrarCliente";
-
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigonumericUpDown)).EndInit();
             this.BarraTitulo.ResumeLayout(false);

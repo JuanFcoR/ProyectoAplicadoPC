@@ -146,7 +146,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             LimiteDeCreditomaskedTextBox.Text = c.LimiteDeCredito.ToString()  ;
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)
+        private void Guardarbutton_Click1(object sender, EventArgs e)
         {
             Clientes Cliente;
             bool paso = false;
@@ -224,5 +224,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             Restaurar_pictureBox.Visible = false;
             Maximixar_pictureBox.Visible = true;
         }
+
+        
     }
 }
