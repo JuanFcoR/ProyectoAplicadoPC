@@ -5,15 +5,15 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace ProyectoAplicadoPC.DAL
 {
     public class Contexto:DbContext
     {
-        public DbSet<Productos> Productos { get; set; }
+        public DbSet<Producto> Producto { get; set; }
         public DbSet<Clientes> Clientes { get; set; }
-
-        public Contexto(): base("ConStr")
+        public Contexto(): base(@"Server =localhost;Database= id9920472_pa; Uid = id9920472_root; Pwd=12345")
         {
 
         }

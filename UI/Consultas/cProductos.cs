@@ -22,7 +22,7 @@ namespace ProyectoAplicadoPC.UI
 
         private void CProductos_Load(object sender, EventArgs e)
         {
-            var listado = new List<Productos>();
+            var listado = new List<Producto>();
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
@@ -46,7 +46,8 @@ namespace ProyectoAplicadoPC.UI
                         break;
 
                     case 4:
-                        listado =ProductosBLL.GetList(p => p.Comentario.Contains(CriterioTextBox.Text));
+                        int minimo = Convert.ToInt32(CriterioTextBox.Text);
+                        listado =ProductosBLL.GetList(p => p.Minimo==minimo);
                         break;
 
                     case 5:
@@ -69,7 +70,7 @@ namespace ProyectoAplicadoPC.UI
 
         private void CProductos_Load_2(object sender, EventArgs e)
         {
-            var listado = new List<Productos>();
+            var listado = new List<Producto>();
             listado = ProductosBLL.GetList(p => true);
             ConsultaDataGridView.DataSource = null;
             ConsultaDataGridView.DataSource = listado;
@@ -85,7 +86,7 @@ namespace ProyectoAplicadoPC.UI
         private void EditarButton_Click(object sender, EventArgs e)
         {
             int id;
-            Productos p = new Productos();
+            Producto p = new Producto();
             int.TryParse(ConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(), out id);
             p = ProductosBLL.Buscar(id);
             RegistrarProducto rp = new RegistrarProducto(p);
@@ -127,6 +128,11 @@ namespace ProyectoAplicadoPC.UI
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void ConsultaButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

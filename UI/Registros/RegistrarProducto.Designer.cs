@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.GuardarButton = new System.Windows.Forms.Button();
-            this.ComentarioTextBox = new System.Windows.Forms.TextBox();
+            this.MinimoTextBox = new System.Windows.Forms.TextBox();
             this.DepartamentoTextBox = new System.Windows.Forms.TextBox();
             this.ITBIsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.CodigoRegistroNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoRegistroNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreciocostoNumericUpDown)).BeginInit();
@@ -89,15 +89,15 @@
             this.GuardarButton.UseVisualStyleBackColor = false;
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
-            // ComentarioTextBox
+            // MinimoTextBox
             // 
-            this.ComentarioTextBox.BackColor = System.Drawing.Color.White;
-            this.ComentarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ComentarioTextBox.ForeColor = System.Drawing.Color.Black;
-            this.ComentarioTextBox.Location = new System.Drawing.Point(149, 352);
-            this.ComentarioTextBox.Name = "ComentarioTextBox";
-            this.ComentarioTextBox.Size = new System.Drawing.Size(152, 20);
-            this.ComentarioTextBox.TabIndex = 42;
+            this.MinimoTextBox.BackColor = System.Drawing.Color.White;
+            this.MinimoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MinimoTextBox.ForeColor = System.Drawing.Color.Black;
+            this.MinimoTextBox.Location = new System.Drawing.Point(149, 352);
+            this.MinimoTextBox.Name = "MinimoTextBox";
+            this.MinimoTextBox.Size = new System.Drawing.Size(152, 20);
+            this.MinimoTextBox.TabIndex = 42;
             // 
             // DepartamentoTextBox
             // 
@@ -144,17 +144,6 @@
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(86, 20);
             this.FechaDateTimePicker.TabIndex = 33;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(26, 352);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 17);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Comentario";
             // 
             // label9
             // 
@@ -413,17 +402,29 @@
             this.CancelarButton.UseVisualStyleBackColor = false;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(21, 351);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 17);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Minimo";
+            // 
             // RegistrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(321, 443);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.CancelarButton);
-            this.Controls.Add(this.ComentarioTextBox);
+            this.Controls.Add(this.MinimoTextBox);
             this.Controls.Add(this.CantidadExistenteNumericUpDown);
             this.Controls.Add(this.DepartamentoTextBox);
             this.Controls.Add(this.TasaDeGananciaNumericUpDown);
@@ -433,7 +434,6 @@
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.CodigoRegistroNumericUpDown);
             this.Controls.Add(this.FechaDateTimePicker);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -469,13 +469,12 @@
 
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button CancelarButton;
-        private System.Windows.Forms.TextBox ComentarioTextBox;
+        private System.Windows.Forms.TextBox MinimoTextBox;
         private System.Windows.Forms.TextBox DepartamentoTextBox;
         private System.Windows.Forms.NumericUpDown ITBIsNumericUpDown;
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.NumericUpDown CodigoRegistroNumericUpDown;
         private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -497,5 +496,6 @@
         private System.Windows.Forms.PictureBox Minimizar_pictureBox;
         private System.Windows.Forms.PictureBox Maximixar_pictureBox;
         private System.Windows.Forms.PictureBox Cerrar_pictureBox;
+        private System.Windows.Forms.Label label10;
     }
 }

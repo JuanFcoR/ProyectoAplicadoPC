@@ -151,6 +151,7 @@
             this.ConsultaButton.Text = "Consultar";
             this.ConsultaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultaButton.UseVisualStyleBackColor = true;
+            this.ConsultaButton.Click += new System.EventHandler(this.ConsultaButton_Click);
             // 
             // CriterioTextBox
             // 

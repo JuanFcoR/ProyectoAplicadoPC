@@ -19,7 +19,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             InitializeComponent();
         }
 
-        public RegistrarProducto(Productos p)
+        public RegistrarProducto(Producto p)
         {
             InitializeComponent();
             LlenarCampos(p);
@@ -35,32 +35,32 @@ namespace ProyectoAplicadoPC.UI.Registros
             TasaDeGananciaNumericUpDown.Value = 0;
             DepartamentoTextBox.Text = String.Empty;
             CantidadExistenteNumericUpDown.Value = 0;
-            ComentarioTextBox.Text = String.Empty;
+            MinimoTextBox.Text = String.Empty;
             FechaDateTimePicker.Value = DateTime.Now;
             SuperErrorProvider.Clear();
         }
-        private Productos llenarClase()
+        private Producto llenarClase()
         {
-            Productos Producto = new Productos();
-            Producto.CodigoProducto = Convert.ToInt32(CodigoRegistroNumericUpDown.Value);
-            Producto.Descripcion = DescripcionTextBox.Text.ToString();
-            Producto.CantidadExistente = Convert.ToInt32(CantidadExistenteNumericUpDown.Value);
-            Producto.Preciocosto = Convert.ToSingle(PreciocostoNumericUpDown.Value);
-            Producto.Departamento = DepartamentoTextBox.Text;
-            Producto.Comentario = ComentarioTextBox.Text;
-            Producto.FechaRegistro = FechaDateTimePicker.Value;
-            Producto.PrecioVenta = Convert.ToSingle(PrecioVentaNumericUpDown.Value);
-            Producto.TasaDeGanancia = Convert.ToSingle(TasaDeGananciaNumericUpDown.Value);
-            Producto.ITBIs = Convert.ToSingle(ITBIsNumericUpDown.Value);
+            Producto Pro = new Producto();
+            Pro.CodigoProducto = Convert.ToInt32(CodigoRegistroNumericUpDown.Value);
+            Pro.Descripcion = DescripcionTextBox.Text.ToString();
+            Pro.CantidadExistente = Convert.ToInt32(CantidadExistenteNumericUpDown.Value);
+            Pro.PrecioCosto = Convert.ToSingle(PreciocostoNumericUpDown.Value);
+            Pro.Departamento = DepartamentoTextBox.Text;
+            Pro.Minimo = Convert.ToInt32(MinimoTextBox.Text);
+            Pro.FechaRegistro = FechaDateTimePicker.Value;
+            Pro.PrecioVenta = Convert.ToSingle(PrecioVentaNumericUpDown.Value);
+            Pro.TasaDeGanancia = Convert.ToSingle(TasaDeGananciaNumericUpDown.Value);
+            Pro.ITBIS = Convert.ToSingle(ITBIsNumericUpDown.Value);
 
 
-            return Producto;
+            return Pro;
         }
 
         private bool ExisteEnLaBasedeDatos()
         {
-            Productos Producto = ProductosBLL.Buscar((int)CodigoRegistroNumericUpDown.Value);
-            return (Producto != null);
+            Producto Pro = ProductosBLL.Buscar((int)CodigoRegistroNumericUpDown.Value);
+            return (Pro != null);
         }
 
         private bool Validar()
@@ -82,10 +82,10 @@ namespace ProyectoAplicadoPC.UI.Registros
                     paso = false;
                 }
 
-                if (String.IsNullOrWhiteSpace(ComentarioTextBox.Text))
+                if (String.IsNullOrWhiteSpace(MinimoTextBox.Text))
                 {
-                    SuperErrorProvider.SetError(ComentarioTextBox, "Este campo no debe estar vacio");
-                    ComentarioTextBox.Focus();
+                    SuperErrorProvider.SetError(MinimoTextBox, "Este campo no debe estar vacio");
+                    MinimoTextBox.Focus();
                     paso = false;
                 }
 
@@ -94,36 +94,36 @@ namespace ProyectoAplicadoPC.UI.Registros
             return paso;
         }
 
-        private void LlenarCampos(Productos Producto)
+        private void LlenarCampos(Producto Pro)
         {
-            FechaDateTimePicker.Value = Producto.FechaRegistro;
-            CodigoRegistroNumericUpDown.Value = Producto.CodigoProducto;
-            DescripcionTextBox.Text = Producto.Descripcion;
-            CantidadExistenteNumericUpDown.Value = Producto.CantidadExistente;
-            PreciocostoNumericUpDown.Value = Convert.ToDecimal(Producto.Preciocosto);
-            PrecioVentaNumericUpDown.Value = Convert.ToDecimal(Producto.PrecioVenta);
+            FechaDateTimePicker.Value = Pro.FechaRegistro;
+            CodigoRegistroNumericUpDown.Value = Pro.CodigoProducto;
+            DescripcionTextBox.Text = Pro.Descripcion;
+            CantidadExistenteNumericUpDown.Value = Pro.CantidadExistente;
+            PreciocostoNumericUpDown.Value = Convert.ToDecimal(Pro.PrecioCosto);
+            PrecioVentaNumericUpDown.Value = Convert.ToDecimal(Pro.PrecioVenta);
             ITBIsNumericUpDown.Value = 0;
-            DepartamentoTextBox.Text = Producto.Departamento;
-            ComentarioTextBox.Text = Producto.Comentario;
-            TasaDeGananciaNumericUpDown.Value = Convert.ToDecimal(Producto.TasaDeGanancia);
+            DepartamentoTextBox.Text = Pro.Departamento;
+            MinimoTextBox.Text = Pro.Minimo.ToString();
+            TasaDeGananciaNumericUpDown.Value = Convert.ToDecimal(Pro.TasaDeGanancia);
         }
 
         
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Productos Producto;
+            Producto Pro;
             bool paso = false;
 
 
             if (!Validar())
                 return;
-            Producto = llenarClase();
+            Pro = llenarClase();
             //limpiar();
 
             if (CodigoRegistroNumericUpDown.Value == 0)
             {
-                paso = ProductosBLL.Guardar(Producto);
+                paso = ProductosBLL.Guardar(Pro);
             }
             else
             {
@@ -132,7 +132,7 @@ namespace ProyectoAplicadoPC.UI.Registros
                     MessageBox.Show("No se puede modificar un producto que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = ProductosBLL.Modificar(Producto);
+                paso = ProductosBLL.Modificar(Pro);
             }
             if (paso)
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);

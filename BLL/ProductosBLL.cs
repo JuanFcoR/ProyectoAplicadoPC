@@ -12,13 +12,13 @@ namespace ProyectoAplicadoPC.BLL
 {
     public class ProductosBLL
     {
-        public static bool Guardar(Productos Producto)
+        public static bool Guardar(Producto Pro)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Productos.Add(Producto) != null)
+                if (contexto.Producto.Add(Pro) != null)
                 {
                     contexto.SaveChanges();
                     paso = true;
@@ -36,13 +36,13 @@ namespace ProyectoAplicadoPC.BLL
             return paso;
         }
 
-        public static bool Modificar(Productos Producto)
+        public static bool Modificar(Producto Pro)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Entry(Producto).State = EntityState.Modified;
+                contexto.Entry(Pro).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
                 contexto.Dispose();
             }
@@ -60,8 +60,8 @@ namespace ProyectoAplicadoPC.BLL
             Contexto contexto = new Contexto();
             try
             {
-                Productos Producto = contexto.Productos.Find(id);
-                contexto.Productos.Remove(Producto);
+                Producto Pro = contexto.Producto.Find(id);
+                contexto.Producto.Remove(Pro);
                 paso = contexto.SaveChanges() > 0;
                 contexto.Dispose();
             }
@@ -75,13 +75,13 @@ namespace ProyectoAplicadoPC.BLL
             return paso;
         }
 
-        public static Productos Buscar(int id)
+        public static Producto Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Productos Producto;
+            Producto Pro;
             try
             {
-                Producto = contexto.Productos.Find(id);
+                Pro = contexto.Producto.Find(id);
                 contexto.Dispose();
             }
 
@@ -91,16 +91,16 @@ namespace ProyectoAplicadoPC.BLL
                 throw;
             }
 
-            return Producto;
+            return Pro;
         }
 
-        public static List<Productos> GetList(Expression<Func<Productos, bool>> persona)
+        public static List<Producto> GetList(Expression<Func<Producto, bool>> persona)
         {
-            List<Productos> Lista = new List<Productos>();
+            List<Producto> Lista = new List<Producto>();
             Contexto db = new Contexto();
             try
             {
-                Lista = db.Productos.Where(persona).ToList();
+                Lista = db.Producto.Where(persona).ToList();
             }
             catch (Exception)
             {
