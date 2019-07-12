@@ -116,16 +116,40 @@ namespace ProyectoAplicadoPC
             SubMenuP_panel.Visible = false;
         }
 
-        private void ConsultarP_button_Click(object sender, EventArgs e)
-        {
-            cProductos cp = new cProductos();
-            cp.ShowDialog();
-            SubMenuP_panel.Visible = false;
-        }
+        
 
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegistrarVenta_Button_Click(object sender, EventArgs e)
+        {
+            rVentas rv = new rVentas();
+            rv.ShowDialog();
+        }
+
+        private void ConsultarVenta_button_Click(object sender, EventArgs e)
+        {
+            cVentas cv = new cVentas();
+            cv.ShowDialog();
+        }
+
+        private void Ventas_button_Click(object sender, EventArgs e)
+        {
+            if (SubMenuV_panel.Visible == true)
+            {
+                SubMenuV_panel.Visible = false;
+            }
+            else
+            {
+                SubMenuV_panel.Visible = true;
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.SubMenuClientes = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -41,12 +42,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SubMenuV_panel = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ConsultarVenta_button = new System.Windows.Forms.Button();
+            this.RegistrarVenta_Button = new System.Windows.Forms.Button();
             this.ConsultarCliente_button = new System.Windows.Forms.Button();
             this.RegistrarCliente_button = new System.Windows.Forms.Button();
             this.ConsultarP_button = new System.Windows.Forms.Button();
             this.RegistarP_button = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Ventas_button = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Productos_button = new System.Windows.Forms.Button();
             this.Clientes_button = new System.Windows.Forms.Button();
@@ -54,11 +60,11 @@
             this.Minimizar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Maximixar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.SubMenuClientes.SuspendLayout();
             this.SubMenuP_panel.SuspendLayout();
+            this.SubMenuV_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
@@ -82,13 +88,25 @@
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(25, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 23);
+            this.label11.TabIndex = 51;
+            this.label11.Text = "Menu Principal";
+            // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.MenuVertical.Controls.Add(this.SubMenuV_panel);
             this.MenuVertical.Controls.Add(this.SubMenuClientes);
             this.MenuVertical.Controls.Add(this.SubMenuP_panel);
             this.MenuVertical.Controls.Add(this.panel4);
-            this.MenuVertical.Controls.Add(this.button4);
+            this.MenuVertical.Controls.Add(this.Ventas_button);
             this.MenuVertical.Controls.Add(this.panel3);
             this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.panel2);
@@ -191,6 +209,35 @@
             this.panel1.Size = new System.Drawing.Size(5, 32);
             this.panel1.TabIndex = 1;
             // 
+            // SubMenuV_panel
+            // 
+            this.SubMenuV_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubMenuV_panel.Controls.Add(this.panel8);
+            this.SubMenuV_panel.Controls.Add(this.ConsultarVenta_button);
+            this.SubMenuV_panel.Controls.Add(this.panel9);
+            this.SubMenuV_panel.Controls.Add(this.RegistrarVenta_Button);
+            this.SubMenuV_panel.Location = new System.Drawing.Point(44, 176);
+            this.SubMenuV_panel.Name = "SubMenuV_panel";
+            this.SubMenuV_panel.Size = new System.Drawing.Size(159, 86);
+            this.SubMenuV_panel.TabIndex = 9;
+            this.SubMenuV_panel.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.panel8.Location = new System.Drawing.Point(-3, 41);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(13, 32);
+            this.panel8.TabIndex = 9;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.panel9.Location = new System.Drawing.Point(-3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(13, 32);
+            this.panel9.TabIndex = 5;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoAplicadoPC.Properties.Resources.bestbuy;
@@ -200,6 +247,44 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // ConsultarVenta_button
+            // 
+            this.ConsultarVenta_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ConsultarVenta_button.FlatAppearance.BorderSize = 0;
+            this.ConsultarVenta_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.ConsultarVenta_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConsultarVenta_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConsultarVenta_button.ForeColor = System.Drawing.Color.White;
+            this.ConsultarVenta_button.Image = global::ProyectoAplicadoPC.Properties.Resources.venta1;
+            this.ConsultarVenta_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ConsultarVenta_button.Location = new System.Drawing.Point(3, 41);
+            this.ConsultarVenta_button.Name = "ConsultarVenta_button";
+            this.ConsultarVenta_button.Size = new System.Drawing.Size(153, 32);
+            this.ConsultarVenta_button.TabIndex = 8;
+            this.ConsultarVenta_button.Text = "Consultar ";
+            this.ConsultarVenta_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ConsultarVenta_button.UseVisualStyleBackColor = false;
+            this.ConsultarVenta_button.Click += new System.EventHandler(this.ConsultarVenta_button_Click);
+            // 
+            // RegistrarVenta_Button
+            // 
+            this.RegistrarVenta_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.RegistrarVenta_Button.FlatAppearance.BorderSize = 0;
+            this.RegistrarVenta_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.RegistrarVenta_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistrarVenta_Button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrarVenta_Button.ForeColor = System.Drawing.Color.White;
+            this.RegistrarVenta_Button.Image = global::ProyectoAplicadoPC.Properties.Resources.venta1;
+            this.RegistrarVenta_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RegistrarVenta_Button.Location = new System.Drawing.Point(3, 3);
+            this.RegistrarVenta_Button.Name = "RegistrarVenta_Button";
+            this.RegistrarVenta_Button.Size = new System.Drawing.Size(153, 32);
+            this.RegistrarVenta_Button.TabIndex = 6;
+            this.RegistrarVenta_Button.Text = "   Registrar Venta";
+            this.RegistrarVenta_Button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegistrarVenta_Button.UseVisualStyleBackColor = false;
+            this.RegistrarVenta_Button.Click += new System.EventHandler(this.RegistrarVenta_Button_Click);
             // 
             // ConsultarCliente_button
             // 
@@ -253,7 +338,7 @@
             this.ConsultarP_button.TabIndex = 8;
             this.ConsultarP_button.Text = "     Consultar";
             this.ConsultarP_button.UseVisualStyleBackColor = false;
-            this.ConsultarP_button.Click += new System.EventHandler(this.ConsultarP_button_Click);
+            this.ConsultarP_button.Click += new System.EventHandler(this.ConsultarCliente_button_Click);
             // 
             // RegistarP_button
             // 
@@ -273,23 +358,24 @@
             this.RegistarP_button.UseVisualStyleBackColor = false;
             this.RegistarP_button.Click += new System.EventHandler(this.RegistarP_button_Click);
             // 
-            // button4
+            // Ventas_button
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::ProyectoAplicadoPC.Properties.Resources.venta;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 151);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 32);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Punto De Venta";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.Ventas_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.Ventas_button.FlatAppearance.BorderSize = 0;
+            this.Ventas_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.Ventas_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ventas_button.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ventas_button.ForeColor = System.Drawing.Color.White;
+            this.Ventas_button.Image = global::ProyectoAplicadoPC.Properties.Resources.venta;
+            this.Ventas_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Ventas_button.Location = new System.Drawing.Point(3, 151);
+            this.Ventas_button.Name = "Ventas_button";
+            this.Ventas_button.Size = new System.Drawing.Size(194, 32);
+            this.Ventas_button.TabIndex = 6;
+            this.Ventas_button.Text = "Punto De Venta";
+            this.Ventas_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Ventas_button.UseVisualStyleBackColor = false;
+            this.Ventas_button.Click += new System.EventHandler(this.Ventas_button_Click);
             // 
             // button3
             // 
@@ -397,17 +483,6 @@
             this.Cerrar_pictureBox.TabStop = false;
             this.Cerrar_pictureBox.Click += new System.EventHandler(this.Cerrar_pictureBox_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(25, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 23);
-            this.label11.TabIndex = 51;
-            this.label11.Text = "Menu Principal";
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,6 +501,7 @@
             this.MenuVertical.ResumeLayout(false);
             this.SubMenuClientes.ResumeLayout(false);
             this.SubMenuP_panel.ResumeLayout(false);
+            this.SubMenuV_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).EndInit();
@@ -446,7 +522,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Clientes_button;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Ventas_button;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
@@ -463,6 +539,11 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel SubMenuV_panel;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button ConsultarVenta_button;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button RegistrarVenta_Button;
     }
 }
 

@@ -7,12 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using MySql.Data.EntityFramework;
+using ProyectoAplicadoPC.Entidades;
+using System.Globalization;
 
 namespace ProyectoAplicadoPC.BLL
 {
     public class ProductosBLL
     {
-        public static bool Guardar(Producto Pro)
+        public static bool Guardar(Productos Pro)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
@@ -36,7 +38,7 @@ namespace ProyectoAplicadoPC.BLL
             return paso;
         }
 
-        public static bool Modificar(Producto Pro)
+        public static bool Modificar(Productos Pro)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
@@ -60,7 +62,7 @@ namespace ProyectoAplicadoPC.BLL
             Contexto contexto = new Contexto();
             try
             {
-                Producto Pro = contexto.Producto.Find(id);
+                Productos Pro = contexto.Producto.Find(id);
                 contexto.Producto.Remove(Pro);
                 paso = contexto.SaveChanges() > 0;
                 contexto.Dispose();
@@ -75,10 +77,10 @@ namespace ProyectoAplicadoPC.BLL
             return paso;
         }
 
-        public static Producto Buscar(int id)
+        public static Productos Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Producto Pro;
+            Productos Pro;
             try
             {
                 Pro = contexto.Producto.Find(id);
@@ -94,13 +96,16 @@ namespace ProyectoAplicadoPC.BLL
             return Pro;
         }
 
-        public static List<Producto> GetList(Expression<Func<Producto, bool>> persona)
+        public static List<Productos> GetList(Expression<Func<Productos, bool>> expression)
         {
-            List<Producto> Lista = new List<Producto>();
+            
+            List<Productos> Lista2 = new List<Productos>();
             Contexto db = new Contexto();
             try
             {
-                Lista = db.Producto.Where(persona).ToList();
+                var Lista = db.Producto.Where(expression).ToList();
+                
+                Lista2 = Lista;
             }
             catch (Exception)
             {
@@ -110,7 +115,7 @@ namespace ProyectoAplicadoPC.BLL
             {
                 db.Dispose();
             }
-            return Lista;
+            return Lista2;
         }
 
     }

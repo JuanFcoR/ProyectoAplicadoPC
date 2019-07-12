@@ -4,14 +4,15 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
-namespace ProyectoAplicadoPC
+namespace ProyectoAplicadoPC.Entidades
 {
-    public class Producto
+    public class Productos
     {
         [Key]
         public int CodigoProducto { get; set; }
-        public DateTime FechaRegistro { get; set; }
+        public string FechaRegistro { get; set; }
         public string Descripcion { get; set; }
         public float PrecioCosto { get; set; }
         public float TasaDeGanancia { get; set; }
@@ -25,10 +26,10 @@ namespace ProyectoAplicadoPC
   
         
 
-        public Producto()
+        public Productos()
         {
             CodigoProducto = 0;
-            FechaRegistro = DateTime.Now;
+            FechaRegistro =DateTime.Now.ToString("dd//MM//yyyy");
             Descripcion = string.Empty;
             PrecioCosto = 0;
             PrecioVenta = 0;

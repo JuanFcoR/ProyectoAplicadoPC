@@ -1,14 +1,11 @@
 ﻿using ProyectoAplicadoPC.BLL;
+using ProyectoAplicadoPC.Entidades;
 using ProyectoAplicadoPC.UI.Registros;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoAplicadoPC.UI
@@ -20,9 +17,9 @@ namespace ProyectoAplicadoPC.UI
             InitializeComponent();
         }
 
-        private void CProductos_Load(object sender, EventArgs e)
+        private void CProductos_Load_2(object sender, EventArgs e)
         {
-            var listado = new List<Producto>();
+            var listado = new List<Productos>();
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
@@ -52,11 +49,11 @@ namespace ProyectoAplicadoPC.UI
 
                     case 5:
                         listado = ProductosBLL.GetList(p => true);
-                        listado = listado.Where(c => c.FechaRegistro.Date >= DesdeDateTimePicker.Value.Date && c.FechaRegistro.Date <= HastaDateTimePicker.Value.Date).ToList();
+                        listado = listado.Where(c => DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
                         break;
 
                 }
-                listado = listado.Where(c => c.FechaRegistro.Date >= DesdeDateTimePicker.Value.Date && c.FechaRegistro.Date <= HastaDateTimePicker.Value.Date).ToList();
+                listado = listado.Where(c => DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
 
             }
             else
@@ -68,9 +65,9 @@ namespace ProyectoAplicadoPC.UI
             ConsultaDataGridView.DataSource = listado;
         }
 
-        private void CProductos_Load_2(object sender, EventArgs e)
+        private void CProductos_Load(object sender, EventArgs e)
         {
-            var listado = new List<Producto>();
+            var listado = new List<Productos>();
             listado = ProductosBLL.GetList(p => true);
             ConsultaDataGridView.DataSource = null;
             ConsultaDataGridView.DataSource = listado;
@@ -83,10 +80,10 @@ namespace ProyectoAplicadoPC.UI
             rp.ShowDialog();
         }
 
-        private void EditarButton_Click(object sender, EventArgs e)
+        private void EditarButton_Click_1(object sender, EventArgs e)
         {
             int id;
-            Producto p = new Producto();
+            Productos p = new Productos();
             int.TryParse(ConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(), out id);
             p = ProductosBLL.Buscar(id);
             RegistrarProducto rp = new RegistrarProducto(p);
@@ -134,6 +131,8 @@ namespace ProyectoAplicadoPC.UI
         {
 
         }
+
+        
     }
 
     

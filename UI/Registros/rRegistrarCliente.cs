@@ -44,14 +44,14 @@ namespace ProyectoAplicadoPC.UI.Registros
         private Clientes llenarClase()
         {
             Clientes c = new Clientes();
-            c.Codigo=Convert.ToInt32(CodigonumericUpDown.Value);
-            c.Fecha = FechadateTimePicker.Value;
+            c.CodigoCliente=Convert.ToInt32(CodigonumericUpDown.Value);
+            c.Fecha = FechadateTimePicker.Value.ToString("dd//MM//yyyy");
             c.Nombre = NombretextBox.Text;
-            c.Apellido = ApellidotextBox.Text;
+            c.Apellidos = ApellidotextBox.Text;
             c.Cedula=CedulamaskedTextBox.Text;
             c.Telefono=TelefonomaskedTextBox.Text;
             c.Celular=CelularmaskedTextBox.Text;
-            c.TelefonoDeReferencia=TelefonoDeReferenciamaskedTextBox.Text;
+            c.TelefonoReferencia=TelefonoDeReferenciamaskedTextBox.Text;
             c.Direccion=DirecciontextBox.Text;
             c.LimiteDeCredito=Convert.ToSingle(LimiteDeCreditomaskedTextBox.Text);
 
@@ -134,14 +134,14 @@ namespace ProyectoAplicadoPC.UI.Registros
         private void LlenarCampos(Clientes c)
         {
 
-            CodigonumericUpDown.Value=c.Codigo;
-            FechadateTimePicker.Value = c.Fecha;
+            CodigonumericUpDown.Value=c.CodigoCliente;
+            FechadateTimePicker.Value = DateTime.Parse(c.Fecha);
             NombretextBox.Text = c.Nombre;
-            ApellidotextBox.Text = c.Apellido;
+            ApellidotextBox.Text = c.Apellidos;
             CedulamaskedTextBox.Text = c.Cedula;
             TelefonomaskedTextBox.Text = c.Telefono;
             CelularmaskedTextBox.Text= c.Celular;
-            TelefonoDeReferenciamaskedTextBox.Text = c.TelefonoDeReferencia;
+            TelefonoDeReferenciamaskedTextBox.Text = c.TelefonoReferencia;
             DirecciontextBox.Text = c.Direccion;
             LimiteDeCreditomaskedTextBox.Text = c.LimiteDeCredito.ToString()  ;
         }

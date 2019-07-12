@@ -1,4 +1,5 @@
 ﻿using ProyectoAplicadoPC.BLL;
+using ProyectoAplicadoPC.DAL;
 using ProyectoAplicadoPC.Entidades;
 using ProyectoAplicadoPC.UI.Registros;
 using System;
@@ -34,6 +35,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
         private void ConsultaButton_Click_1(object sender, EventArgs e)
         {
             var listado = new List<Clientes>();
+            Contexto c = new Contexto();
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
@@ -45,7 +47,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
 
                     case 1:
                         int id = Convert.ToInt32(CriterioTextBox.Text);
-                        listado = ClientesBLL.GetList(p => p.Codigo == id);
+                        listado = ClientesBLL.GetList(p => p.CodigoCliente == id);
                         break;
 
                     case 2:
@@ -53,7 +55,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
                         break;
 
                     case 3:
-                        listado = ClientesBLL.GetList(p => p.Apellido.Contains(CriterioTextBox.Text));
+                        listado = ClientesBLL.GetList(p => p.Apellidos.Contains(CriterioTextBox.Text));
                         break;
 
                     case 4:
@@ -61,12 +63,13 @@ namespace ProyectoAplicadoPC.UI.Consultas
                         break;
 
                     case 5:
+                        
                         listado = ClientesBLL.GetList(p => true);
-                        listado = listado.Where(c => c.Fecha.Date >= DesdeDateTimePicker.Value.Date && c.Fecha.Date <= HastaDateTimePicker.Value.Date).ToList();
+                        listado = listado.Where(p => DateTime.Parse(p.Fecha) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(p.Fecha) <= HastaDateTimePicker.Value.Date).ToList();
                         break;
 
                 }
-                listado = listado.Where(c => c.Fecha.Date >= DesdeDateTimePicker.Value.Date && c.Fecha.Date <= HastaDateTimePicker.Value.Date).ToList();
+                listado = listado.Where(p => DateTime.Parse(p.Fecha) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(p.Fecha) <= HastaDateTimePicker.Value.Date).ToList();
 
             }
             else

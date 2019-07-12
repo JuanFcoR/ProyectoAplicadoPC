@@ -1,4 +1,5 @@
 ﻿using ProyectoAplicadoPC.BLL;
+using ProyectoAplicadoPC.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             InitializeComponent();
         }
 
-        public RegistrarProducto(Producto p)
+        public RegistrarProducto(Productos p)
         {
             InitializeComponent();
             LlenarCampos(p);
@@ -39,16 +40,16 @@ namespace ProyectoAplicadoPC.UI.Registros
             FechaDateTimePicker.Value = DateTime.Now;
             SuperErrorProvider.Clear();
         }
-        private Producto llenarClase()
+        private Productos llenarClase()
         {
-            Producto Pro = new Producto();
+            Productos Pro = new Productos();
             Pro.CodigoProducto = Convert.ToInt32(CodigoRegistroNumericUpDown.Value);
             Pro.Descripcion = DescripcionTextBox.Text.ToString();
             Pro.CantidadExistente = Convert.ToInt32(CantidadExistenteNumericUpDown.Value);
             Pro.PrecioCosto = Convert.ToSingle(PreciocostoNumericUpDown.Value);
             Pro.Departamento = DepartamentoTextBox.Text;
             Pro.Minimo = Convert.ToInt32(MinimoTextBox.Text);
-            Pro.FechaRegistro = FechaDateTimePicker.Value;
+            Pro.FechaRegistro = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
             Pro.PrecioVenta = Convert.ToSingle(PrecioVentaNumericUpDown.Value);
             Pro.TasaDeGanancia = Convert.ToSingle(TasaDeGananciaNumericUpDown.Value);
             Pro.ITBIS = Convert.ToSingle(ITBIsNumericUpDown.Value);
@@ -59,7 +60,7 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private bool ExisteEnLaBasedeDatos()
         {
-            Producto Pro = ProductosBLL.Buscar((int)CodigoRegistroNumericUpDown.Value);
+            Productos Pro = ProductosBLL.Buscar((int)CodigoRegistroNumericUpDown.Value);
             return (Pro != null);
         }
 
@@ -94,9 +95,9 @@ namespace ProyectoAplicadoPC.UI.Registros
             return paso;
         }
 
-        private void LlenarCampos(Producto Pro)
+        private void LlenarCampos(Productos Pro)
         {
-            FechaDateTimePicker.Value = Pro.FechaRegistro;
+            FechaDateTimePicker.Value = DateTime.Parse(Pro.FechaRegistro);
             CodigoRegistroNumericUpDown.Value = Pro.CodigoProducto;
             DescripcionTextBox.Text = Pro.Descripcion;
             CantidadExistenteNumericUpDown.Value = Pro.CantidadExistente;
@@ -112,7 +113,7 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Producto Pro;
+            Productos Pro;
             bool paso = false;
 
 
