@@ -39,37 +39,50 @@ namespace ProyectoAplicadoPC.BLL
         public static bool Modificar(Ventas Venta)
         {
             bool paso = false;
-            Contexto contexto = new Contexto();
+            Contexto db = new Contexto();
             try
             {
-                contexto.Entry(Venta).State = EntityState.Modified;
-                paso = contexto.SaveChanges() > 0;
-                contexto.Dispose();
+                var Anterior = db.Ventas.Find(Venta.NumeroFactura);
+                foreach (var item in Anterior.Articulos)
+                {
+                    if (!Venta.Articulos.Exists(d => d.ID == item.ID))
+                        db.Entry(Venta).State = EntityState.Deleted;
+                }
+
+                db.Entry(Venta).State = EntityState.Modified;
+                paso = db.SaveChanges() > 0;
+
             }
             catch (Exception)
             {
 
                 throw;
             }
+            finally
+            {
+                db.Dispose();
+            }
+
             return paso;
         }
 
         public static bool Eliminar(int id)
         {
             bool paso = false;
-            Contexto contexto = new Contexto();
+            Contexto db = new Contexto();
             try
             {
-                Ventas Venta = contexto.Ventas.Find(id);
-                contexto.Ventas.Remove(Venta);
-                paso = contexto.SaveChanges() > 0;
-                contexto.Dispose();
+                var eliminar = db.Ventas.Find(id);
+                db.Entry(eliminar).State = EntityState.Deleted;
+                paso = (db.SaveChanges() > 0);
             }
-
             catch (Exception)
             {
-
                 throw;
+            }
+            finally
+            {
+                db.Dispose();
             }
 
             return paso;
@@ -77,18 +90,20 @@ namespace ProyectoAplicadoPC.BLL
 
         public static Ventas Buscar(int id)
         {
-            Contexto contexto = new Contexto();
+            Contexto db = new Contexto();
             Ventas Venta;
             try
             {
-                Venta = contexto.Ventas.Find(id);
-                contexto.Dispose();
+                Venta = db.Ventas.Find(id);
+                Venta.Articulos.Count();
             }
-
             catch (Exception)
             {
-
                 throw;
+            }
+            finally
+            {
+                db.Dispose();
             }
 
             return Venta;
