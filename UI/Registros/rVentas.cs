@@ -102,7 +102,7 @@ namespace ProyectoAplicadoPC.UI.Registros
 
             else
                 MessageBox.Show("No se pudo guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        } 
 
         private void CancelarButton_Click(object sender, EventArgs e)
         {
