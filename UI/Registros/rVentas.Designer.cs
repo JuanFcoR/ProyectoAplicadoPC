@@ -293,6 +293,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rVentas";
             this.Text = "rVentas";
+            this.Load += new System.EventHandler(this.RVentas_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();

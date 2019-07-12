@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.Restaurar_pictureBox = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -47,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
@@ -81,6 +85,7 @@
             this.Restaurar_pictureBox.TabIndex = 9;
             this.Restaurar_pictureBox.TabStop = false;
             this.Restaurar_pictureBox.Visible = false;
+            this.Restaurar_pictureBox.Click += new System.EventHandler(this.Restaurar_pictureBox_Click);
             // 
             // label11
             // 
@@ -104,6 +109,7 @@
             this.Minimizar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Minimizar_pictureBox.TabIndex = 8;
             this.Minimizar_pictureBox.TabStop = false;
+            this.Minimizar_pictureBox.Click += new System.EventHandler(this.Minimizar_pictureBox_Click);
             // 
             // Maximixar_pictureBox
             // 
@@ -116,6 +122,7 @@
             this.Maximixar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Maximixar_pictureBox.TabIndex = 7;
             this.Maximixar_pictureBox.TabStop = false;
+            this.Maximixar_pictureBox.Click += new System.EventHandler(this.Maximixar_pictureBox_Click);
             // 
             // Cerrar_pictureBox
             // 
@@ -129,6 +136,7 @@
             this.Cerrar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Cerrar_pictureBox.TabIndex = 6;
             this.Cerrar_pictureBox.TabStop = false;
+            this.Cerrar_pictureBox.Click += new System.EventHandler(this.Cerrar_pictureBox_Click);
             // 
             // CerrarButton
             // 
@@ -226,6 +234,7 @@
             this.ConsultaButton.Text = "Consultar";
             this.ConsultaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultaButton.UseVisualStyleBackColor = true;
+            this.ConsultaButton.Click += new System.EventHandler(this.ConsultaButton_Click);
             // 
             // CriterioTextBox
             // 
@@ -278,13 +287,47 @@
             this.ConsultaDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsultaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ConsultaDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.ConsultaDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConsultaDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ConsultaDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.ConsultaDataGridView.EnableHeadersVisualStyles = false;
+            this.ConsultaDataGridView.GridColor = System.Drawing.Color.Black;
             this.ConsultaDataGridView.Location = new System.Drawing.Point(11, 93);
             this.ConsultaDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultaDataGridView.Name = "ConsultaDataGridView";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ConsultaDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.ConsultaDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.ConsultaDataGridView.RowTemplate.Height = 24;
             this.ConsultaDataGridView.Size = new System.Drawing.Size(588, 293);
             this.ConsultaDataGridView.TabIndex = 66;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
             // 
             // cVentas
             // 
@@ -308,6 +351,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "cVentas";
             this.Text = "cVentas";
+            this.Load += new System.EventHandler(this.CVentas_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();
@@ -341,5 +385,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView ConsultaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

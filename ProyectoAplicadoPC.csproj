@@ -173,6 +173,7 @@
   <ItemGroup>
     <Compile Include="BLL\ClientesBLL.cs" />
     <Compile Include="BLL\ProductosBLL.cs" />
+    <Compile Include="BLL\VentasBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\DetalleVentas.cs" />
