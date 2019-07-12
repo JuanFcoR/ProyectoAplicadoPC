@@ -223,6 +223,16 @@ namespace ProyectoAplicadoPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_322_icon_icons_com_61532 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_322_icon-icons.com_61532", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_social_web_network_internet_340_icon_icons_com_61497 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_340_icon-icons.com_61497", resourceCulture);
