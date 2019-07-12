@@ -42,7 +42,7 @@ namespace ProyectoAplicadoPC.BLL
             Contexto db = new Contexto();
             try
             {
-                var Anterior = db.Ventas.Find(Venta.NumeroFactura);
+                var Anterior = Buscar(Venta.NumeroFactura);
                 foreach (var item in Anterior.Articulos)
                 {
                     if (!Venta.Articulos.Exists(d => d.ID == item.ID))
