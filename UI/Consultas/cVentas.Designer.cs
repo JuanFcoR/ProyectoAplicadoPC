@@ -179,6 +179,7 @@
             this.EditarButton.TabIndex = 76;
             this.EditarButton.Text = "Editar";
             this.EditarButton.UseVisualStyleBackColor = true;
+            this.EditarButton.Click += new System.EventHandler(this.EditarButton_Click);
             // 
             // label4
             // 

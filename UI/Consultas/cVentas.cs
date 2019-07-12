@@ -1,5 +1,6 @@
 ﻿using ProyectoAplicadoPC.BLL;
 using ProyectoAplicadoPC.Entidades;
+using ProyectoAplicadoPC.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,5 +85,17 @@ namespace ProyectoAplicadoPC.UI.Consultas
             ConsultaDataGridView.DataSource = null;
             ConsultaDataGridView.DataSource = listado;
         }
+
+        private void EditarButton_Click(object sender, EventArgs e)
+        {
+            int id;
+            Ventas p = new Ventas();
+            int.TryParse(ConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(), out id);
+            p = VentasBLL.Buscar(id);
+            rVentas rp = new rVentas(p);
+            this.Hide();
+            rp.ShowDialog();
+        }
     }
+    
 }

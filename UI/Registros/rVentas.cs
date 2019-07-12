@@ -22,6 +22,12 @@ namespace ProyectoAplicadoPC.UI.Registros
             InitializeComponent();
             this.Detalle = new List<DetalleVentas>();
         }
+        public rVentas(Ventas v)
+        {
+            InitializeComponent();
+            this.Detalle = new List<DetalleVentas>();
+            LlenarCampos(v);
+        }
 
         public void CargarGrid()
         {
@@ -42,7 +48,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             Ventas Pro = new Ventas();
             Pro.NumeroFactura = Convert.ToInt32(NumeroFacturaNumericUpDown.Value);
             Pro.Fecha = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
-            Pro.Total = Convert.ToSingle(TotalTextBox.Text);
+           // Pro.Total = Convert.ToDecimal(TotalTextBox.Text);
             Pro.Articulos = this.Detalle;
 
 
@@ -68,7 +74,7 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             FechaDateTimePicker.Value = DateTime.Parse(Pro.Fecha);
             NumeroFacturaNumericUpDown.Value = Pro.NumeroFactura;
-            TotalTextBox.Text = Pro.Total.ToString();
+            //TotalTextBox.Text = Pro.Total.ToString();
             this.Detalle = Pro.Articulos;
             CargarGrid();
         }
