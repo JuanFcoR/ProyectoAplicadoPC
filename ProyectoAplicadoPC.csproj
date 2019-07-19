@@ -184,6 +184,7 @@
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\DetalleVentas.cs" />
+    <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -352,6 +353,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\seo-social-web-network-internet_322_icon-icons.com_61532.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20190709-WA0006.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

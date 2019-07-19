@@ -32,6 +32,9 @@
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.SubMenuV_panel = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.SubMenuClientes = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -42,9 +45,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SubMenuV_panel = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ConsultarVenta_button = new System.Windows.Forms.Button();
             this.RegistrarVenta_Button = new System.Windows.Forms.Button();
@@ -62,9 +62,9 @@
             this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
             this.BarraTitulo.SuspendLayout();
             this.MenuVertical.SuspendLayout();
+            this.SubMenuV_panel.SuspendLayout();
             this.SubMenuClientes.SuspendLayout();
             this.SubMenuP_panel.SuspendLayout();
-            this.SubMenuV_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
@@ -118,6 +118,35 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(200, 274);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // SubMenuV_panel
+            // 
+            this.SubMenuV_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubMenuV_panel.Controls.Add(this.panel8);
+            this.SubMenuV_panel.Controls.Add(this.ConsultarVenta_button);
+            this.SubMenuV_panel.Controls.Add(this.panel9);
+            this.SubMenuV_panel.Controls.Add(this.RegistrarVenta_Button);
+            this.SubMenuV_panel.Location = new System.Drawing.Point(44, 176);
+            this.SubMenuV_panel.Name = "SubMenuV_panel";
+            this.SubMenuV_panel.Size = new System.Drawing.Size(159, 86);
+            this.SubMenuV_panel.TabIndex = 9;
+            this.SubMenuV_panel.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.panel8.Location = new System.Drawing.Point(-3, 41);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(13, 32);
+            this.panel8.TabIndex = 9;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.panel9.Location = new System.Drawing.Point(-3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(13, 32);
+            this.panel9.TabIndex = 5;
             // 
             // SubMenuClientes
             // 
@@ -209,41 +238,13 @@
             this.panel1.Size = new System.Drawing.Size(5, 32);
             this.panel1.TabIndex = 1;
             // 
-            // SubMenuV_panel
-            // 
-            this.SubMenuV_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuV_panel.Controls.Add(this.panel8);
-            this.SubMenuV_panel.Controls.Add(this.ConsultarVenta_button);
-            this.SubMenuV_panel.Controls.Add(this.panel9);
-            this.SubMenuV_panel.Controls.Add(this.RegistrarVenta_Button);
-            this.SubMenuV_panel.Location = new System.Drawing.Point(44, 176);
-            this.SubMenuV_panel.Name = "SubMenuV_panel";
-            this.SubMenuV_panel.Size = new System.Drawing.Size(159, 86);
-            this.SubMenuV_panel.TabIndex = 9;
-            this.SubMenuV_panel.Visible = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.panel8.Location = new System.Drawing.Point(-3, 41);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(13, 32);
-            this.panel8.TabIndex = 9;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.panel9.Location = new System.Drawing.Point(-3, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(13, 32);
-            this.panel9.TabIndex = 5;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoAplicadoPC.Properties.Resources.bestbuy;
-            this.pictureBox1.Location = new System.Drawing.Point(247, 57);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoAplicadoPC.Properties.Resources.IMG_20190709_WA0006;
+            this.pictureBox1.Location = new System.Drawing.Point(200, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(253, 203);
+            this.pictureBox1.Size = new System.Drawing.Size(345, 274);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -499,9 +500,9 @@
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
+            this.SubMenuV_panel.ResumeLayout(false);
             this.SubMenuClientes.ResumeLayout(false);
             this.SubMenuP_panel.ResumeLayout(false);
-            this.SubMenuV_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).EndInit();

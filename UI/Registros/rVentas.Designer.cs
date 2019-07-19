@@ -80,7 +80,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(607, 32);
+            this.BarraTitulo.Size = new System.Drawing.Size(607, 37);
             this.BarraTitulo.TabIndex = 67;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -154,7 +154,7 @@
             this.TotalTextBox.BackColor = System.Drawing.Color.White;
             this.TotalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TotalTextBox.ForeColor = System.Drawing.Color.Black;
-            this.TotalTextBox.Location = new System.Drawing.Point(109, 125);
+            this.TotalTextBox.Location = new System.Drawing.Point(110, 132);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.ReadOnly = true;
             this.TotalTextBox.Size = new System.Drawing.Size(229, 20);
@@ -162,7 +162,7 @@
             // 
             // NumeroFacturaNumericUpDown
             // 
-            this.NumeroFacturaNumericUpDown.Location = new System.Drawing.Point(109, 54);
+            this.NumeroFacturaNumericUpDown.Location = new System.Drawing.Point(109, 64);
             this.NumeroFacturaNumericUpDown.Name = "NumeroFacturaNumericUpDown";
             this.NumeroFacturaNumericUpDown.Size = new System.Drawing.Size(55, 20);
             this.NumeroFacturaNumericUpDown.TabIndex = 78;
@@ -171,7 +171,7 @@
             // 
             this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(109, 90);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(110, 97);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(86, 20);
             this.FechaDateTimePicker.TabIndex = 77;
@@ -181,7 +181,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(15, 124);
+            this.label3.Location = new System.Drawing.Point(16, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 70;
@@ -192,7 +192,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(15, 54);
+            this.label2.Location = new System.Drawing.Point(13, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 69;
@@ -203,7 +203,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 90);
+            this.label1.Location = new System.Drawing.Point(15, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 68;
@@ -214,7 +214,7 @@
             this.DetallesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DetallesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DetallesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DetallesDataGridView.Location = new System.Drawing.Point(14, 33);
+            this.DetallesDataGridView.Location = new System.Drawing.Point(14, 61);
             this.DetallesDataGridView.Name = "DetallesDataGridView";
             this.DetallesDataGridView.Size = new System.Drawing.Size(515, 190);
             this.DetallesDataGridView.TabIndex = 91;
@@ -226,7 +226,7 @@
             this.AgregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AgregarButton.Location = new System.Drawing.Point(496, 3);
             this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(33, 24);
+            this.AgregarButton.Size = new System.Drawing.Size(45, 37);
             this.AgregarButton.TabIndex = 93;
             this.AgregarButton.Text = "+";
             this.AgregarButton.UseVisualStyleBackColor = false;
@@ -239,9 +239,9 @@
             this.RemoverButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoverButton.Image = global::ProyectoAplicadoPC.Properties.Resources.seo_social_web_network_internet_322_icon_icons_com_61532;
             this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RemoverButton.Location = new System.Drawing.Point(60, 229);
+            this.RemoverButton.Location = new System.Drawing.Point(14, 257);
             this.RemoverButton.Name = "RemoverButton";
-            this.RemoverButton.Size = new System.Drawing.Size(116, 26);
+            this.RemoverButton.Size = new System.Drawing.Size(116, 47);
             this.RemoverButton.TabIndex = 92;
             this.RemoverButton.Text = "Remover Fila";
             this.RemoverButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -255,9 +255,9 @@
             this.BuscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuscarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.preview_search_find_locate_1551;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarButton.Location = new System.Drawing.Point(185, 45);
+            this.BuscarButton.Location = new System.Drawing.Point(210, 63);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(79, 36);
+            this.BuscarButton.Size = new System.Drawing.Size(79, 51);
             this.BuscarButton.TabIndex = 89;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -271,9 +271,9 @@
             this.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(170, 460);
+            this.GuardarButton.Location = new System.Drawing.Point(33, 488);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(94, 36);
+            this.GuardarButton.Size = new System.Drawing.Size(94, 58);
             this.GuardarButton.TabIndex = 84;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -287,9 +287,9 @@
             this.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(310, 460);
+            this.EliminarButton.Location = new System.Drawing.Point(175, 488);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(94, 36);
+            this.EliminarButton.Size = new System.Drawing.Size(94, 58);
             this.EliminarButton.TabIndex = 83;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -310,7 +310,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(18, 173);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 263);
+            this.panel1.Size = new System.Drawing.Size(556, 309);
             this.panel1.TabIndex = 94;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
@@ -377,7 +377,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 519);
+            this.ClientSize = new System.Drawing.Size(607, 558);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.GuardarButton);

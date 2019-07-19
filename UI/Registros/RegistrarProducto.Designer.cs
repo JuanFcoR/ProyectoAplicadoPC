@@ -80,9 +80,9 @@
             this.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(169, 387);
+            this.GuardarButton.Location = new System.Drawing.Point(207, 387);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(94, 36);
+            this.GuardarButton.Size = new System.Drawing.Size(94, 62);
             this.GuardarButton.TabIndex = 44;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,7 +311,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(321, 32);
+            this.BarraTitulo.Size = new System.Drawing.Size(319, 32);
             this.BarraTitulo.TabIndex = 51;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
@@ -321,7 +321,7 @@
             this.Restaurar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Restaurar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Restaurar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.res;
-            this.Restaurar_pictureBox.Location = new System.Drawing.Point(270, 4);
+            this.Restaurar_pictureBox.Location = new System.Drawing.Point(268, 4);
             this.Restaurar_pictureBox.Name = "Restaurar_pictureBox";
             this.Restaurar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Restaurar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -335,7 +335,7 @@
             this.Minimizar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.minimazar;
-            this.Minimizar_pictureBox.Location = new System.Drawing.Point(243, 3);
+            this.Minimizar_pictureBox.Location = new System.Drawing.Point(241, 3);
             this.Minimizar_pictureBox.Name = "Minimizar_pictureBox";
             this.Minimizar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Minimizar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -348,7 +348,7 @@
             this.Maximixar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Maximixar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Maximixar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.maxi;
-            this.Maximixar_pictureBox.Location = new System.Drawing.Point(270, 4);
+            this.Maximixar_pictureBox.Location = new System.Drawing.Point(268, 4);
             this.Maximixar_pictureBox.Name = "Maximixar_pictureBox";
             this.Maximixar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Maximixar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -362,7 +362,7 @@
             this.Cerrar_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Cerrar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cerrar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.cerrar;
-            this.Cerrar_pictureBox.Location = new System.Drawing.Point(297, 4);
+            this.Cerrar_pictureBox.Location = new System.Drawing.Point(295, 4);
             this.Cerrar_pictureBox.Name = "Cerrar_pictureBox";
             this.Cerrar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Cerrar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -379,7 +379,7 @@
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(224, 74);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(79, 36);
+            this.BuscarButton.Size = new System.Drawing.Size(79, 45);
             this.BuscarButton.TabIndex = 49;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -393,9 +393,9 @@
             this.CancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelarButton.Location = new System.Drawing.Point(43, 387);
+            this.CancelarButton.Location = new System.Drawing.Point(94, 387);
             this.CancelarButton.Name = "CancelarButton";
-            this.CancelarButton.Size = new System.Drawing.Size(94, 36);
+            this.CancelarButton.Size = new System.Drawing.Size(94, 62);
             this.CancelarButton.TabIndex = 43;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -418,7 +418,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(321, 443);
+            this.ClientSize = new System.Drawing.Size(319, 460);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.BuscarButton);

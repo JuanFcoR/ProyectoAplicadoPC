@@ -57,14 +57,13 @@
             // 
             // CerrarButton
             // 
-            this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.CerrarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CerrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CerrarButton.Location = new System.Drawing.Point(563, 189);
+            this.CerrarButton.Location = new System.Drawing.Point(631, 298);
             this.CerrarButton.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarButton.Name = "CerrarButton";
-            this.CerrarButton.Size = new System.Drawing.Size(83, 31);
+            this.CerrarButton.Size = new System.Drawing.Size(83, 68);
             this.CerrarButton.TabIndex = 64;
             this.CerrarButton.Text = "Cerrar";
             this.CerrarButton.UseVisualStyleBackColor = true;
@@ -72,14 +71,13 @@
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NuevoButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.NuevoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoButton.Location = new System.Drawing.Point(563, 146);
+            this.NuevoButton.Location = new System.Drawing.Point(631, 217);
             this.NuevoButton.Margin = new System.Windows.Forms.Padding(2);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(83, 31);
+            this.NuevoButton.Size = new System.Drawing.Size(83, 57);
             this.NuevoButton.TabIndex = 63;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
@@ -87,14 +85,13 @@
             // 
             // EditarButton
             // 
-            this.EditarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EditarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.EditarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EditarButton.Location = new System.Drawing.Point(563, 107);
+            this.EditarButton.Location = new System.Drawing.Point(631, 133);
             this.EditarButton.Margin = new System.Windows.Forms.Padding(2);
             this.EditarButton.Name = "EditarButton";
-            this.EditarButton.Size = new System.Drawing.Size(83, 31);
+            this.EditarButton.Size = new System.Drawing.Size(83, 56);
             this.EditarButton.TabIndex = 62;
             this.EditarButton.Text = "Editar";
             this.EditarButton.UseVisualStyleBackColor = true;
@@ -124,7 +121,7 @@
             // 
             this.HastaDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.HastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.HastaDateTimePicker.Location = new System.Drawing.Point(102, 52);
+            this.HastaDateTimePicker.Location = new System.Drawing.Point(103, 50);
             this.HastaDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.HastaDateTimePicker.Name = "HastaDateTimePicker";
             this.HastaDateTimePicker.Size = new System.Drawing.Size(77, 20);
@@ -146,7 +143,7 @@
             this.CriterioTextBox.Location = new System.Drawing.Point(289, 52);
             this.CriterioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CriterioTextBox.Name = "CriterioTextBox";
-            this.CriterioTextBox.Size = new System.Drawing.Size(270, 20);
+            this.CriterioTextBox.Size = new System.Drawing.Size(323, 20);
             this.CriterioTextBox.TabIndex = 56;
             // 
             // FiltrarComboBox
@@ -195,7 +192,7 @@
             this.ConsultaDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultaDataGridView.Name = "ConsultaDataGridView";
             this.ConsultaDataGridView.RowTemplate.Height = 24;
-            this.ConsultaDataGridView.Size = new System.Drawing.Size(542, 293);
+            this.ConsultaDataGridView.Size = new System.Drawing.Size(595, 319);
             this.ConsultaDataGridView.TabIndex = 52;
             // 
             // BarraTitulo
@@ -209,7 +206,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(666, 32);
+            this.BarraTitulo.Size = new System.Drawing.Size(730, 32);
             this.BarraTitulo.TabIndex = 65;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -218,7 +215,7 @@
             this.Restaurar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Restaurar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Restaurar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.res;
-            this.Restaurar_pictureBox.Location = new System.Drawing.Point(615, 4);
+            this.Restaurar_pictureBox.Location = new System.Drawing.Point(679, 4);
             this.Restaurar_pictureBox.Name = "Restaurar_pictureBox";
             this.Restaurar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Restaurar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -243,7 +240,7 @@
             this.Minimizar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.minimazar;
-            this.Minimizar_pictureBox.Location = new System.Drawing.Point(588, 3);
+            this.Minimizar_pictureBox.Location = new System.Drawing.Point(652, 3);
             this.Minimizar_pictureBox.Name = "Minimizar_pictureBox";
             this.Minimizar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Minimizar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -256,7 +253,7 @@
             this.Maximixar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Maximixar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Maximixar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.maxi;
-            this.Maximixar_pictureBox.Location = new System.Drawing.Point(615, 4);
+            this.Maximixar_pictureBox.Location = new System.Drawing.Point(679, 4);
             this.Maximixar_pictureBox.Name = "Maximixar_pictureBox";
             this.Maximixar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Maximixar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -270,7 +267,7 @@
             this.Cerrar_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Cerrar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cerrar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.cerrar;
-            this.Cerrar_pictureBox.Location = new System.Drawing.Point(642, 4);
+            this.Cerrar_pictureBox.Location = new System.Drawing.Point(706, 4);
             this.Cerrar_pictureBox.Name = "Cerrar_pictureBox";
             this.Cerrar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Cerrar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -280,15 +277,14 @@
             // 
             // ConsultaButton
             // 
-            this.ConsultaButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.ConsultaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultaButton.Image = global::ProyectoAplicadoPC.Properties.Resources.seo_social_web_network_internet_340_icon_icons1;
             this.ConsultaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ConsultaButton.Location = new System.Drawing.Point(563, 49);
+            this.ConsultaButton.Location = new System.Drawing.Point(627, 50);
             this.ConsultaButton.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultaButton.Name = "ConsultaButton";
-            this.ConsultaButton.Size = new System.Drawing.Size(100, 24);
+            this.ConsultaButton.Size = new System.Drawing.Size(87, 53);
             this.ConsultaButton.TabIndex = 57;
             this.ConsultaButton.Text = "Consultar";
             this.ConsultaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -300,7 +296,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(666, 387);
+            this.ClientSize = new System.Drawing.Size(730, 413);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.NuevoButton);
