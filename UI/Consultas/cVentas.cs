@@ -63,18 +63,18 @@ namespace ProyectoAplicadoPC.UI.Consultas
 
                     case 1:
                         int id = Convert.ToInt32(CriterioTextBox.Text);
-                        listado = VentasBLL.GetList(p => p.CodigoCliente == id);
+                        //listado = VentasBLL.GetList(p => p.CodigoCliente == id);
                         break;
 
-                        break;
+                        //break;
 
-                    case 5:
-                        listado = VentasBLL.GetList(p => true);
-                        listado = listado.Where(c => DateTime.Parse(c.Fecha) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.Fecha) <= HastaDateTimePicker.Value.Date).ToList();
-                        break;
+                //    case 5:
+                //        listado = VentasBLL.GetList(p => true);
+                //        /listado = listado.Where(c => DateTime.Parse(c.Fecha) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.Fecha) <= HastaDateTimePicker.Value.Date).ToList();
+                //        break;
 
                 }
-                listado = listado.Where(c => DateTime.Parse(c.Fecha) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.Fecha) <= HastaDateTimePicker.Value.Date).ToList();
+                //listado = listado.Where(c => DateTime.Parse(c.Fecha) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.Fecha) <= HastaDateTimePicker.Value.Date).ToList();
 
             }
             else
@@ -88,7 +88,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
-            int id;
+            int id=0;
             Ventas p = new Ventas();
             int.TryParse(ConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(), out id);
             p = VentasBLL.Buscar(id);

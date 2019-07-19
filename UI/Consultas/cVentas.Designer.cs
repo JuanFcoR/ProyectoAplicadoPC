@@ -50,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
@@ -301,8 +300,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ConsultaDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.ConsultaDataGridView.EnableHeadersVisualStyles = false;
             this.ConsultaDataGridView.GridColor = System.Drawing.Color.Black;
             this.ConsultaDataGridView.Location = new System.Drawing.Point(11, 93);
@@ -324,11 +321,6 @@
             this.ConsultaDataGridView.RowTemplate.Height = 24;
             this.ConsultaDataGridView.Size = new System.Drawing.Size(588, 293);
             this.ConsultaDataGridView.TabIndex = 66;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
             // 
             // cVentas
             // 
@@ -386,6 +378,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView ConsultaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

@@ -23,7 +23,7 @@ namespace ProyectoAplicadoPC.BLL
                     contexto.SaveChanges();
                     paso = true;
                 }
-                contexto.Dispose();
+                
 
             }
             catch (Exception)
@@ -31,7 +31,7 @@ namespace ProyectoAplicadoPC.BLL
 
                 throw;
             }
-
+            contexto.Dispose();
 
             return paso;
         }

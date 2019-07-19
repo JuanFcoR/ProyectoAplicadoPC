@@ -47,7 +47,7 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             Ventas Pro = new Ventas();
             Pro.NumeroFactura = Convert.ToInt32(NumeroFacturaNumericUpDown.Value);
-            Pro.Fecha = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
+            //Pro.Fecha = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
            // Pro.Total = Convert.ToDecimal(TotalTextBox.Text);
             Pro.Articulos = this.Detalle;
 
@@ -72,7 +72,7 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void LlenarCampos(Ventas Pro)
         {
-            FechaDateTimePicker.Value = DateTime.Parse(Pro.Fecha);
+            //FechaDateTimePicker.Value = DateTime.Parse(Pro.Fecha);
             NumeroFacturaNumericUpDown.Value = Pro.NumeroFactura;
             //TotalTextBox.Text = Pro.Total.ToString();
             this.Detalle = Pro.Articulos;
