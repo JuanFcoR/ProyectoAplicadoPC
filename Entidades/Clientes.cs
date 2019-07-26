@@ -23,7 +23,17 @@ namespace ProyectoAplicadoPC.Entidades
 
         public Clientes()
         {
-                
+            CodigoCliente = 0;
+            Fecha = DateTime.Now.ToString("dd/MM/yyyy");
+            Nombre = string.Empty;
+            Apellidos = string.Empty;
+            Cedula = string.Empty;
+            Telefono = string.Empty;
+            Celular = string.Empty;
+            TelefonoReferencia = string.Empty;
+            Direccion = string.Empty;
+            Direccion = string.Empty;
+            LimiteDeCredito=0;
         }
         
     }

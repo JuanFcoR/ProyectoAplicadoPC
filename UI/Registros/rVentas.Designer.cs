@@ -48,8 +48,6 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DetalleIdumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
             this.CantidadNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CodigoProductoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumeroFacturaNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DetalleIdumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
@@ -299,11 +296,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.DetalleIdumericUpDown);
             this.panel1.Controls.Add(this.RemoverButton);
             this.panel1.Controls.Add(this.AgregarButton);
             this.panel1.Controls.Add(this.DetallesDataGridView);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.CantidadNumericUpDown);
             this.panel1.Controls.Add(this.CodigoProductoNumericUpDown);
             this.panel1.Controls.Add(this.label5);
@@ -314,28 +309,9 @@
             this.panel1.TabIndex = 94;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // DetalleIdumericUpDown
-            // 
-            this.DetalleIdumericUpDown.Location = new System.Drawing.Point(90, 7);
-            this.DetalleIdumericUpDown.Name = "DetalleIdumericUpDown";
-            this.DetalleIdumericUpDown.Size = new System.Drawing.Size(55, 20);
-            this.DetalleIdumericUpDown.TabIndex = 119;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(11, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 17);
-            this.label10.TabIndex = 118;
-            this.label10.Text = "DetalleId";
-            this.label10.Click += new System.EventHandler(this.Label10_Click);
-            // 
             // CantidadNumericUpDown
             // 
-            this.CantidadNumericUpDown.Location = new System.Drawing.Point(242, 7);
+            this.CantidadNumericUpDown.Location = new System.Drawing.Point(122, 8);
             this.CantidadNumericUpDown.Name = "CantidadNumericUpDown";
             this.CantidadNumericUpDown.Size = new System.Drawing.Size(55, 20);
             this.CantidadNumericUpDown.TabIndex = 114;
@@ -352,7 +328,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(172, 7);
+            this.label5.Location = new System.Drawing.Point(52, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 17);
             this.label5.TabIndex = 107;
@@ -403,7 +379,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DetallesDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DetalleIdumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
@@ -437,8 +412,6 @@
         private System.Windows.Forms.NumericUpDown CodigoProductoNumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown DetalleIdumericUpDown;
         private System.Windows.Forms.ErrorProvider SuperErrorProvider;
     }
 }

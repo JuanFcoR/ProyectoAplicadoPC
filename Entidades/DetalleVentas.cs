@@ -17,7 +17,7 @@ namespace ProyectoAplicadoPC.Entidades
         public int Cantidad { get; set; }
         public float Precio { get; set; }
         public float ITBIS { get; set; }
-        public float SubTotal { get; set; }
+        public decimal SubTotal { get; set; }
 
         public DetalleVentas()
         {
@@ -30,7 +30,7 @@ namespace ProyectoAplicadoPC.Entidades
             SubTotal = 0;
         }
 
-        public DetalleVentas(int iD, int codigoProducto, string descripcion, int cantidad, float precio, float iTBIS, float subTotal)
+        public DetalleVentas(int iD, int codigoProducto, string descripcion, int cantidad, float precio, float iTBIS, decimal subTotal)
         {
             ID = iD;
             CodigoProducto = codigoProducto;

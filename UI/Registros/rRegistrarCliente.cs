@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -45,7 +46,7 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             Clientes c = new Clientes();
             c.CodigoCliente=Convert.ToInt32(CodigonumericUpDown.Value);
-            c.Fecha = FechadateTimePicker.Value.ToString("dd//MM//yyyy");
+            c.Fecha = FechadateTimePicker.Value.ToString("dd/MM/yyyy");
             c.Nombre = NombretextBox.Text;
             c.Apellidos = ApellidotextBox.Text;
             c.Cedula=CedulamaskedTextBox.Text;
@@ -133,9 +134,12 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void LlenarCampos(Clientes c)
         {
+           
+  
+           
 
             CodigonumericUpDown.Value=c.CodigoCliente;
-            FechadateTimePicker.Value = DateTime.Parse(c.Fecha);
+            FechadateTimePicker.Value = DateTime.ParseExact(c.Fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             NombretextBox.Text = c.Nombre;
             ApellidotextBox.Text = c.Apellidos;
             CedulamaskedTextBox.Text = c.Cedula;

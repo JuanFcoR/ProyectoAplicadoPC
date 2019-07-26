@@ -29,7 +29,7 @@ namespace ProyectoAplicadoPC.Entidades
         public Productos()
         {
             CodigoProducto = 0;
-            FechaRegistro =DateTime.Now.ToString("dd//MM//yyyy");
+            FechaRegistro = DateTime.Now.ToString("dd/MM/yyyy");
             Descripcion = string.Empty;
             PrecioCosto = 0;
             PrecioVenta = 0;

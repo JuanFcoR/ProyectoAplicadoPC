@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -14,8 +15,10 @@ using System.Windows.Forms;
 
 namespace ProyectoAplicadoPC.UI.Registros
 {
+   
     public partial class rVentas : Form
     {
+        decimal total=0;
         public List<DetalleVentas> Detalle { get; set; }
         public rVentas()
         {
@@ -47,8 +50,8 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             Ventas Pro = new Ventas();
             Pro.NumeroFactura = Convert.ToInt32(NumeroFacturaNumericUpDown.Value);
-            //Pro.Fecha = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
-           // Pro.Total = Convert.ToDecimal(TotalTextBox.Text);
+            Pro.Fecha = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
+            Pro.Total = Convert.ToDecimal(TotalTextBox.Text);
             Pro.Articulos = this.Detalle;
 
 
@@ -72,9 +75,9 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void LlenarCampos(Ventas Pro)
         {
-            //FechaDateTimePicker.Value = DateTime.Parse(Pro.Fecha);
+            FechaDateTimePicker.Value = DateTime.ParseExact(Pro.Fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             NumeroFacturaNumericUpDown.Value = Pro.NumeroFactura;
-            //TotalTextBox.Text = Pro.Total.ToString();
+            TotalTextBox.Text = Pro.Total.ToString();
             this.Detalle = Pro.Articulos;
             CargarGrid();
         }
@@ -132,21 +135,24 @@ namespace ProyectoAplicadoPC.UI.Registros
             if (DetallesDataGridView.DataSource != null)
                 this.Detalle = (List<DetalleVentas>)DetallesDataGridView.DataSource;
             Productos p = ProductosBLL.Buscar((int)CodigoProductoNumericUpDown.Value);
-            this.Detalle.Add(
-                new DetalleVentas(iD: 0,
+            this.Detalle.Add(new DetalleVentas(iD: 0,
                 codigoProducto: (int)CodigoProductoNumericUpDown.Value,
                 descripcion: p.Descripcion,
                 cantidad: (int)CantidadNumericUpDown.Value,
                 precio: p.PrecioVenta,
-                iTBIS:p.ITBIS,
-                subTotal: (int)CantidadNumericUpDown.Value*p.PrecioVenta
-
+                iTBIS: p.ITBIS,
+                subTotal: Convert.ToDecimal((int)CantidadNumericUpDown.Value * p.PrecioVenta)
                 ));
 
+            foreach (var item in this.Detalle)
+            {
+                total += item.SubTotal;
+            }
+            
             CargarGrid();
 
+            TotalTextBox.Text = total.ToString();
 
-            
         }
 
         private void Cerrar_pictureBox_Click(object sender, EventArgs e)

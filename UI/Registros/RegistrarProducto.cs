@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -97,7 +98,7 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void LlenarCampos(Productos Pro)
         {
-            FechaDateTimePicker.Value = DateTime.Parse(Pro.FechaRegistro);
+            FechaDateTimePicker.Value = DateTime.ParseExact(Pro.FechaRegistro, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             CodigoRegistroNumericUpDown.Value = Pro.CodigoProducto;
             DescripcionTextBox.Text = Pro.Descripcion;
             CantidadExistenteNumericUpDown.Value = Pro.CantidadExistente;

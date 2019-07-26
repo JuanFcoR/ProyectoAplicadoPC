@@ -49,11 +49,11 @@ namespace ProyectoAplicadoPC.UI
 
                     case 5:
                         listado = ProductosBLL.GetList(p => true);
-                        listado = listado.Where(c => DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
+                        listado = listado.Where(c=>DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
                         break;
 
                 }
-                listado = listado.Where(c => DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
+                listado = listado.Where(c =>DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
 
             }
             else
@@ -129,7 +129,50 @@ namespace ProyectoAplicadoPC.UI
 
         private void ConsultaButton_Click(object sender, EventArgs e)
         {
+            var listado = new List<Productos>();
 
+            if (CriterioTextBox.Text.Trim().Length > 0)
+            {
+                switch (FiltrarComboBox.SelectedIndex)
+                {
+                    case 0://Todo
+                        listado = ProductosBLL.GetList(p => true);
+                        break;
+
+                    case 1:
+                        int id = Convert.ToInt32(CriterioTextBox.Text);
+                        listado = ProductosBLL.GetList(p => p.CodigoProducto == id);
+                        break;
+
+                    case 2:
+                        listado = ProductosBLL.GetList(p => p.Descripcion.Contains(CriterioTextBox.Text));
+                        break;
+
+                    case 3:
+                        listado = ProductosBLL.GetList(p => p.Departamento.Contains(CriterioTextBox.Text));
+                        break;
+
+                    case 4:
+                        int minimo = Convert.ToInt32(CriterioTextBox.Text);
+                        listado = ProductosBLL.GetList(p => p.Minimo == minimo);
+                        break;
+
+                    case 5:
+                        listado = ProductosBLL.GetList(p => true);
+                        listado = listado.Where(c => DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
+                        break;
+
+                }
+                listado = listado.Where(c => DateTime.Parse(c.FechaRegistro) >= DesdeDateTimePicker.Value.Date && DateTime.Parse(c.FechaRegistro) <= HastaDateTimePicker.Value.Date).ToList();
+
+            }
+            else
+            {
+                listado = ProductosBLL.GetList(p => true);
+            }
+
+            ConsultaDataGridView.DataSource = null;
+            ConsultaDataGridView.DataSource = listado;
         }
 
         

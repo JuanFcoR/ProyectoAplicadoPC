@@ -92,8 +92,8 @@ namespace ProyectoAplicadoPC
         private void ConsultarCliente_button_Click(object sender, EventArgs e)
         {
             SubMenuClientes.Visible = false;
-            cClientes cliente = new cClientes();
-            cliente.ShowDialog();
+            cProductos cP = new cProductos();
+            cP.ShowDialog();
         }
 
         private void Productos_button_Click(object sender, EventArgs e)

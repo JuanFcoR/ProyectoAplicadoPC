@@ -153,7 +153,7 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.CustomFormat = "";
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(178, 105);
