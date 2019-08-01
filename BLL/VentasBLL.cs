@@ -49,6 +49,18 @@ namespace ProyectoAplicadoPC.BLL
                         db.Entry(Venta).State = EntityState.Deleted;
                 }
 
+                foreach (var item in Venta.Articulos)
+                {
+                    if (item.CodigoProducto == 0)
+                    {
+                        db.Entry(item).State = EntityState.Added;
+                    }
+                    else
+                    {
+                        db.Entry(item).State = EntityState.Modified;
+                    }
+                }
+
                 db.Entry(Venta).State = EntityState.Modified;
                 paso = db.SaveChanges() > 0;
 
