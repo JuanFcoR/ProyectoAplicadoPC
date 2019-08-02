@@ -50,7 +50,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             usuarios.UsuarioId = Convert.ToInt32(UsuarioId_numericUpDown.Value);
             usuarios.Clave = Clave_textBox.Text;
             usuarios.Usuario = Usuario_textBox.Text;
-            usuarios.NivelAcceso = ElegirNivel();
+            usuarios.Permiso = ElegirNivel();
             usuarios.Fecha = FechaIngreso_dateTimePicker.Value.ToString("dd/MM/yyyy");
             
             return usuarios;
@@ -59,10 +59,10 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void LlenarRadioButton(Usuarios usuario)
         {
-            if (usuario.NivelAcceso == "Administrador")
+            if (usuario.Permiso == "Administrador")
                 Administrador_radioButton.Checked = true;
 
-            if (usuario.NivelAcceso == "Contador")
+            if (usuario.Permiso == "Contador")
                 Cajero_radioButton.Checked = true;
 
         }

@@ -13,7 +13,7 @@ namespace ProyectoAplicadoPC.Entidades
         public int UsuarioId { get; set; }
         public string Usuario { get; set; }
         public string Clave { get; set; }
-        public string NivelAcceso { get; set; }
+        public string Permiso { get; set; }
         public string Fecha { get; set; }
 
         public Usuarios()
@@ -22,7 +22,7 @@ namespace ProyectoAplicadoPC.Entidades
             Fecha = DateTime.Now.ToString("dd/MM/yyyy");
             Usuario = string.Empty;
             Clave = string.Empty;
-            NivelAcceso = 0;
+            Permiso = "";
         }
     }
 }

@@ -36,6 +36,8 @@
             this.Maximixar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.SubMenuV_panel = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.ConsultarVenta_button = new System.Windows.Forms.Button();
@@ -66,8 +68,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Usuario_label = new System.Windows.Forms.Label();
+            this.Permiso_label = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
@@ -183,6 +185,31 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(200, 412);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(9, 368);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 32);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.panel5.Location = new System.Drawing.Point(3, 368);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 32);
+            this.panel5.TabIndex = 11;
             // 
             // SubMenuV_panel
             // 
@@ -500,6 +527,8 @@
             // 
             this.panel11.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.Permiso_label);
+            this.panel11.Controls.Add(this.Usuario_label);
             this.panel11.Controls.Add(this.pictureBox2);
             this.panel11.Controls.Add(this.label1);
             this.panel11.Controls.Add(this.label2);
@@ -558,30 +587,23 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Permiso:";
             // 
-            // panel5
+            // Usuario_label
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.panel5.Location = new System.Drawing.Point(3, 368);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 32);
-            this.panel5.TabIndex = 11;
+            this.Usuario_label.AutoSize = true;
+            this.Usuario_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuario_label.Location = new System.Drawing.Point(160, 23);
+            this.Usuario_label.Name = "Usuario_label";
+            this.Usuario_label.Size = new System.Drawing.Size(0, 16);
+            this.Usuario_label.TabIndex = 2;
             // 
-            // button1
+            // Permiso_label
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(9, 368);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 32);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.Permiso_label.AutoSize = true;
+            this.Permiso_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Permiso_label.Location = new System.Drawing.Point(160, 45);
+            this.Permiso_label.Name = "Permiso_label";
+            this.Permiso_label.Size = new System.Drawing.Size(0, 16);
+            this.Permiso_label.TabIndex = 3;
             // 
             // MainMenu
             // 
@@ -656,6 +678,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label Usuario_label;
+        private System.Windows.Forms.Label Permiso_label;
     }
 }
 

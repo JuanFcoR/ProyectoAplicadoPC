@@ -41,9 +41,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Cancelarbutton = new System.Windows.Forms.Button();
-            this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DeudaActualnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoDelClientenumericUpDown)).BeginInit();
@@ -149,6 +149,10 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "CodigoDelCliente";
             // 
+            // SuperErrorProvider
+            // 
+            this.SuperErrorProvider.ContainerControl = this;
+            // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
@@ -175,15 +179,11 @@
             this.Cancelarbutton.UseVisualStyleBackColor = true;
             this.Cancelarbutton.Click += new System.EventHandler(this.Cancelarbutton_Click);
             // 
-            // SuperErrorProvider
-            // 
-            this.SuperErrorProvider.ContainerControl = this;
-            // 
             // rCobros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(244, 290);
+            this.ClientSize = new System.Drawing.Size(348, 366);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Cancelarbutton);
             this.Controls.Add(this.DeudaActualnumericUpDown);
