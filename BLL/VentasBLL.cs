@@ -50,7 +50,7 @@ namespace ProyectoAplicadoPC.BLL
                     if (!Venta.Articulos.Exists(d => d.ID == item.ID))
                         db.Entry(item).State = EntityState.Deleted;
                 }
-
+                
                 foreach (var item in Venta.Articulos)
                 {
                     if (item.ID == 0)
@@ -61,6 +61,8 @@ namespace ProyectoAplicadoPC.BLL
                     {
                         db.Entry(item).State = EntityState.Modified;
                     }
+                    Productos ps=db.Producto.Find(item.CodigoProducto);
+                    ps.CantidadExistente -= item.Cantidad;
                 }
 
                 db.Entry(Venta).State = EntityState.Modified;
