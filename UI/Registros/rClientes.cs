@@ -239,6 +239,6 @@ namespace ProyectoAplicadoPC.UI.Registros
         private void CedulamaskedTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
-        }
+        } 
     }
 }
