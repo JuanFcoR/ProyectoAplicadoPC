@@ -31,7 +31,7 @@ namespace ProyectoAplicadoPC.BLL
             }
             finally
             {
-                db.Dispose();
+                db.Dispose(); 
             }
             
 
