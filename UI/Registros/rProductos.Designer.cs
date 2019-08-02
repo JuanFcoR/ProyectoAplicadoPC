@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.GuardarButton = new System.Windows.Forms.Button();
-            this.MinimoTextBox = new System.Windows.Forms.TextBox();
             this.DepartamentoTextBox = new System.Windows.Forms.TextBox();
             this.ITBIsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
@@ -59,6 +58,7 @@
             this.BuscarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.MinimonumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoRegistroNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreciocostoNumericUpDown)).BeginInit();
@@ -71,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimonumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // GuardarButton
@@ -81,7 +82,7 @@
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(195, 387);
+            this.GuardarButton.Location = new System.Drawing.Point(175, 387);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(110, 48);
             this.GuardarButton.TabIndex = 44;
@@ -89,17 +90,6 @@
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarButton.UseVisualStyleBackColor = false;
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
-            // 
-            // MinimoTextBox
-            // 
-            this.MinimoTextBox.BackColor = System.Drawing.Color.White;
-            this.MinimoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MinimoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimoTextBox.ForeColor = System.Drawing.Color.Black;
-            this.MinimoTextBox.Location = new System.Drawing.Point(152, 348);
-            this.MinimoTextBox.Name = "MinimoTextBox";
-            this.MinimoTextBox.Size = new System.Drawing.Size(165, 22);
-            this.MinimoTextBox.TabIndex = 42;
             // 
             // DepartamentoTextBox
             // 
@@ -157,7 +147,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(16, 319);
+            this.label9.Location = new System.Drawing.Point(22, 317);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 17);
             this.label9.TabIndex = 31;
@@ -294,7 +284,6 @@
             this.CantidadExistenteNumericUpDown.Name = "CantidadExistenteNumericUpDown";
             this.CantidadExistenteNumericUpDown.Size = new System.Drawing.Size(165, 22);
             this.CantidadExistenteNumericUpDown.TabIndex = 45;
-            this.CantidadExistenteNumericUpDown.ValueChanged += new System.EventHandler(this.CantidadExistenteNumericUpDown_ValueChanged);
             // 
             // SuperErrorProvider
             // 
@@ -305,7 +294,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(90, 5);
+            this.label11.Location = new System.Drawing.Point(74, 6);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 23);
             this.label11.TabIndex = 50;
@@ -324,7 +313,6 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(342, 32);
             this.BarraTitulo.TabIndex = 51;
-            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // Restaurar_pictureBox
@@ -406,7 +394,7 @@
             this.CancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelarButton.Location = new System.Drawing.Point(61, 387);
+            this.CancelarButton.Location = new System.Drawing.Point(50, 387);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(110, 48);
             this.CancelarButton.TabIndex = 43;
@@ -420,11 +408,22 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(21, 351);
+            this.label10.Location = new System.Drawing.Point(22, 349);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 17);
             this.label10.TabIndex = 52;
             this.label10.Text = "Minimo";
+            // 
+            // MinimonumericUpDown
+            // 
+            this.MinimonumericUpDown.BackColor = System.Drawing.Color.White;
+            this.MinimonumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MinimonumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimonumericUpDown.ForeColor = System.Drawing.Color.Black;
+            this.MinimonumericUpDown.Location = new System.Drawing.Point(152, 348);
+            this.MinimonumericUpDown.Name = "MinimonumericUpDown";
+            this.MinimonumericUpDown.Size = new System.Drawing.Size(165, 22);
+            this.MinimonumericUpDown.TabIndex = 45;
             // 
             // rProductos
             // 
@@ -437,7 +436,7 @@
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.CancelarButton);
-            this.Controls.Add(this.MinimoTextBox);
+            this.Controls.Add(this.MinimonumericUpDown);
             this.Controls.Add(this.CantidadExistenteNumericUpDown);
             this.Controls.Add(this.DepartamentoTextBox);
             this.Controls.Add(this.TasaDeGananciaNumericUpDown);
@@ -459,7 +458,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rProductos";
             this.Text = "RegistrarProducto";
-            this.Load += new System.EventHandler(this.RegistrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoRegistroNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreciocostoNumericUpDown)).EndInit();
@@ -473,6 +471,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimonumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,7 +481,6 @@
 
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button CancelarButton;
-        private System.Windows.Forms.TextBox MinimoTextBox;
         private System.Windows.Forms.TextBox DepartamentoTextBox;
         private System.Windows.Forms.NumericUpDown ITBIsNumericUpDown;
         private System.Windows.Forms.TextBox DescripcionTextBox;
@@ -510,5 +508,6 @@
         private System.Windows.Forms.PictureBox Maximixar_pictureBox;
         private System.Windows.Forms.PictureBox Cerrar_pictureBox;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown MinimonumericUpDown;
     }
 }
