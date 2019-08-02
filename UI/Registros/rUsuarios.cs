@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,7 +55,7 @@ namespace ProyectoAplicadoPC.UI.Registros
                 //usuarios.TiposUsuario = Check();
                 usuarios.Psw = Clave_textBox.Text;
 
-                usuarios.Fecha = FechaIngreso_dateTimePicker.Value;
+                usuarios.Fecha = FechaIngreso_dateTimePicker.Value.ToString("dd/MM/yyyy");
             };
             return usuarios;
 
@@ -70,7 +71,7 @@ namespace ProyectoAplicadoPC.UI.Registros
           //  Nivel.Text = Check();
             Clave_textBox.Text = usuarios.Psw;
 
-            FechaIngreso_dateTimePicker.Value = usuarios.Fecha;
+            FechaIngreso_dateTimePicker.Value = DateTime.ParseExact(usuarios.Fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture); 
 
         }
         private bool ExisteEnLaBaseDeDatos()

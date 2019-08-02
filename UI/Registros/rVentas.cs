@@ -18,7 +18,7 @@ namespace ProyectoAplicadoPC.UI.Registros
    
     public partial class rVentas : Form
     {
-        decimal total=0;
+      
         public List<DetalleVentas> Detalle { get; set; }
         public rVentas()
         {

@@ -20,13 +20,13 @@ namespace ProyectoAplicadoPC.Entidades
         public Usuarios()
         {
             UsuarioId = 0;
-            Fecha = DateTime.Parse("dd/MM/yyyy");
+            Fecha = DateTime.Now.ToString("dd/MM/yyyy");
             Usuario = string.Empty;
             Psw = string.Empty;
             NivelAcceso = 0;
         }
 
-        public Usuarios(int usuarioId, string usuario, string psw, int nivelAcceso, DateTime fecha)
+        public Usuarios(int usuarioId, string usuario, string psw, int nivelAcceso, string fecha)
         {
             UsuarioId = usuarioId;
             Usuario = usuario;
