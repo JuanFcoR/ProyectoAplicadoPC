@@ -52,7 +52,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.CantidadNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
@@ -63,7 +63,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -353,9 +353,9 @@
             this.label4.TabIndex = 106;
             this.label4.Text = "Codigo del Producto";
             // 
-            // SuperErrorProvider
+            // ErrorProvider
             // 
-            this.SuperErrorProvider.ContainerControl = this;
+            this.ErrorProvider.ContainerControl = this;
             // 
             // rVentas
             // 
@@ -388,7 +388,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,6 +419,6 @@
         private System.Windows.Forms.NumericUpDown CodigoProductoNumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ErrorProvider SuperErrorProvider;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }

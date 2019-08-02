@@ -49,47 +49,47 @@
             // 
             // DeudaActualnumericUpDown
             // 
-            this.DeudaActualnumericUpDown.Location = new System.Drawing.Point(136, 197);
+            this.DeudaActualnumericUpDown.Location = new System.Drawing.Point(104, 197);
             this.DeudaActualnumericUpDown.Name = "DeudaActualnumericUpDown";
-            this.DeudaActualnumericUpDown.Size = new System.Drawing.Size(86, 20);
+            this.DeudaActualnumericUpDown.Size = new System.Drawing.Size(118, 20);
             this.DeudaActualnumericUpDown.TabIndex = 36;
             // 
             // CantidadAbonarnumericUpDown
             // 
-            this.CantidadAbonarnumericUpDown.Location = new System.Drawing.Point(136, 162);
+            this.CantidadAbonarnumericUpDown.Location = new System.Drawing.Point(104, 162);
             this.CantidadAbonarnumericUpDown.Name = "CantidadAbonarnumericUpDown";
-            this.CantidadAbonarnumericUpDown.Size = new System.Drawing.Size(86, 20);
+            this.CantidadAbonarnumericUpDown.Size = new System.Drawing.Size(118, 20);
             this.CantidadAbonarnumericUpDown.TabIndex = 35;
             // 
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.CustomFormat = "";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(136, 130);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(104, 130);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(86, 20);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(118, 20);
             this.FechadateTimePicker.TabIndex = 34;
             // 
             // CedulamaskedTextBox
             // 
-            this.CedulamaskedTextBox.Location = new System.Drawing.Point(136, 93);
+            this.CedulamaskedTextBox.Location = new System.Drawing.Point(104, 93);
             this.CedulamaskedTextBox.Mask = "0-0000000-0";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
-            this.CedulamaskedTextBox.Size = new System.Drawing.Size(86, 20);
+            this.CedulamaskedTextBox.Size = new System.Drawing.Size(118, 20);
             this.CedulamaskedTextBox.TabIndex = 33;
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(136, 60);
+            this.NombretextBox.Location = new System.Drawing.Point(104, 60);
             this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(86, 20);
+            this.NombretextBox.Size = new System.Drawing.Size(118, 20);
             this.NombretextBox.TabIndex = 32;
             // 
             // CodigoDelClientenumericUpDown
             // 
-            this.CodigoDelClientenumericUpDown.Location = new System.Drawing.Point(136, 19);
+            this.CodigoDelClientenumericUpDown.Location = new System.Drawing.Point(104, 19);
             this.CodigoDelClientenumericUpDown.Name = "CodigoDelClientenumericUpDown";
-            this.CodigoDelClientenumericUpDown.Size = new System.Drawing.Size(86, 20);
+            this.CodigoDelClientenumericUpDown.Size = new System.Drawing.Size(118, 20);
             this.CodigoDelClientenumericUpDown.TabIndex = 31;
             // 
             // label6
@@ -170,7 +170,7 @@
             this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Cancelarbutton.UseVisualStyleBackColor = true;
             // 
-            // rCosto
+            // rCobros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,7 +189,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "rCosto";
+            this.Name = "rCobros";
             this.Text = "Cobro";
             ((System.ComponentModel.ISupportInitialize)(this.DeudaActualnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).EndInit();
