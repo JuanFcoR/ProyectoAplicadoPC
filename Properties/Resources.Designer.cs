@@ -233,6 +233,26 @@ namespace ProyectoAplicadoPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_262_icon_icons_com_61518 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_262_icon-icons.com_61518", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_273_icon_icons_com_61489 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_273_icon-icons.com_61489", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_social_web_network_internet_322_icon_icons_com_61532 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_322_icon-icons.com_61532", resourceCulture);
@@ -256,6 +276,26 @@ namespace ProyectoAplicadoPC.Properties {
         internal static System.Drawing.Bitmap seo_social_web_network_internet_340_icon_icons1 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_340_icon-icons1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_340_icon_icons2 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_340_icon-icons2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_icon {
+            get {
+                object obj = ResourceManager.GetObject("User_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -228,6 +228,12 @@
     <Compile Include="UI\Registros\rClientes.Designer.cs">
       <DependentUpon>rClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rLogin.Designer.cs">
+      <DependentUpon>rLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,12 @@
     </Compile>
     <Compile Include="UI\Registros\rFacturaCredito.Designer.cs">
       <DependentUpon>rFacturaCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuarios.Designer.cs">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rVentas.cs">
       <SubType>Form</SubType>
@@ -274,11 +286,17 @@
     <EmbeddedResource Include="UI\Registros\rClientes.resx">
       <DependentUpon>rClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rLogin.resx">
+      <DependentUpon>rLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rProductos.resx">
       <DependentUpon>rProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rFacturaCredito.resx">
       <DependentUpon>rFacturaCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rVentas.resx">
       <DependentUpon>rVentas.cs</DependentUpon>
@@ -359,6 +377,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG-20190709-WA0006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_273_icon-icons.com_61489.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_262_icon-icons.com_61518.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_340_icon-icons.com_614971.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

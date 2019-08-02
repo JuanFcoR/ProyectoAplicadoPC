@@ -16,9 +16,11 @@ namespace ProyectoAplicadoPC
 {
     public partial class MainMenu : Form
     {
-        public MainMenu()
+        public int IdUsuario;
+        public MainMenu(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void RegistroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)

@@ -37,7 +37,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             TasaDeGananciaNumericUpDown.Value = 0;
             DepartamentoTextBox.Text = String.Empty;
             CantidadExistenteNumericUpDown.Value = 0;
-            MinimoTextBox.Text = String.Empty;
+            MinimonumericUpDown.Value = 0;
             FechaDateTimePicker.Value = DateTime.Now;
             SuperErrorProvider.Clear();
         }
@@ -49,7 +49,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             Pro.CantidadExistente = Convert.ToInt32(CantidadExistenteNumericUpDown.Value);
             Pro.PrecioCosto = Convert.ToSingle(PreciocostoNumericUpDown.Value);
             Pro.Departamento = DepartamentoTextBox.Text;
-            Pro.Minimo = Convert.ToInt32(MinimoTextBox.Text);
+            Pro.Minimo = Convert.ToInt32(MinimonumericUpDown.Value);
             Pro.FechaRegistro = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
             Pro.PrecioVenta = Convert.ToSingle(PrecioVentaNumericUpDown.Value);
             Pro.TasaDeGanancia = Convert.ToSingle(TasaDeGananciaNumericUpDown.Value);
@@ -73,21 +73,24 @@ namespace ProyectoAplicadoPC.UI.Registros
                 if (String.IsNullOrWhiteSpace(DescripcionTextBox.Text))
                 {
                     SuperErrorProvider.SetError(DescripcionTextBox, "Este campo no debe estar vacio");
-                    DescripcionTextBox.Focus();
                     paso = false;
                 }
 
                 if (String.IsNullOrWhiteSpace(DepartamentoTextBox.Text))
                 {
                     SuperErrorProvider.SetError(DepartamentoTextBox, "Este campo no debe estar vacio");
-                    DepartamentoTextBox.Focus();
                     paso = false;
                 }
 
-                if (String.IsNullOrWhiteSpace(MinimoTextBox.Text))
+                if (MinimonumericUpDown.Value < 1)
                 {
-                    SuperErrorProvider.SetError(MinimoTextBox, "Este campo no debe estar vacio");
-                    MinimoTextBox.Focus();
+                    SuperErrorProvider.SetError(MinimonumericUpDown, "Este campo no puede ser menor de 1");
+                    paso = false;
+                }
+
+                if(PrecioVentaNumericUpDown.Value < PreciocostoNumericUpDown.Value)
+                {
+                    SuperErrorProvider.SetError(PrecioVentaNumericUpDown, "El  precio de compra no puede ser menor al precio de venta");
                     paso = false;
                 }
 
@@ -106,7 +109,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             PrecioVentaNumericUpDown.Value = Convert.ToDecimal(Pro.PrecioVenta);
             ITBIsNumericUpDown.Value = 0;
             DepartamentoTextBox.Text = Pro.Departamento;
-            MinimoTextBox.Text = Pro.Minimo.ToString();
+            MinimonumericUpDown.Value = Pro.Minimo;
             TasaDeGananciaNumericUpDown.Value = Convert.ToDecimal(Pro.TasaDeGanancia);
         }
 
@@ -114,33 +117,41 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Productos Pro;
+            Productos producto;
             bool paso = false;
 
 
             if (!Validar())
                 return;
-            Pro = llenarClase();
-            //limpiar();
 
-            if (CodigoRegistroNumericUpDown.Value == 0)
+            try
             {
-                paso = ProductosBLL.Guardar(Pro);
-            }
-            else
-            {
-                if (!ExisteEnLaBasedeDatos())
+                producto = llenarClase();
+
+                if (CodigoRegistroNumericUpDown.Value == 0)
                 {
-                    MessageBox.Show("No se puede modificar un producto que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    paso = ProductosBLL.Guardar(producto);
+                    MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                paso = ProductosBLL.Modificar(Pro);
-            }
-            if (paso)
-                MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    if (!ExisteEnLaBasedeDatos())
+                    {
+                        MessageBox.Show("No se puede modificar un producto que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    paso = ProductosBLL.Modificar(producto);
+                    MessageBox.Show("Se modifico con exito!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-            else
+                if (!paso)
+                    MessageBox.Show("No se pudo guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception)
+            {
                 MessageBox.Show("No se pudo guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -150,17 +161,9 @@ namespace ProyectoAplicadoPC.UI.Registros
             cp.ShowDialog();
         }
 
-
-    
-
     private void CancelarButton_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void RegistrarProducto_Load(object sender, EventArgs e)
-        {
-            
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -194,17 +197,6 @@ namespace ProyectoAplicadoPC.UI.Registros
         private void Cerrar_pictureBox_Click(object sender, EventArgs e)
         {
             Dispose();
-        }
-
-
-        private void CantidadExistenteNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
