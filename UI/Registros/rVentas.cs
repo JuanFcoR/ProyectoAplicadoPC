@@ -54,7 +54,6 @@ namespace ProyectoAplicadoPC.UI.Registros
             Pro.Total = Convert.ToDecimal(TotalTextBox.Text);
             Pro.Articulos = this.Detalle;
 
-
             return Pro;
         }
 
@@ -84,7 +83,7 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Ventas Pro;
+            Ventas venta;
             bool paso = false;
 
             if (!Validar())
@@ -93,30 +92,43 @@ namespace ProyectoAplicadoPC.UI.Registros
             try
             {
 
-                Pro = llenarClase();
+                venta = llenarClase();
                 limpiar();
 
                 if (NumeroFacturaNumericUpDown.Value == 0)
                 {
-                    paso = VentasBLL.Guardar(Pro);
+                    if(VentasBLL.Guardar(venta))
+                    {
+                        MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
                     if (!ExisteEnLaBasedeDatos())
                     {
-                        MessageBox.Show("No se puede modificar una venta que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se puede modificar una venta que no existe", "información!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    paso = VentasBLL.Modificar(Pro);
+
+                    if (VentasBLL.Modificar(venta))
+                    {
+                        MessageBox.Show("Modificado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo modificar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                   
                 }
-                if (paso)
-                {
-                    MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+               
+                
             }
             catch (Exception)
             {

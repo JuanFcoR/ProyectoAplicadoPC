@@ -178,7 +178,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(33, 135);
+            this.label3.Location = new System.Drawing.Point(30, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 70;
@@ -200,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(32, 101);
+            this.label1.Location = new System.Drawing.Point(30, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 68;
@@ -273,7 +273,7 @@
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(127, 488);
+            this.GuardarButton.Location = new System.Drawing.Point(157, 488);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(112, 45);
             this.GuardarButton.TabIndex = 84;
@@ -290,7 +290,7 @@
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(245, 488);
+            this.EliminarButton.Location = new System.Drawing.Point(288, 488);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(112, 45);
             this.EliminarButton.TabIndex = 83;

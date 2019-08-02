@@ -15,23 +15,25 @@ namespace ProyectoAplicadoPC.BLL
         public static bool Guardar(Ventas Venta)
         {
             bool paso = false;
-            Contexto contexto = new Contexto();
+            Contexto db = new Contexto();
             try
             {
-                if (contexto.Ventas.Add(Venta) != null)
+                if (db.Ventas.Add(Venta) != null)
                 {
-                    contexto.SaveChanges();
-                    paso = true;
+                    paso = db.SaveChanges() > 0;
+                    
                 }
-                
-
             }
             catch (Exception)
             {
 
                 throw;
             }
-            contexto.Dispose();
+            finally
+            {
+                db.Dispose();
+            }
+            
 
             return paso;
         }
@@ -51,7 +53,7 @@ namespace ProyectoAplicadoPC.BLL
 
                 foreach (var item in Venta.Articulos)
                 {
-                    if (item.CodigoProducto == 0)
+                    if (item.ID == 0)
                     {
                         db.Entry(item).State = EntityState.Added;
                     }
