@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.Niveles_panel = new System.Windows.Forms.Panel();
             this.Administrador_radioButton = new System.Windows.Forms.RadioButton();
-            this.Contador_radioButton = new System.Windows.Forms.RadioButton();
+            this.Cajero_radioButton = new System.Windows.Forms.RadioButton();
             this.FechaIngreso_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Clave_textBox = new System.Windows.Forms.TextBox();
             this.Usuario_textBox = new System.Windows.Forms.TextBox();
@@ -66,7 +66,7 @@
             // 
             this.Niveles_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Niveles_panel.Controls.Add(this.Administrador_radioButton);
-            this.Niveles_panel.Controls.Add(this.Contador_radioButton);
+            this.Niveles_panel.Controls.Add(this.Cajero_radioButton);
             this.Niveles_panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.Niveles_panel.Location = new System.Drawing.Point(117, 215);
             this.Niveles_panel.Name = "Niveles_panel";
@@ -86,17 +86,17 @@
             this.Administrador_radioButton.UseVisualStyleBackColor = true;
             this.Administrador_radioButton.CheckedChanged += new System.EventHandler(this.Administrador_radioButton_CheckedChanged);
             // 
-            // Contador_radioButton
+            // Cajero_radioButton
             // 
-            this.Contador_radioButton.AutoSize = true;
-            this.Contador_radioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contador_radioButton.Location = new System.Drawing.Point(16, 26);
-            this.Contador_radioButton.Name = "Contador_radioButton";
-            this.Contador_radioButton.Size = new System.Drawing.Size(66, 20);
-            this.Contador_radioButton.TabIndex = 29;
-            this.Contador_radioButton.TabStop = true;
-            this.Contador_radioButton.Text = "Cajero";
-            this.Contador_radioButton.UseVisualStyleBackColor = true;
+            this.Cajero_radioButton.AutoSize = true;
+            this.Cajero_radioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cajero_radioButton.Location = new System.Drawing.Point(16, 26);
+            this.Cajero_radioButton.Name = "Cajero_radioButton";
+            this.Cajero_radioButton.Size = new System.Drawing.Size(66, 20);
+            this.Cajero_radioButton.TabIndex = 29;
+            this.Cajero_radioButton.TabStop = true;
+            this.Cajero_radioButton.Text = "Cajero";
+            this.Cajero_radioButton.UseVisualStyleBackColor = true;
             // 
             // FechaIngreso_dateTimePicker
             // 
@@ -360,7 +360,7 @@
 
         private System.Windows.Forms.Panel Niveles_panel;
         private System.Windows.Forms.RadioButton Administrador_radioButton;
-        private System.Windows.Forms.RadioButton Contador_radioButton;
+        private System.Windows.Forms.RadioButton Cajero_radioButton;
         private System.Windows.Forms.DateTimePicker FechaIngreso_dateTimePicker;
         private System.Windows.Forms.TextBox Clave_textBox;
         private System.Windows.Forms.TextBox Usuario_textBox;

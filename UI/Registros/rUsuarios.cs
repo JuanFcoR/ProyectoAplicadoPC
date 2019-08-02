@@ -31,49 +31,51 @@ namespace ProyectoAplicadoPC.UI.Registros
             Usuario_textBox.Text = string.Empty;
             FechaIngreso_dateTimePicker.Value = DateTime.Now;
         }
-      /*  public String Check()
+
+        private string ElegirNivel()
         {
-            string Tipos = string.Empty;
-            if (AdministradorRadioButton.Checked == true)
-                Tipos = Constantes.admi;
-            else if (UsuarioradioButton2.Checked == true)
-                Tipos = Constantes.user;
-            return Tipos;
-        }*/
+            string nivel = string.Empty;
+            if (Administrador_radioButton.Checked)
+                nivel = "Administrador";
 
+            if (Cajero_radioButton.Checked)
+                nivel = "Cajero";
 
-
+            return nivel;
+        }
 
         private Usuarios LlenaClase()
         {
             Usuarios usuarios = new Usuarios();
-            {
-                usuarios.UsuarioId = Convert.ToInt32(UsuarioId_numericUpDown.Value);
-                
-                usuarios.Usuario = Usuario_textBox.Text;
-           
-                //usuarios.TiposUsuario = Check();
-                /*suarios.Psw = Clave_textBox.Text;*/
-
-                usuarios.Fecha = FechaIngreso_dateTimePicker.Value.ToString("dd/MM/yyyy");
-            };
+            usuarios.UsuarioId = Convert.ToInt32(UsuarioId_numericUpDown.Value);
+            usuarios.Clave = Clave_textBox.Text;
+            usuarios.Usuario = Usuario_textBox.Text;
+            usuarios.NivelAcceso = ElegirNivel();
+            usuarios.Fecha = FechaIngreso_dateTimePicker.Value.ToString("dd/MM/yyyy");
+            
             return usuarios;
+
+        }
+
+        private void LlenarRadioButton(Usuarios usuario)
+        {
+            if (usuario.NivelAcceso == "Administrador")
+                Administrador_radioButton.Checked = true;
+
+            if (usuario.NivelAcceso == "Contador")
+                Cajero_radioButton.Checked = true;
 
         }
 
         private void LlenaCampo(Usuarios usuarios)
         {
-             UsuarioId_numericUpDown.Value = usuarios.UsuarioId;
+            UsuarioId_numericUpDown.Value = usuarios.UsuarioId;
             Usuario_textBox.Text = usuarios.Usuario;
-    
-          //  Confirmar_textBox.Text = usuarios.Psw;
-           
-          ////  Nivel.Text = Check();
-          //  Clave_textBox.Text = usuarios.Psw;
-
-            FechaIngreso_dateTimePicker.Value = DateTime.ParseExact(usuarios.Fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture); 
-
+            Clave_textBox.Text = usuarios.Clave;
+            FechaIngreso_dateTimePicker.Value = DateTime.ParseExact(usuarios.Fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            LlenarRadioButton(usuarios);
         }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             Usuarios usuarios = new Usuarios();
