@@ -96,6 +96,13 @@ namespace ProyectoAplicadoPC.UI.Consultas
             this.Hide();
             rp.ShowDialog();
         }
+
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+            rVentas rp = new rVentas();
+            this.Hide();
+            rp.ShowDialog();
+        }
     }
     
 }

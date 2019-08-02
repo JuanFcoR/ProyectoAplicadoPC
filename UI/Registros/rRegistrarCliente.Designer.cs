@@ -122,10 +122,11 @@
             // 
             this.CedulamaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.CedulamaskedTextBox.Location = new System.Drawing.Point(178, 200);
-            this.CedulamaskedTextBox.Mask = "0-0000000-0";
+            this.CedulamaskedTextBox.Mask = "000-0000000-0";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
             this.CedulamaskedTextBox.Size = new System.Drawing.Size(193, 23);
             this.CedulamaskedTextBox.TabIndex = 65;
+            this.CedulamaskedTextBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.CedulamaskedTextBox_MaskInputRejected);
             // 
             // ApellidotextBox
             // 
