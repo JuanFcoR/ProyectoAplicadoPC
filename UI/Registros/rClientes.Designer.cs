@@ -147,9 +147,9 @@
             // CodigonumericUpDown
             // 
             this.CodigonumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.CodigonumericUpDown.Location = new System.Drawing.Point(184, 66);
+            this.CodigonumericUpDown.Location = new System.Drawing.Point(178, 66);
             this.CodigonumericUpDown.Name = "CodigonumericUpDown";
-            this.CodigonumericUpDown.Size = new System.Drawing.Size(58, 23);
+            this.CodigonumericUpDown.Size = new System.Drawing.Size(95, 23);
             this.CodigonumericUpDown.TabIndex = 62;
             // 
             // FechadateTimePicker
@@ -271,6 +271,7 @@
             this.BarraTitulo.Controls.Add(this.Cerrar_pictureBox);
             this.BarraTitulo.Controls.Add(this.label11);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(396, 38);
@@ -347,11 +348,12 @@
             this.BuscarButton.BackColor = System.Drawing.Color.White;
             this.BuscarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.BuscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuscarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.preview_search_find_locate_1551;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarButton.Location = new System.Drawing.Point(292, 72);
+            this.BuscarButton.Location = new System.Drawing.Point(279, 72);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(79, 56);
+            this.BuscarButton.Size = new System.Drawing.Size(92, 56);
             this.BuscarButton.TabIndex = 73;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -362,11 +364,12 @@
             // 
             this.Guardarbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.Guardarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(282, 410);
+            this.Guardarbutton.Location = new System.Drawing.Point(259, 410);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(89, 68);
+            this.Guardarbutton.Size = new System.Drawing.Size(112, 68);
             this.Guardarbutton.TabIndex = 72;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -377,17 +380,18 @@
             // 
             this.Cancelarbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.Cancelarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancelarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelarbutton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
             this.Cancelarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cancelarbutton.Location = new System.Drawing.Point(156, 410);
+            this.Cancelarbutton.Location = new System.Drawing.Point(133, 408);
             this.Cancelarbutton.Name = "Cancelarbutton";
-            this.Cancelarbutton.Size = new System.Drawing.Size(86, 70);
+            this.Cancelarbutton.Size = new System.Drawing.Size(109, 70);
             this.Cancelarbutton.TabIndex = 71;
             this.Cancelarbutton.Text = "Cancelar";
             this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Cancelarbutton.UseVisualStyleBackColor = true;
             // 
-            // rRegistrarCliente
+            // rClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -418,7 +422,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "rRegistrarCliente";
+            this.Name = "rClientes";
             this.Text = "RegistrarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigonumericUpDown)).EndInit();
