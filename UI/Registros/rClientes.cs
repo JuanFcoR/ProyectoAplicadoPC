@@ -120,6 +120,13 @@ namespace ProyectoAplicadoPC.UI.Registros
                     paso = false;
                 }
 
+                if (String.IsNullOrWhiteSpace(TelefonoDeReferenciamaskedTextBox.Text))
+                {
+                    SuperErrorProvider.SetError(TelefonoDeReferenciamaskedTextBox, "Este campo no debe estar vacio");
+                    TelefonoDeReferenciamaskedTextBox.Focus();
+                    paso = false;
+                }
+
                 if (String.IsNullOrWhiteSpace(DirecciontextBox.Text))
                 {
                     SuperErrorProvider.SetError(DirecciontextBox, "Este campo no debe estar vacio");
@@ -229,6 +236,9 @@ namespace ProyectoAplicadoPC.UI.Registros
             Maximixar_pictureBox.Visible = true;
         }
 
-        
+        private void CedulamaskedTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

@@ -140,6 +140,9 @@ namespace ProyectoAplicadoPC.UI.Consultas
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+        private void CriterioTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
