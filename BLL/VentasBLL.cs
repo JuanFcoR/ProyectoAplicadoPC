@@ -48,7 +48,7 @@ namespace ProyectoAplicadoPC.BLL
                 foreach (var item in Anterior.Articulos)
                 {
                     if (!Venta.Articulos.Exists(d => d.ID == item.ID))
-                        db.Entry(Venta).State = EntityState.Deleted;
+                        db.Entry(item).State = EntityState.Deleted;
                 }
 
                 foreach (var item in Venta.Articulos)
