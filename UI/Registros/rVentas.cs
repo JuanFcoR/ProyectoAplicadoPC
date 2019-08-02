@@ -53,6 +53,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             Pro.Fecha = FechaDateTimePicker.Value.ToString("dd/MM/yyyy");
             Pro.Total = Convert.ToDecimal(TotalTextBox.Text);
             Pro.Articulos = this.Detalle;
+            Pro.Total = CalculoBalance();
 
             return Pro;
         }
@@ -156,7 +157,12 @@ namespace ProyectoAplicadoPC.UI.Registros
         private void RemoverButton_Click(object sender, EventArgs e)
         {
             if (DetallesDataGridView.Rows.Count > 0 && DetallesDataGridView.CurrentRow != null)
+            {
                 Detalle.RemoveAt(DetallesDataGridView.CurrentRow.Index);
+                CargarGrid();
+                TotalTextBox.Text = CalculoBalance().ToString();
+            }
+
         }
 
         private bool validar2()
@@ -177,6 +183,19 @@ namespace ProyectoAplicadoPC.UI.Registros
 
             return paso;
         }
+
+        private decimal CalculoBalance()
+        {
+            decimal Balance = 0;
+
+            foreach (var item in Detalle)
+            {
+                Balance += item.SubTotal;
+            }
+
+            return Balance;
+        }
+
 
         private void AgregarButton_Click(object sender, EventArgs e)
         {
@@ -202,14 +221,8 @@ namespace ProyectoAplicadoPC.UI.Registros
                         )
                     );
 
-                foreach (var item in this.Detalle)
-                {
-                    total += item.SubTotal;
-                }
-            
                 CargarGrid();
-
-                TotalTextBox.Text = total.ToString();
+                TotalTextBox.Text = CalculoBalance().ToString();
 
             }
             catch (Exception)
