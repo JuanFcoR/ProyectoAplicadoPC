@@ -18,7 +18,10 @@ namespace ProyectoAplicadoPC.UI.Registros
    
     public partial class rVentas : Form
     {
+<<<<<<< HEAD
+=======
       
+>>>>>>> ceed9633b915653c49b314144626b10917f1af8a
         public List<DetalleVentas> Detalle { get; set; }
         public rVentas()
         {

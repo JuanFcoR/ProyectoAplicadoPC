@@ -23,6 +23,7 @@ namespace ProyectoAplicadoPC
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
+            MostrarUsuario(IdUsuario);
         }
 
         private void MostrarUsuario(int id)

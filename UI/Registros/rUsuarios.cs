@@ -53,7 +53,7 @@ namespace ProyectoAplicadoPC.UI.Registros
                 usuarios.Usuario = Usuario_textBox.Text;
            
                 //usuarios.TiposUsuario = Check();
-                usuarios.Psw = Clave_textBox.Text;
+                /*suarios.Psw = Clave_textBox.Text;*/
 
                 usuarios.Fecha = FechaIngreso_dateTimePicker.Value.ToString("dd/MM/yyyy");
             };
@@ -66,10 +66,10 @@ namespace ProyectoAplicadoPC.UI.Registros
              UsuarioId_numericUpDown.Value = usuarios.UsuarioId;
             Usuario_textBox.Text = usuarios.Usuario;
     
-            Confirmar_textBox.Text = usuarios.Psw;
+          //  Confirmar_textBox.Text = usuarios.Psw;
            
-          //  Nivel.Text = Check();
-            Clave_textBox.Text = usuarios.Psw;
+          ////  Nivel.Text = Check();
+          //  Clave_textBox.Text = usuarios.Psw;
 
             FechaIngreso_dateTimePicker.Value = DateTime.ParseExact(usuarios.Fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture); 
 
