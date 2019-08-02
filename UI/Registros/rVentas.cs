@@ -87,30 +87,43 @@ namespace ProyectoAplicadoPC.UI.Registros
             Ventas Pro;
             bool paso = false;
 
-
             if (!Validar())
                 return;
-            Pro = llenarClase();
-            //limpiar();
 
-            if (NumeroFacturaNumericUpDown.Value == 0)
+            try
             {
-                paso = VentasBLL.Guardar(Pro);
-            }
-            else
-            {
-                if (!ExisteEnLaBasedeDatos())
+
+                Pro = llenarClase();
+                limpiar();
+
+                if (NumeroFacturaNumericUpDown.Value == 0)
                 {
-                    MessageBox.Show("No se puede modificar una venta que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    paso = VentasBLL.Guardar(Pro);
                 }
-                paso = VentasBLL.Modificar(Pro);
+                else
+                {
+                    if (!ExisteEnLaBasedeDatos())
+                    {
+                        MessageBox.Show("No se puede modificar una venta que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    paso = VentasBLL.Modificar(Pro);
+                }
+                if (paso)
+                {
+                    MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            if (paso)
-                MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            else
+            catch (Exception)
+            {
                 MessageBox.Show("No se pudo guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+                
         } 
 
         private void CancelarButton_Click(object sender, EventArgs e)
@@ -132,26 +145,39 @@ namespace ProyectoAplicadoPC.UI.Registros
 
         private void AgregarButton_Click(object sender, EventArgs e)
         {
-            if (DetallesDataGridView.DataSource != null)
-                this.Detalle = (List<DetalleVentas>)DetallesDataGridView.DataSource;
-            Productos p = ProductosBLL.Buscar((int)CodigoProductoNumericUpDown.Value);
-            this.Detalle.Add(new DetalleVentas(iD: 0,
-                codigoProducto: (int)CodigoProductoNumericUpDown.Value,
-                descripcion: p.Descripcion,
-                cantidad: (int)CantidadNumericUpDown.Value,
-                precio: p.PrecioVenta,
-                iTBIS: p.ITBIS,
-                subTotal: Convert.ToDecimal((int)CantidadNumericUpDown.Value * p.PrecioVenta)
-                ));
-
-            foreach (var item in this.Detalle)
+            try
             {
-                total += item.SubTotal;
-            }
-            
-            CargarGrid();
+                if (DetallesDataGridView.DataSource != null)
+                    this.Detalle = (List<DetalleVentas>)DetallesDataGridView.DataSource;
+                    Productos p = ProductosBLL.Buscar((int)CodigoProductoNumericUpDown.Value);
 
-            TotalTextBox.Text = total.ToString();
+                this.Detalle.Add(
+                    new DetalleVentas(
+                        iD: 0,
+                        codigoProducto: (int)CodigoProductoNumericUpDown.Value,
+                        descripcion: p.Descripcion,
+                        cantidad: (int)CantidadNumericUpDown.Value,
+                        precio: p.PrecioVenta,
+                        iTBIS: p.ITBIS,
+                        subTotal: Convert.ToDecimal((int)CantidadNumericUpDown.Value * p.PrecioVenta)
+                        )
+                    );
+
+                foreach (var item in this.Detalle)
+                {
+                    total += item.SubTotal;
+                }
+            
+                CargarGrid();
+
+                TotalTextBox.Text = total.ToString();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Producto no encontrado");
+                CodigoProductoNumericUpDown.Value = 0;
+            }
 
         }
 
@@ -187,21 +213,6 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void RVentas_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Label10_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

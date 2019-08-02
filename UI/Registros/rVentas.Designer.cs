@@ -48,9 +48,9 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CantidadNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CodigoProductoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
+            this.CantidadNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.BarraTitulo.SuspendLayout();
@@ -61,8 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumeroFacturaNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +77,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(607, 37);
+            this.BarraTitulo.Size = new System.Drawing.Size(567, 37);
             this.BarraTitulo.TabIndex = 67;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -86,7 +86,7 @@
             this.Restaurar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Restaurar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Restaurar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.res;
-            this.Restaurar_pictureBox.Location = new System.Drawing.Point(556, 3);
+            this.Restaurar_pictureBox.Location = new System.Drawing.Point(516, 3);
             this.Restaurar_pictureBox.Name = "Restaurar_pictureBox";
             this.Restaurar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Restaurar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,7 +100,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(90, 5);
+            this.label11.Location = new System.Drawing.Point(122, 5);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(158, 23);
             this.label11.TabIndex = 50;
@@ -111,7 +111,7 @@
             this.Minimizar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.minimazar;
-            this.Minimizar_pictureBox.Location = new System.Drawing.Point(529, 3);
+            this.Minimizar_pictureBox.Location = new System.Drawing.Point(489, 3);
             this.Minimizar_pictureBox.Name = "Minimizar_pictureBox";
             this.Minimizar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Minimizar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,7 +124,7 @@
             this.Maximixar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Maximixar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Maximixar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.maxi;
-            this.Maximixar_pictureBox.Location = new System.Drawing.Point(556, 4);
+            this.Maximixar_pictureBox.Location = new System.Drawing.Point(516, 4);
             this.Maximixar_pictureBox.Name = "Maximixar_pictureBox";
             this.Maximixar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Maximixar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@
             this.Cerrar_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Cerrar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cerrar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.cerrar;
-            this.Cerrar_pictureBox.Location = new System.Drawing.Point(583, 4);
+            this.Cerrar_pictureBox.Location = new System.Drawing.Point(543, 4);
             this.Cerrar_pictureBox.Name = "Cerrar_pictureBox";
             this.Cerrar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Cerrar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,7 +151,7 @@
             this.TotalTextBox.BackColor = System.Drawing.Color.White;
             this.TotalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TotalTextBox.ForeColor = System.Drawing.Color.Black;
-            this.TotalTextBox.Location = new System.Drawing.Point(110, 132);
+            this.TotalTextBox.Location = new System.Drawing.Point(127, 136);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.ReadOnly = true;
             this.TotalTextBox.Size = new System.Drawing.Size(229, 20);
@@ -159,18 +159,18 @@
             // 
             // NumeroFacturaNumericUpDown
             // 
-            this.NumeroFacturaNumericUpDown.Location = new System.Drawing.Point(109, 64);
+            this.NumeroFacturaNumericUpDown.Location = new System.Drawing.Point(126, 68);
             this.NumeroFacturaNumericUpDown.Name = "NumeroFacturaNumericUpDown";
-            this.NumeroFacturaNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.NumeroFacturaNumericUpDown.Size = new System.Drawing.Size(113, 20);
             this.NumeroFacturaNumericUpDown.TabIndex = 78;
             // 
             // FechaDateTimePicker
             // 
             this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(110, 97);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(127, 101);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(86, 20);
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(112, 20);
             this.FechaDateTimePicker.TabIndex = 77;
             // 
             // label3
@@ -178,7 +178,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(16, 131);
+            this.label3.Location = new System.Drawing.Point(33, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 70;
@@ -189,7 +189,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(13, 67);
+            this.label2.Location = new System.Drawing.Point(30, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 69;
@@ -200,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(15, 97);
+            this.label1.Location = new System.Drawing.Point(32, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 68;
@@ -208,12 +208,13 @@
             // 
             // DetallesDataGridView
             // 
+            this.DetallesDataGridView.AllowUserToAddRows = false;
+            this.DetallesDataGridView.AllowUserToDeleteRows = false;
             this.DetallesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DetallesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DetallesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DetallesDataGridView.Location = new System.Drawing.Point(14, 61);
             this.DetallesDataGridView.Name = "DetallesDataGridView";
-            this.DetallesDataGridView.Size = new System.Drawing.Size(515, 190);
+            this.DetallesDataGridView.Size = new System.Drawing.Size(496, 190);
             this.DetallesDataGridView.TabIndex = 91;
             // 
             // AgregarButton
@@ -221,7 +222,8 @@
             this.AgregarButton.BackColor = System.Drawing.Color.White;
             this.AgregarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.AgregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AgregarButton.Location = new System.Drawing.Point(496, 3);
+            this.AgregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarButton.Location = new System.Drawing.Point(465, 9);
             this.AgregarButton.Name = "AgregarButton";
             this.AgregarButton.Size = new System.Drawing.Size(45, 37);
             this.AgregarButton.TabIndex = 93;
@@ -234,11 +236,12 @@
             this.RemoverButton.BackColor = System.Drawing.Color.White;
             this.RemoverButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.RemoverButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoverButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoverButton.Image = global::ProyectoAplicadoPC.Properties.Resources.seo_social_web_network_internet_322_icon_icons_com_61532;
             this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemoverButton.Location = new System.Drawing.Point(14, 257);
             this.RemoverButton.Name = "RemoverButton";
-            this.RemoverButton.Size = new System.Drawing.Size(116, 47);
+            this.RemoverButton.Size = new System.Drawing.Size(145, 40);
             this.RemoverButton.TabIndex = 92;
             this.RemoverButton.Text = "Remover Fila";
             this.RemoverButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,11 +253,12 @@
             this.BuscarButton.BackColor = System.Drawing.Color.White;
             this.BuscarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.BuscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuscarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.preview_search_find_locate_1551;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarButton.Location = new System.Drawing.Point(210, 63);
+            this.BuscarButton.Location = new System.Drawing.Point(245, 67);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(79, 51);
+            this.BuscarButton.Size = new System.Drawing.Size(112, 45);
             this.BuscarButton.TabIndex = 89;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -266,11 +270,12 @@
             this.GuardarButton.BackColor = System.Drawing.Color.White;
             this.GuardarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(33, 488);
+            this.GuardarButton.Location = new System.Drawing.Point(127, 488);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(94, 58);
+            this.GuardarButton.Size = new System.Drawing.Size(112, 45);
             this.GuardarButton.TabIndex = 84;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -282,11 +287,12 @@
             this.EliminarButton.BackColor = System.Drawing.Color.White;
             this.EliminarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Remove_icon;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(175, 488);
+            this.EliminarButton.Location = new System.Drawing.Point(245, 488);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(94, 58);
+            this.EliminarButton.Size = new System.Drawing.Size(112, 45);
             this.EliminarButton.TabIndex = 83;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,28 +305,22 @@
             this.panel1.Controls.Add(this.RemoverButton);
             this.panel1.Controls.Add(this.AgregarButton);
             this.panel1.Controls.Add(this.DetallesDataGridView);
-            this.panel1.Controls.Add(this.CantidadNumericUpDown);
             this.panel1.Controls.Add(this.CodigoProductoNumericUpDown);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.CantidadNumericUpDown);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(18, 173);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 309);
+            this.panel1.Size = new System.Drawing.Size(532, 309);
             this.panel1.TabIndex = 94;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
-            // 
-            // CantidadNumericUpDown
-            // 
-            this.CantidadNumericUpDown.Location = new System.Drawing.Point(122, 8);
-            this.CantidadNumericUpDown.Name = "CantidadNumericUpDown";
-            this.CantidadNumericUpDown.Size = new System.Drawing.Size(55, 20);
-            this.CantidadNumericUpDown.TabIndex = 114;
             // 
             // CodigoProductoNumericUpDown
             // 
-            this.CodigoProductoNumericUpDown.Location = new System.Drawing.Point(418, 7);
+            this.CodigoProductoNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CodigoProductoNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodigoProductoNumericUpDown.Location = new System.Drawing.Point(344, 17);
             this.CodigoProductoNumericUpDown.Name = "CodigoProductoNumericUpDown";
-            this.CodigoProductoNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.CodigoProductoNumericUpDown.Size = new System.Drawing.Size(109, 22);
             this.CodigoProductoNumericUpDown.TabIndex = 112;
             // 
             // label5
@@ -328,22 +328,30 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(52, 8);
+            this.label5.Location = new System.Drawing.Point(11, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 17);
             this.label5.TabIndex = 107;
             this.label5.Text = "Cantidad";
+            // 
+            // CantidadNumericUpDown
+            // 
+            this.CantidadNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CantidadNumericUpDown.Location = new System.Drawing.Point(75, 17);
+            this.CantidadNumericUpDown.Name = "CantidadNumericUpDown";
+            this.CantidadNumericUpDown.Size = new System.Drawing.Size(108, 22);
+            this.CantidadNumericUpDown.TabIndex = 114;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(303, 7);
+            this.label4.Location = new System.Drawing.Point(202, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 17);
+            this.label4.Size = new System.Drawing.Size(136, 17);
             this.label4.TabIndex = 106;
-            this.label4.Text = "CodigoProducto";
+            this.label4.Text = "Codigo del Producto";
             // 
             // SuperErrorProvider
             // 
@@ -353,7 +361,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 558);
+            this.ClientSize = new System.Drawing.Size(567, 558);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.GuardarButton);
@@ -368,7 +376,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rVentas";
             this.Text = "rVentas";
-            this.Load += new System.EventHandler(this.RVentas_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();
@@ -379,8 +386,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DetallesDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoProductoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
