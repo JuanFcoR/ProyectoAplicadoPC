@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoAplicadoPC.BLL;
+using ProyectoAplicadoPC.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,6 +68,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             return paso;
         }
 
+        public int IdUsuario;
         private bool ValidarLogin()
         {
             bool paso = false;
@@ -74,10 +77,25 @@ namespace ProyectoAplicadoPC.UI.Registros
             {
                 paso = true;
             }
+            else
+            {
+                RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+                var listado = new List<Usuarios>();
+                listado = repositorio.GetList(p => true);
+                foreach (var item in listado)
+                {
+                    if (Usuario_textBox.Text == item.Usuario && Clave_textBox.Text == item.Clave)
+                    {
+                        IdUsuario = item.UsuarioId;
+                        paso = true;
+                        break;
+                    }
+                }
+            }
 
             return paso;
         }
-        public int IdUsuario;
+        
         private void IniciarSesion_button_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
