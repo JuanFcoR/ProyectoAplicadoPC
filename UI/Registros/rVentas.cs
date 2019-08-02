@@ -42,7 +42,7 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             NumeroFacturaNumericUpDown.Value = 0;
             FechaDateTimePicker.Value = DateTime.Now;
-            SuperErrorProvider.Clear();
+            ErrorProvider.Clear();
             this.Detalle = new List<DetalleVentas>();
             CargarGrid();
         }
@@ -67,7 +67,12 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             bool paso = true;
 
-           
+            if(this.Detalle.Count == 0)
+            {
+                ErrorProvider.SetError(DetallesDataGridView, "Debe agregar algún Producto");
+                paso = false;
+
+            }
 
             return paso;
         }
@@ -84,7 +89,6 @@ namespace ProyectoAplicadoPC.UI.Registros
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             Ventas venta;
-            bool paso = false;
 
             if (!Validar())
                 return;
@@ -155,8 +159,31 @@ namespace ProyectoAplicadoPC.UI.Registros
                 Detalle.RemoveAt(DetallesDataGridView.CurrentRow.Index);
         }
 
+        private bool validar2()
+        {
+            bool paso = true;
+
+            if (CodigoProductoNumericUpDown.Value == 0)
+            {
+                ErrorProvider.SetError(CodigoProductoNumericUpDown, "El valor de este campo no puede ser cero");
+                paso = false;
+            }
+
+            if (CantidadNumericUpDown.Value == 0)
+            {
+                ErrorProvider.SetError(CantidadNumericUpDown, "El valor de este campo no puede ser cero");
+                paso = false;
+            }
+
+            return paso;
+        }
+
         private void AgregarButton_Click(object sender, EventArgs e)
         {
+
+            if (!validar2())
+                return;
+
             try
             {
                 if (DetallesDataGridView.DataSource != null)
