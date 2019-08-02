@@ -23,13 +23,13 @@ namespace ProyectoAplicadoPC
 
         private void RegistroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rRegistrarCliente cliente = new rRegistrarCliente(); 
+            rClientes cliente = new rClientes(); 
             cliente.ShowDialog();
         }
 
         private void RegistarProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistrarProducto producto = new RegistrarProducto();
+            rProductos producto = new rProductos();
             producto.ShowDialog();
         }
 
@@ -85,7 +85,7 @@ namespace ProyectoAplicadoPC
         {
 
             SubMenuClientes.Visible = false;
-            rRegistrarCliente cliente = new rRegistrarCliente();
+            rClientes cliente = new rClientes();
             cliente.ShowDialog();
         }
 
@@ -111,7 +111,7 @@ namespace ProyectoAplicadoPC
         private void RegistarP_button_Click(object sender, EventArgs e)
         {
            
-            RegistrarProducto rp = new RegistrarProducto();
+            rProductos rp = new rProductos();
             rp.ShowDialog();
             SubMenuP_panel.Visible = false;
         }

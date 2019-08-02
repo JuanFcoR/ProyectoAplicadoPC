@@ -15,14 +15,14 @@ using System.Windows.Forms;
 
 namespace ProyectoAplicadoPC.UI.Registros
 {
-    public partial class rRegistrarCliente : Form
+    public partial class rClientes : Form
     {
-        public rRegistrarCliente()
+        public rClientes()
         {
             InitializeComponent();
         }
 
-        public rRegistrarCliente(Clientes c)
+        public rClientes(Clientes c)
         {
             InitializeComponent();
             LlenarCampos(c);

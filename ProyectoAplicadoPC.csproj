@@ -221,17 +221,17 @@
     <Compile Include="UI\Registros\rCobros.Designer.cs">
       <DependentUpon>rCobros.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\rRegistrarCliente.cs">
+    <Compile Include="UI\Registros\rClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\rRegistrarCliente.Designer.cs">
-      <DependentUpon>rRegistrarCliente.cs</DependentUpon>
+    <Compile Include="UI\Registros\rClientes.Designer.cs">
+      <DependentUpon>rClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\RegistrarProducto.cs">
+    <Compile Include="UI\Registros\rProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\RegistrarProducto.Designer.cs">
-      <DependentUpon>RegistrarProducto.cs</DependentUpon>
+    <Compile Include="UI\Registros\rProductos.Designer.cs">
+      <DependentUpon>rProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rFacturaCredito.cs">
       <SubType>Form</SubType>
@@ -270,11 +270,11 @@
     <EmbeddedResource Include="UI\Registros\rCobros.resx">
       <DependentUpon>rCobros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rRegistrarCliente.resx">
-      <DependentUpon>rRegistrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\rClientes.resx">
+      <DependentUpon>rClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RegistrarProducto.resx">
-      <DependentUpon>RegistrarProducto.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\rProductos.resx">
+      <DependentUpon>rProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rFacturaCredito.resx">
       <DependentUpon>rFacturaCredito.cs</DependentUpon>
