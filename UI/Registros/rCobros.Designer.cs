@@ -41,14 +41,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Cancelarbutton = new System.Windows.Forms.Button();
             this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.Restaurar_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Minimizar_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Maximixar_pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DeudaActualnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoDelClientenumericUpDown)).BeginInit();
@@ -171,6 +167,10 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "CodigoDelCliente";
             // 
+            // SuperErrorProvider
+            // 
+            this.SuperErrorProvider.ContainerControl = this;
+            // 
             // Guardarbutton
             // 
             this.Guardarbutton.BackColor = System.Drawing.Color.White;
@@ -207,81 +207,11 @@
             // 
             this.SuperErrorProvider.ContainerControl = this;
             // 
-            // BarraTitulo
-            // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.BarraTitulo.Controls.Add(this.Restaurar_pictureBox);
-            this.BarraTitulo.Controls.Add(this.Minimizar_pictureBox);
-            this.BarraTitulo.Controls.Add(this.Cerrar_pictureBox);
-            this.BarraTitulo.Controls.Add(this.Maximixar_pictureBox);
-            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(274, 32);
-            this.BarraTitulo.TabIndex = 78;
-            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
-            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // Restaurar_pictureBox
-            // 
-            this.Restaurar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Restaurar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Restaurar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.res;
-            this.Restaurar_pictureBox.Location = new System.Drawing.Point(217, 4);
-            this.Restaurar_pictureBox.Name = "Restaurar_pictureBox";
-            this.Restaurar_pictureBox.Size = new System.Drawing.Size(21, 25);
-            this.Restaurar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Restaurar_pictureBox.TabIndex = 81;
-            this.Restaurar_pictureBox.TabStop = false;
-            this.Restaurar_pictureBox.Visible = false;
-            this.Restaurar_pictureBox.Click += new System.EventHandler(this.Restaurar_pictureBox_Click);
-            // 
-            // Minimizar_pictureBox
-            // 
-            this.Minimizar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Minimizar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimizar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.minimazar;
-            this.Minimizar_pictureBox.Location = new System.Drawing.Point(191, 5);
-            this.Minimizar_pictureBox.Name = "Minimizar_pictureBox";
-            this.Minimizar_pictureBox.Size = new System.Drawing.Size(21, 25);
-            this.Minimizar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Minimizar_pictureBox.TabIndex = 80;
-            this.Minimizar_pictureBox.TabStop = false;
-            this.Minimizar_pictureBox.Click += new System.EventHandler(this.Minimizar_pictureBox_Click);
-            // 
-            // Cerrar_pictureBox
-            // 
-            this.Cerrar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cerrar_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Cerrar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cerrar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.cerrar;
-            this.Cerrar_pictureBox.Location = new System.Drawing.Point(245, 5);
-            this.Cerrar_pictureBox.Name = "Cerrar_pictureBox";
-            this.Cerrar_pictureBox.Size = new System.Drawing.Size(21, 25);
-            this.Cerrar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Cerrar_pictureBox.TabIndex = 78;
-            this.Cerrar_pictureBox.TabStop = false;
-            this.Cerrar_pictureBox.Click += new System.EventHandler(this.Cerrar_pictureBox_Click);
-            // 
-            // Maximixar_pictureBox
-            // 
-            this.Maximixar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Maximixar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Maximixar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.maxi;
-            this.Maximixar_pictureBox.Location = new System.Drawing.Point(218, 5);
-            this.Maximixar_pictureBox.Name = "Maximixar_pictureBox";
-            this.Maximixar_pictureBox.Size = new System.Drawing.Size(21, 25);
-            this.Maximixar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Maximixar_pictureBox.TabIndex = 79;
-            this.Maximixar_pictureBox.TabStop = false;
-            this.Maximixar_pictureBox.Click += new System.EventHandler(this.Maximixar_pictureBox_Click);
-            // 
             // rCobros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 346);
-            this.Controls.Add(this.BarraTitulo);
+            this.ClientSize = new System.Drawing.Size(244, 290);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Cancelarbutton);
             this.Controls.Add(this.DeudaActualnumericUpDown);
