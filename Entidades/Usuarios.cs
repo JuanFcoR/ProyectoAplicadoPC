@@ -11,28 +11,19 @@ namespace ProyectoAplicadoPC.Entidades
     {
         [Key]
         public int UsuarioId { get; set; }
-       
         public string Usuario { get; set; }
-        public string Psw { get; set; }
-        public int NivelAcceso { get; set; }
+        public string Clave { get; set; }
+        public string Permiso { get; set; }
         public DateTime Fecha { get; set; }
 
         public Usuarios()
         {
             UsuarioId = 0;
-            Fecha = DateTime.Now;
             Usuario = string.Empty;
-            Psw = string.Empty;
-            NivelAcceso = 0;
+            Clave = string.Empty;
+            Permiso = string.Empty;
+            Fecha = DateTime.Now;
         }
 
-        public Usuarios(int usuarioId, string usuario, string psw, int nivelAcceso, DateTime fecha)
-        {
-            UsuarioId = usuarioId;
-            Usuario = usuario;
-            Psw = psw;
-            NivelAcceso = nivelAcceso;
-            Fecha = fecha;
-        }
     }
 }
