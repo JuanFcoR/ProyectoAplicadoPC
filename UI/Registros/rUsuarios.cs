@@ -231,5 +231,72 @@ namespace ProyectoAplicadoPC.UI.Registros
             else
                 SuperErrorProvider.SetError(UsuarioId_numericUpDown, "nos e puede eliminar un usuario que no exixte");
         }
+
+        private void Administrador_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+            SuperErrorProvider.Clear();
+            if (Validar(1))
+            {
+                MessageBox.Show("El TipoID esta vacio", "Llene Campo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int.TryParse(UsuarioId_numericUpDown.Text, out int ID);
+            Usuarios usuario = repositorio.Buscar(ID);
+            if (usuario != null)
+            {
+                MessageBox.Show("Usuario Encotnrado");
+                LlenaCampo(usuario);
+            }
+            else
+                MessageBox.Show("Usuario no Encontrado!!", ".", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void GuardarButton_Click(object sender, EventArgs e)
+        {
+            Usuarios usuario = new Usuarios();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            bool paso = false;
+            if (!ValidarR())
+                return;
+
+            usuario = LlenaClase();
+
+
+
+            //Determinar si es guardar o modificar
+            if (UsuarioId_numericUpDown.Value == 0)
+                paso = db.Guardar(usuario);
+            else
+            {
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MessageBox.Show("no se puede modificar", "exixte un fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                paso = db.Modificar(usuario);
+            }
+
+            //infprmar el resultado
+            if (paso)
+            {
+                MessageBox.Show("Guardado", "exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+            }
+            else
+                MessageBox.Show("Nose pudo guardar", "fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void CancelarButton_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -33,13 +33,13 @@ namespace ProyectoAplicadoPC
                 RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
                 Usuarios usuario = repositorio.Buscar(id);
 
-                Usuario_label.Text = usuario.Usuario.ToString();
+                //Usuario_label.Text = usuario.Usuario.ToString();
                 //Permiso_label.Text = usuario.Permiso.ToString();
             }
             else
             {
-                Usuario_label.Text = "Solo";
-                Permiso_label.Text = "Nuevo";
+                //Usuario_label.Text = "Solo Usuarios";
+                //Permiso_label.Text = "Nuevo";
             }
         }
 

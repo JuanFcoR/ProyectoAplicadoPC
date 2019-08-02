@@ -184,6 +184,7 @@
     <Compile Include="BLL\RepositorioBase.cs" />
     <Compile Include="BLL\VentasBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="Entidades\Cajas.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Cobros.cs" />
     <Compile Include="Entidades\DetalleVentas.cs" />
@@ -215,6 +216,12 @@
     </Compile>
     <Compile Include="UI\Consultas\cVentas.Designer.cs">
       <DependentUpon>cVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCajas.Designer.cs">
+      <DependentUpon>rCajas.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rCobros.cs">
       <SubType>Form</SubType>
@@ -279,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cVentas.resx">
       <DependentUpon>cVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rCajas.resx">
+      <DependentUpon>rCajas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCobros.resx">
       <DependentUpon>rCobros.cs</DependentUpon>

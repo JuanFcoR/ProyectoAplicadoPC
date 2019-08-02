@@ -63,8 +63,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Permiso_label = new System.Windows.Forms.Label();
-            this.Usuario_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -500,8 +498,6 @@
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.pictureBox2);
             this.panel11.Controls.Add(this.label1);
-            this.panel11.Controls.Add(this.Permiso_label);
-            this.panel11.Controls.Add(this.Usuario_label);
             this.panel11.Controls.Add(this.label2);
             this.panel11.Controls.Add(this.label5);
             this.panel11.Controls.Add(this.label6);
@@ -528,26 +524,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
-            // 
-            // Permiso_label
-            // 
-            this.Permiso_label.AutoSize = true;
-            this.Permiso_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Permiso_label.Location = new System.Drawing.Point(153, 48);
-            this.Permiso_label.Name = "Permiso_label";
-            this.Permiso_label.Size = new System.Drawing.Size(45, 16);
-            this.Permiso_label.TabIndex = 0;
-            this.Permiso_label.Text = "Sape";
-            // 
-            // Usuario_label
-            // 
-            this.Usuario_label.AutoSize = true;
-            this.Usuario_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario_label.Location = new System.Drawing.Point(153, 23);
-            this.Usuario_label.Name = "Usuario_label";
-            this.Usuario_label.Size = new System.Drawing.Size(45, 16);
-            this.Usuario_label.TabIndex = 0;
-            this.Usuario_label.Text = "Sape";
             // 
             // label2
             // 
@@ -649,8 +625,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Usuario_label;
-        private System.Windows.Forms.Label Permiso_label;
     }
 }
 
