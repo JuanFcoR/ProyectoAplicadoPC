@@ -561,7 +561,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.panel5.Location = new System.Drawing.Point(3, 341);
+            this.panel5.Location = new System.Drawing.Point(3, 368);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(5, 32);
             this.panel5.TabIndex = 11;
@@ -574,11 +574,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::ProyectoAplicadoPC.Properties.Resources.empleados;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 341);
+            this.button1.Location = new System.Drawing.Point(9, 368);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 32);
+            this.button1.Size = new System.Drawing.Size(188, 32);
             this.button1.TabIndex = 12;
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
