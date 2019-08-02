@@ -115,8 +115,8 @@ namespace ProyectoAplicadoPC
         private void ConsultarCliente_button_Click(object sender, EventArgs e)
         {
             SubMenuClientes.Visible = false;
-            cProductos cP = new cProductos();
-            cP.ShowDialog();
+            cClientes cC = new cClientes();
+            cC.ShowDialog();
         }
 
         private void Productos_button_Click(object sender, EventArgs e)
@@ -173,6 +173,13 @@ namespace ProyectoAplicadoPC
             {
                 SubMenuV_panel.Visible = true;
             }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            rLogin rl = new rLogin();
+            rl.Dispose();
+            rl.ShowDialog();
         }
     }
 }
