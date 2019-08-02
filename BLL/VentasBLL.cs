@@ -20,6 +20,11 @@ namespace ProyectoAplicadoPC.BLL
             {
                 if (db.Ventas.Add(Venta) != null)
                 {
+                    foreach (var item in Venta.Articulos)
+                    {
+                        Productos ps = db.Producto.Find(item.CodigoProducto);
+                        ps.CantidadExistente -= item.Cantidad;
+                    }
                     paso = db.SaveChanges() > 0;
                     
                 }
@@ -48,7 +53,16 @@ namespace ProyectoAplicadoPC.BLL
                 foreach (var item in Anterior.Articulos)
                 {
                     if (!Venta.Articulos.Exists(d => d.ID == item.ID))
+                    {
+
+                        Productos ps = db.Producto.Find(item.CodigoProducto);
+                        ps.CantidadExistente += item.Cantidad;
+
+
                         db.Entry(item).State = EntityState.Deleted;
+
+                    }
+                        
                 }
                 
                 foreach (var item in Venta.Articulos)
@@ -89,6 +103,7 @@ namespace ProyectoAplicadoPC.BLL
             try
             {
                 var eliminar = db.Ventas.Find(id);
+                
                 db.Entry(eliminar).State = EntityState.Deleted;
                 paso = (db.SaveChanges() > 0);
             }
