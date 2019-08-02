@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DeudaActualnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CantidadAbonarnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -42,9 +43,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Cancelarbutton = new System.Windows.Forms.Button();
+            this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DeudaActualnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoDelClientenumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // DeudaActualnumericUpDown
@@ -63,7 +66,7 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.CustomFormat = "";
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(104, 130);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
@@ -157,6 +160,7 @@
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Cancelarbutton
             // 
@@ -169,6 +173,11 @@
             this.Cancelarbutton.Text = "Cancelar";
             this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Cancelarbutton.UseVisualStyleBackColor = true;
+            this.Cancelarbutton.Click += new System.EventHandler(this.Cancelarbutton_Click);
+            // 
+            // SuperErrorProvider
+            // 
+            this.SuperErrorProvider.ContainerControl = this;
             // 
             // rCobros
             // 
@@ -194,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DeudaActualnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoDelClientenumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +225,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider SuperErrorProvider;
     }
 }
