@@ -229,7 +229,7 @@
             this.ConsultaButton.Location = new System.Drawing.Point(633, 62);
             this.ConsultaButton.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultaButton.Name = "ConsultaButton";
-            this.ConsultaButton.Size = new System.Drawing.Size(88, 61);
+            this.ConsultaButton.Size = new System.Drawing.Size(98, 76);
             this.ConsultaButton.TabIndex = 71;
             this.ConsultaButton.Text = "Consultar";
             this.ConsultaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
