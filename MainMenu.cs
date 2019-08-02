@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoAplicadoPC.UI.Consultas;
 using ProyectoAplicadoPC.UI;
+using ProyectoAplicadoPC.BLL;
+using ProyectoAplicadoPC.Entidades;
 
 namespace ProyectoAplicadoPC
 {
@@ -21,6 +23,24 @@ namespace ProyectoAplicadoPC
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
+        }
+
+        private void MostrarUsuario(int id)
+        {
+
+            if (id > 0)
+            {
+                RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+                Usuarios usuario = repositorio.Buscar(id);
+
+                //Usuario_label.Text = usuario.Usuario.ToString();
+                //Permiso_label.Text = usuario.Permiso.ToString();
+            }
+            else
+            {
+                Usuario_label.Text = "Solo Usuarios";
+                Permiso_label.Text = "Nuevo";
+            }
         }
 
         private void RegistroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)

@@ -47,11 +47,6 @@ namespace ProyectoAplicadoPC.UI.Registros
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int lParam);
 
-        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private bool ValidarCampos()
         {
             bool paso = true;
@@ -106,6 +101,12 @@ namespace ProyectoAplicadoPC.UI.Registros
         {
             Usuario_textBox.Text = string.Empty;
             Clave_textBox.Text = string.Empty;
+        }
+
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
