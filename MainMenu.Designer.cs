@@ -459,6 +459,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Cobro";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // panel2
             // 

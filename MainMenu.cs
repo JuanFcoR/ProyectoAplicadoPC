@@ -39,8 +39,8 @@ namespace ProyectoAplicadoPC
             }
             else
             {
-                Usuario_label.Text = "Solo Usuarios";
-                Permiso_label.Text = "Nuevo";
+                Usuario_label.Text = "Admin";
+                Permiso_label.Text = "Administrador";
             }
         }
 
@@ -180,6 +180,12 @@ namespace ProyectoAplicadoPC
             rLogin rl = new rLogin();
             rl.Dispose();
             rl.ShowDialog();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            rCobros rc = new rCobros();
+            rc.ShowDialog();
         }
     }
 }

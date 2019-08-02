@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.GuardarButton = new System.Windows.Forms.Button();
             this.DepartamentoTextBox = new System.Windows.Forms.TextBox();
             this.ITBIsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
@@ -51,14 +50,15 @@
             this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.MinimonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Restaurar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Minimizar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Maximixar_pictureBox = new System.Windows.Forms.PictureBox();
             this.Cerrar_pictureBox = new System.Windows.Forms.PictureBox();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.MinimonumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.ITBIsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoRegistroNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreciocostoNumericUpDown)).BeginInit();
@@ -67,29 +67,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.CantidadExistenteNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MinimonumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.BackColor = System.Drawing.Color.White;
-            this.GuardarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
-            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(175, 387);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(110, 48);
-            this.GuardarButton.TabIndex = 44;
-            this.GuardarButton.Text = "Guardar";
-            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GuardarButton.UseVisualStyleBackColor = false;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // DepartamentoTextBox
             // 
@@ -315,12 +298,34 @@
             this.BarraTitulo.TabIndex = 51;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(22, 349);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 17);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Minimo";
+            // 
+            // MinimonumericUpDown
+            // 
+            this.MinimonumericUpDown.BackColor = System.Drawing.Color.White;
+            this.MinimonumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MinimonumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimonumericUpDown.ForeColor = System.Drawing.Color.Black;
+            this.MinimonumericUpDown.Location = new System.Drawing.Point(152, 348);
+            this.MinimonumericUpDown.Name = "MinimonumericUpDown";
+            this.MinimonumericUpDown.Size = new System.Drawing.Size(165, 22);
+            this.MinimonumericUpDown.TabIndex = 45;
+            // 
             // Restaurar_pictureBox
             // 
             this.Restaurar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Restaurar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Restaurar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.res;
-            this.Restaurar_pictureBox.Location = new System.Drawing.Point(291, 4);
+            this.Restaurar_pictureBox.Location = new System.Drawing.Point(291, 3);
             this.Restaurar_pictureBox.Name = "Restaurar_pictureBox";
             this.Restaurar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Restaurar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -334,7 +339,7 @@
             this.Minimizar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.minimazar;
-            this.Minimizar_pictureBox.Location = new System.Drawing.Point(264, 3);
+            this.Minimizar_pictureBox.Location = new System.Drawing.Point(264, 2);
             this.Minimizar_pictureBox.Name = "Minimizar_pictureBox";
             this.Minimizar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Minimizar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -347,7 +352,7 @@
             this.Maximixar_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Maximixar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Maximixar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.maxi;
-            this.Maximixar_pictureBox.Location = new System.Drawing.Point(291, 4);
+            this.Maximixar_pictureBox.Location = new System.Drawing.Point(291, 3);
             this.Maximixar_pictureBox.Name = "Maximixar_pictureBox";
             this.Maximixar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Maximixar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -361,7 +366,7 @@
             this.Cerrar_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Cerrar_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cerrar_pictureBox.Image = global::ProyectoAplicadoPC.Properties.Resources.cerrar;
-            this.Cerrar_pictureBox.Location = new System.Drawing.Point(318, 4);
+            this.Cerrar_pictureBox.Location = new System.Drawing.Point(318, 3);
             this.Cerrar_pictureBox.Name = "Cerrar_pictureBox";
             this.Cerrar_pictureBox.Size = new System.Drawing.Size(21, 25);
             this.Cerrar_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -386,6 +391,23 @@
             this.BuscarButton.UseVisualStyleBackColor = false;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
+            // GuardarButton
+            // 
+            this.GuardarButton.BackColor = System.Drawing.Color.White;
+            this.GuardarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
+            this.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarButton.Image = global::ProyectoAplicadoPC.Properties.Resources.Save_as_icon;
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GuardarButton.Location = new System.Drawing.Point(175, 387);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(110, 48);
+            this.GuardarButton.TabIndex = 44;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GuardarButton.UseVisualStyleBackColor = false;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
+            // 
             // CancelarButton
             // 
             this.CancelarButton.BackColor = System.Drawing.Color.White;
@@ -402,28 +424,6 @@
             this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CancelarButton.UseVisualStyleBackColor = false;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(22, 349);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 17);
-            this.label10.TabIndex = 52;
-            this.label10.Text = "Minimo";
-            // 
-            // MinimonumericUpDown
-            // 
-            this.MinimonumericUpDown.BackColor = System.Drawing.Color.White;
-            this.MinimonumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MinimonumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimonumericUpDown.ForeColor = System.Drawing.Color.Black;
-            this.MinimonumericUpDown.Location = new System.Drawing.Point(152, 348);
-            this.MinimonumericUpDown.Name = "MinimonumericUpDown";
-            this.MinimonumericUpDown.Size = new System.Drawing.Size(165, 22);
-            this.MinimonumericUpDown.TabIndex = 45;
             // 
             // rProductos
             // 
@@ -467,11 +467,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MinimonumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

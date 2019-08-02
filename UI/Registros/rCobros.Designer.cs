@@ -41,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Cancelarbutton = new System.Windows.Forms.Button();
             this.SuperErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
@@ -49,11 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoDelClientenumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).BeginInit();
-            this.BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // DeudaActualnumericUpDown
@@ -167,10 +161,6 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "CodigoDelCliente";
             // 
-            // SuperErrorProvider
-            // 
-            this.SuperErrorProvider.ContainerControl = this;
-            // 
             // Guardarbutton
             // 
             this.Guardarbutton.BackColor = System.Drawing.Color.White;
@@ -211,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(244, 290);
+            this.ClientSize = new System.Drawing.Size(289, 345);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Cancelarbutton);
             this.Controls.Add(this.DeudaActualnumericUpDown);
@@ -233,11 +223,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CantidadAbonarnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoDelClientenumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuperErrorProvider)).EndInit();
-            this.BarraTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
