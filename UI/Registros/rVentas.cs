@@ -37,7 +37,7 @@ namespace ProyectoAplicadoPC.UI.Registros
             DetallesDataGridView.DataSource = null;
             DetallesDataGridView.DataSource = this.Detalle;
         }
-            
+
         private void limpiar()
         {
             NumeroFacturaNumericUpDown.Value = 0;

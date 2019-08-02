@@ -14,7 +14,6 @@ namespace ProyectoAplicadoPC.DAL
         public DbSet<Productos> Producto { get; set; }
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
-        public DbSet<Usuarios> Usuarios { get; set; }
         public Contexto(): base("ConStr") 
         {
 
