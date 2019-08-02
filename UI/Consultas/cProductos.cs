@@ -76,7 +76,7 @@ namespace ProyectoAplicadoPC.UI
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegistrarProducto rp = new RegistrarProducto();
+            rProductos rp = new rProductos();
             rp.ShowDialog();
         }
 
@@ -86,7 +86,7 @@ namespace ProyectoAplicadoPC.UI
             Productos p = new Productos();
             int.TryParse(ConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(), out id);
             p = ProductosBLL.Buscar(id);
-            RegistrarProducto rp = new RegistrarProducto(p);
+            rProductos rp = new rProductos(p);
             this.Hide();
             rp.ShowDialog();
         }

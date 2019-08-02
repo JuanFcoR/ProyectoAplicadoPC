@@ -87,7 +87,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
             Clientes p = new Clientes();
             int.TryParse(ConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(), out id);
             p = ClientesBLL.Buscar(id);
-            rRegistrarCliente rp = new rRegistrarCliente(p);
+            rClientes rp = new rClientes(p);
             this.Hide();
             rp.ShowDialog();
         }
@@ -95,7 +95,7 @@ namespace ProyectoAplicadoPC.UI.Consultas
         private void NuevoButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            rRegistrarCliente rc = new rRegistrarCliente();
+            rClientes rc = new rClientes();
             rc.ShowDialog();
         }
 

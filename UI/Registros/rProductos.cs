@@ -14,14 +14,14 @@ using System.Windows.Forms;
 
 namespace ProyectoAplicadoPC.UI.Registros
 {
-    public partial class RegistrarProducto : Form
+    public partial class rProductos : Form
     {
-        public RegistrarProducto()
+        public rProductos()
         {
             InitializeComponent();
         }
 
-        public RegistrarProducto(Productos p)
+        public rProductos(Productos p)
         {
             InitializeComponent();
             LlenarCampos(p);
